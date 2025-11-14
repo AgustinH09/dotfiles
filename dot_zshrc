@@ -1,0 +1,216 @@
+# Vscode and Cursor Agent mode: https://forum.cursor.com/t/cursor-agent-mode-when-running-terminal-commands-often-hangs-up-the-terminal-requiring-a-click-to-pop-it-out-in-order-to-continue-commands/59969/16
+if [[ -n "$npm_config_yes" ]] || [[ -n "$CI" ]] || [[ "$-" != *i* ]] || [[ "$TERM_PROGRAM" == "vscode" ]]; then
+  export AGENT_MODE=true
+else
+  export AGENT_MODE=false
+fi
+
+# Direnv (produces output, so must be before prompt setup))
+eval "$(direnv hook zsh)"
+
+if [[ "$AGENT_MODE" == "true" ]]; then
+  ZSH_THEME=""  
+else
+  # Pokemon Colorscripts
+  pokemon-colorscripts -r
+
+  if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux new-session -A -s main
+  fi
+
+  # Powerlevel10k
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  fi
+
+  #Plugins
+  zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+  # zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+  zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+  zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+
+  # Plugins (out: dirhistory)
+  plugins=(alias-finder aws bgnotify  bundler colorize gem git golang mise npm rails rake-fast ruby sudo terraform tmux zsh-vi-mode zsh-autosuggestions)
+fi
+
+
+# .zshrc
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export ZSH="$HOME/.oh-my-zsh"
+HIST_STAMPS="dd/mm/yyyy - %H:%M:%S"
+
+source $ZSH/oh-my-zsh.sh
+
+# ----User configuration----
+export MANPATH="/usr/bin/man:$MANPATH"
+export LANG=en_US.UTF-8
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+  export VISUAL='vim'
+else
+  export EDITOR='nvim'
+  export VISUAL='nvim'
+fi
+
+# Hyprland
+export XDG_SESSION_DESKTOP=hyprland
+export XDG_CURRENT_DESKTOP=hyprland
+export XDG_SESSION_TYPE=wayland
+
+# fcitx5
+export LC_CTYPE=en_US.UTF-8
+export XMODIFIERS="@im=fcitx"
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=ibus
+
+# Bob - Neovim
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
+# Docker Host
+export DOCKER_HOST="unix:///var/run/docker.sock"
+
+# Golang
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# Android SDK
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
+
+# ElasticBeanstalk
+export PATH="/home/chicha09/.ebcli-virtual-env/executables:$PATH"
+
+# Bat
+export BAT_THEME="tokyonight_moon"
+
+# OpenCode
+export PATH=/home/chicha09/.opencode/bin:$PATH
+
+# GPG Key
+export GPG_TTY=$(tty)
+
+# API Keys
+if [ -f ~/.api_keys ]; then
+    source ~/.api_keys
+fi
+
+# ----Additional Tools----
+
+# Mise
+eval "$(~/.local/bin/mise activate zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# Terraform
+complete -C /usr/bin/terraform terraform
+
+# TheFuck
+eval $(thefuck --alias fk)
+
+# fzf
+source <(fzf --zsh)
+# Use bat and eza to preview files and directories
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview' --tmux"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200' --tmux"
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview  'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo ${}'"       "$@" ;;
+    ssh)           fzf --preview 'dig {}'                 "$@" ;;
+    *)             fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+
+# Atuin
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
+
+# fzf-git.sh
+source $HOME/.oh-my-zsh/tools/fzf-git.sh
+
+# Conda
+__conda_setup="$('/home/chicha09/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/chicha09/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/chicha09/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/chicha09/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+# Brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Syntax Highlighting
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Tmux
+if [ -n "$TMUX" ]; then
+  # Tmux git autofetch
+  tmux-git-autofetch() {(/home/chicha09/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
+  add-zsh-hook chpwd tmux-git-autofetch
+
+  case "$TERM" in
+    # Terminal escape sequences
+    linux|xterm*|rxvt*)
+      export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}: ${PWD##*/}\007"'
+      ;;
+    screen*)
+      export PROMPT_COMMAND='echo -ne "\033k${HOSTNAME%%.*}: ${PWD##*/}\033\\" '
+      ;;
+    *)
+      ;;
+  esac
+fi
+
+# Fabric
+fpath=(~/.zsh/completions $fpath)
+autoload -Uz compinit && compinit
+
+# Undistract-me
+#export LONG_RUNNING_COMMAND_TIMEOUT=20
+#export UDM_PLAY_SOUND=1
+#source /etc/profile.d/undistract-me.sh
+
+# grit doc: https://docs.grit.io/
+. "$HOME/.grit/bin/env"
+# add rvm to path for scripting. make sure this is the last path variable change.
+. "$HOME/.cargo/env"
+
+if [[ "$AGENT_MODE" == "true" ]]; then
+  PROMPT='%n@%m:%~%# '
+  RPROMPT=''
+  unsetopt CORRECT
+  unsetopt CORRECT_ALL
+  setopt NO_BEEP
+  setopt NO_HIST_BEEP  
+  setopt NO_LIST_BEEP
+  
+  # Agent-friendly aliases
+  # alias rm='rm -f'
+  # alias cp='cp -f'  
+  # alias mv='mv -f'
+  alias npm='npm --no-fund --no-audit'
+  alias yarn='yarn --non-interactive'
+  alias pip='pip --quiet'
+  alias git='git -c advice.detachedHead=false'
+else
+  [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+fi
+

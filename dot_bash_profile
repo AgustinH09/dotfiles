@@ -1,0 +1,19 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+source /home/chicha09/.config/broot/launcher/bash/br
+export PATH="/home/chicha09/.ebcli-virtual-env/executables:$PATH"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
+
+. "$HOME/.grit/bin/env"
+
+
+. "$HOME/.atuin/bin/env"
