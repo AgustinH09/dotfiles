@@ -1,0 +1,42 @@
+#!/bin/sh
+
+set -e
+
+PLAINTEXT_KEY_PATH="{{.chezmoi.homeDir }}/.config/chezmoi/key.txt"
+ENCRYPTED_KEY_PATH="{{.chezmoi.sourceDir }}/key.txt.age"
+
+if; then
+    echo "✅ Decrypted age key already exists at $PLAINTEXT_KEY_PATH. Skipping."
+    exit 0
+fi
+
+if; then
+    echo "⚠️ Encrypted key file not found at $ENCRYPTED_KEY_PATH."
+    echo "   Continuing without decrypting. Encrypted files will not be applied."
+    exit 0
+fi
+
+if! command -v age >/dev/null 2>&1; then
+    echo "❌ 'age' command not found. Please install age to decrypt secrets."
+    echo "   See: https://github.com/FiloSottile/age"
+    exit 1
+fi
+
+printf "Encrypted master key found. Do you want to decrypt it now? (y/N) "
+read -r REPLY
+if &&; then
+    echo "Skipping decryption. Encrypted files will not be applied."
+    exit 0
+fi
+
+echo "Please enter the passphrase for $ENCRYPTED_KEY_PATH"
+mkdir -p "$(dirname "$PLAINTEXT_KEY_PATH")"
+
+if age --decrypt -o "$PLAINTEXT_KEY_PATH" "$ENCRYPTED_KEY_PATH"; then
+    chmod 600 "$PLAINTEXT_KEY_PATH"
+    echo "✅ Successfully decrypted and saved key to $PLAINTEXT_KEY_PATH"
+else
+    echo "❌ Decryption failed. Please check your passphrase."
+    rm -f "$PLAINTEXT_KEY_PATH"
+    exit 1
+fi

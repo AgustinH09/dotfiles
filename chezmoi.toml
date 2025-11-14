@@ -1,0 +1,11 @@
+encryption = "age"
+[age]
+    identity = "~/.config/chezmoi/key.txt"
+    recipient = "age1lwajdwev4qtc6zenhgh9dttpe4e8ft7mjwplm4hfltxxcjdpjg6qrrz7zz"
+[git]
+    autoCommit = true
+    autoPush = true
+[merge]
+    command = "nvim"
+    args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
+

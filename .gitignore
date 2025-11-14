@@ -1,0 +1,39 @@
+# Chezmoi private keys - NEVER commit these!
+key.txt
+key.txt.age
+*.key
+*.pem
+!encrypted_*.pem.age
+
+# Unencrypted tokens and credentials - NEVER commit these!
+**/config.json
+**/*token*
+**/*authtoken*
+!encrypted_*
+private_dot_copilot*
+dot_supermaven/
+
+# Local chezmoi state
+.chezmoi.yaml.tmpl
+
+# History files (may contain sensitive commands)
+*_history
+.history
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+
+# Logs
+*.log
