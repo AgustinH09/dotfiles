@@ -21,13 +21,16 @@ This repository contains my personal system configuration files for Linux (Fedor
 
 Install the required tools:
 
-````bash
+```bash
 # Chezmoi
 sh -c "$(curl -fsLS get.chezmoi.io)"
+```
 
+```bash
 # Age (for encryption)
 # Fedora
 sudo dnf install age
+```
 
 ### Installation
 
@@ -35,13 +38,15 @@ Initialize the dotfiles (read-only without decryption key):
 
 ```bash
 chezmoi init https://github.com/AgustinH09/dotfiles-public.git
+```
+
 ````
 
 To preview what would be applied:
 
 ```bash
 chezmoi diff
-```
+````
 
 Note: Without the Age decryption key, encrypted files will not be applied. This is intentional for security.
 
