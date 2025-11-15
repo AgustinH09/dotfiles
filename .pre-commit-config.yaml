@@ -16,7 +16,7 @@ repos:
     hooks:
       - id: trufflehog
         name: Scan for secrets with TruffleHog
-        entry: trufflehog filesystem --directory .
+        entry: trufflehog filesystem --directory . --exclude-paths .trufflehog-exclude.txt
         language: system
         pass_filenames: false
         exclude: '^(\.pre-commit-config\.yaml|\.gitleaks\.toml|\.github/workflows/security-scan\.yml|scripts/security-check\.sh|SECURITY.*\.md)$'

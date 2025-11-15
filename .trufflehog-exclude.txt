@@ -1,0 +1,12 @@
+# TruffleHog exclusion patterns
+# Exclude .git directory (internal git objects contain binary data)
+\.git/
+
+# Exclude encrypted files (binary encrypted data causes false positives)
+.*\.age$
+
+# Exclude node_modules
+node_modules/
+
+# Exclude tmux plugins
+\.tmux/plugins/
