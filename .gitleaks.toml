@@ -16,11 +16,6 @@ paths = [
   '''scripts/security.*check\.sh$''',
   '''security-check\.sh$''',
   '''\.gitleaks\.toml$''',
-  '''dot_config/hypr/scripts/executable_sddm_wallpaper\.sh$''',
-  '''dot_config/kitty/kitty-themes/dot_tools/executable_previews\.sh$''',
-  '''dot_zshrc$''',
-  '''dot_bashrc$''',
-  '''dot_bash_profile$''',
 ]
 
 regexes = [
@@ -179,10 +174,21 @@ description = "Hardcoded Password"
 regex = '''(?i)(password|passwd|pwd)(.{0,20})?['\"][^'\"]{8,}['\"]'''
 tags = ["password", "medium"]
 [rules.allowlist]
+paths = [
+  '''dot_zshrc$''',
+  '''dot_bashrc$''',
+  '''dot_bash_profile$''',
+  '''dot_config/hypr/scripts/executable_sddm_wallpaper\.sh$''',
+  '''dot_config/kitty/kitty-themes/dot_tools/executable_previews\.sh$''',
+]
 regexes = [
   '''password_store''',
   '''password.*placeholder''',
   '''password.*example''',
+  '''\bpwd\b''',
+  '''PWD[#%}]''',
+  '''PasswordFieldTextColor''',
+  '''PasswordIconColor''',
 ]
 
 [[rules]]

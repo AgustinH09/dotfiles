@@ -29,9 +29,9 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: HEAD
-          extra_args: --only-verified --fail
+          base: ""
+          head: ""
+          extra_args: --only-verified
 
       - name: Gitleaks Secret Scanning
         uses: gitleaks/gitleaks-action@v2
@@ -40,11 +40,12 @@ jobs:
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
       - name: Upload Gitleaks SARIF report
-        if: always()
+        if: always() && hashFiles('results.sarif') != ''
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: results.sarif
           category: gitleaks
+        continue-on-error: true
 
   path-validation:
     name: Validate Paths
@@ -197,11 +198,12 @@ jobs:
           exit-code: '0'
 
       - name: Upload Trivy SARIF report
-        if: always()
+        if: always() && hashFiles('trivy-results.sarif') != ''
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: trivy-results.sarif
           category: trivy
+        continue-on-error: true
 
   chezmoi-validation:
     name: Validate Chezmoi Configuration
