@@ -40,13 +40,11 @@ Initialize the dotfiles (read-only without decryption key):
 chezmoi init https://github.com/AgustinH09/dotfiles-public.git
 ```
 
-````
-
 To preview what would be applied:
 
 ```bash
 chezmoi diff
-````
+```
 
 Note: Without the Age decryption key, encrypted files will not be applied. This is intentional for security.
 
