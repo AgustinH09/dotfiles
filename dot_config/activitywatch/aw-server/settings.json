@@ -1,0 +1,509 @@
+{
+    "initialTimestamp": "2025-03-22T18:49:41.200Z",
+    "startOfDay": "05:00",
+    "startOfWeek": "Monday",
+    "durationDefault": 21600,
+    "landingpage": "/home",
+    "theme": "dark",
+    "newReleaseCheckData": {
+        "isEnabled": true,
+        "nextCheckTime": "2025-11-12T00:41:31.981Z",
+        "howOftenToCheck": 86400,
+        "timesChecked": 0
+    },
+    "userSatisfactionPollData": {
+        "isEnabled": false,
+        "nextPollTime": "2025-04-07T00:53:27.124Z",
+        "timesPollIsShown": 1
+    },
+    "classes": [
+        {
+            "data": {
+                "color": "#0F0",
+                "score": 10
+            },
+            "id": 0,
+            "name": [
+                "Work"
+            ],
+            "rule": {
+                "regex": "Google Docs|libreoffice|ReText",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#68CCCA"
+            },
+            "id": 1,
+            "name": [
+                "Work",
+                "Programming"
+            ],
+            "rule": {
+                "regex": "GitHub|Stack Overflow|BitBucket|Gitlab|vim|Spyder|kate|Ghidra|Scite|kitty|nvim|rails",
+                "type": "regex",
+                "ignore_case": true
+            }
+        },
+        {
+            "data": {},
+            "id": 2,
+            "name": [
+                "Work",
+                "Programming",
+                "ActivityWatch"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "aw-",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {},
+            "id": 3,
+            "name": [
+                "Media",
+                "Social Media",
+                "Image"
+            ],
+            "rule": {
+                "regex": "GIMP|Inkscape",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {},
+            "id": 4,
+            "name": [
+                "Media",
+                "Social Media",
+                "Video"
+            ],
+            "rule": {
+                "regex": "Kdenlive",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {},
+            "id": 5,
+            "name": [
+                "Media",
+                "Social Media",
+                "Audio"
+            ],
+            "rule": {
+                "regex": "Audacity",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {},
+            "id": 6,
+            "name": [
+                "Media",
+                "3D"
+            ],
+            "rule": {
+                "regex": "Blender",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#F33",
+                "score": "1"
+            },
+            "id": 7,
+            "name": [
+                "Media"
+            ],
+            "rule": {
+                "type": "none"
+            }
+        },
+        {
+            "data": {
+                "color": "#F80"
+            },
+            "id": 8,
+            "name": [
+                "Media",
+                "Games"
+            ],
+            "rule": {
+                "regex": "Minecraft|RimWorld",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#B0BC00"
+            },
+            "id": 9,
+            "name": [
+                "Media",
+                "Video"
+            ],
+            "rule": {
+                "regex": "YouTube|Plex|VLC|mpv",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#FCC400"
+            },
+            "id": 10,
+            "name": [
+                "Media",
+                "Social Media"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "reddit|Facebook|Twitter|Instagram|devRant",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#68CCCA"
+            },
+            "id": 11,
+            "name": [
+                "Media",
+                "Music"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "Spotify|Deezer|Music|music",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#FE9200",
+                "score": "5"
+            },
+            "id": 12,
+            "name": [
+                "Comms "
+            ],
+            "rule": {
+                "type": "none"
+            }
+        },
+        {
+            "id": 13,
+            "name": [
+                "Comms ",
+                "IM"
+            ],
+            "rule": {
+                "regex": "Messenger|Telegram|Signal|WhatsApp|Rambox|Slack|Riot|Element|Discord|Nheko|NeoChat|Mattermost",
+                "type": "regex"
+            }
+        },
+        {
+            "id": 14,
+            "name": [
+                "Comms ",
+                "Email"
+            ],
+            "rule": {
+                "regex": "Gmail|Thunderbird|mutt|alpine",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#CCC"
+            },
+            "id": 15,
+            "name": [
+                "Uncategorized"
+            ],
+            "rule": {
+                "type": "none"
+            }
+        },
+        {
+            "data": {
+                "color": "#7B64FF"
+            },
+            "id": 16,
+            "name": [
+                "Work",
+                "Programming",
+                "AI"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "ChatGPT|Gemini|Claude|Opencode",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#DBDF00"
+            },
+            "id": 17,
+            "name": [
+                "Work",
+                "Programming",
+                "Bright"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "Brig",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#009CE0",
+                "score": "10"
+            },
+            "id": 18,
+            "name": [
+                "Studyng"
+            ],
+            "rule": {
+                "regex": "Notion|Study|Obsidian|Pdf ",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#7B64FF",
+                "score": "12"
+            },
+            "id": 19,
+            "name": [
+                "Studyng",
+                "Japanese"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "Anki|Japanese|mpv|Jisho|Yomitan|AJATT|impd|DeepL Translate|translate|asbplayer|mining",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#FDA1FF"
+            },
+            "id": 20,
+            "name": [
+                "Media",
+                "Stream"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "Twitch|Kick|FutbolLibre",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#F44E3B"
+            },
+            "id": 21,
+            "name": [
+                "Work",
+                "Tools"
+            ],
+            "rule": {
+                "regex": "Slack|slack|Teams|Outlook|Meets|Meet",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#DBDF00"
+            },
+            "id": 22,
+            "name": [
+                "Diary"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "Activity|Watch|Obsidian|Notion|Habitica|Task",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#AEA1FF"
+            },
+            "id": 23,
+            "name": [
+                "Studyng",
+                "Japanese",
+                "Anki"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "anki",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {},
+            "id": 24,
+            "name": [
+                "Studyng",
+                "Japanese",
+                "Innmersion"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "mpv|anime",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {
+                "color": "#0062B1"
+            },
+            "id": 25,
+            "name": [
+                "Work",
+                "Programming",
+                "Neocoast"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "neo",
+                "type": "regex"
+            }
+        },
+        {
+            "data": {},
+            "id": 26,
+            "name": [
+                "Work",
+                "Programming",
+                "Cirrus"
+            ],
+            "rule": {
+                "ignore_case": true,
+                "regex": "Cirrus|aircraft",
+                "type": "regex"
+            }
+        },
+        {
+            "name": [
+                "Work",
+                "Programming",
+                "New class"
+            ],
+            "rule": {
+                "type": "regex",
+                "regex": "FILL ME"
+            },
+            "id": 27
+        }
+    ],
+    "views": [
+        {
+            "elements": [
+                {
+                    "size": 3,
+                    "type": "top_apps"
+                },
+                {
+                    "size": 3,
+                    "type": "top_titles"
+                },
+                {
+                    "size": 3,
+                    "type": "timeline_barchart"
+                },
+                {
+                    "size": 3,
+                    "type": "top_categories"
+                },
+                {
+                    "size": 3,
+                    "type": "category_tree"
+                },
+                {
+                    "size": 3,
+                    "type": "category_sunburst"
+                }
+            ],
+            "id": "summary",
+            "name": "Summary"
+        },
+        {
+            "elements": [
+                {
+                    "size": 3,
+                    "type": "top_apps"
+                },
+                {
+                    "size": 3,
+                    "type": "top_titles"
+                }
+            ],
+            "id": "window",
+            "name": "Window"
+        },
+        {
+            "elements": [
+                {
+                    "size": 3,
+                    "type": "top_domains"
+                },
+                {
+                    "size": 3,
+                    "type": "top_urls"
+                }
+            ],
+            "id": "browser",
+            "name": "Browser"
+        },
+        {
+            "elements": [
+                {
+                    "size": 3,
+                    "type": "top_editor_files"
+                },
+                {
+                    "size": 3,
+                    "type": "top_editor_projects"
+                },
+                {
+                    "size": 3,
+                    "type": "top_editor_languages"
+                }
+            ],
+            "id": "editor",
+            "name": "Editor"
+        },
+        {
+            "elements": [
+                {
+                    "props": {},
+                    "type": "score"
+                },
+                {
+                    "props": {},
+                    "type": "vis_timeline"
+                }
+            ],
+            "id": "Score",
+            "name": "Score"
+        },
+        {
+            "id": "df",
+            "name": "cx",
+            "elements": []
+        }
+    ],
+    "requestTimeout": 30,
+    "always_active_pattern": "mpv|anime"
+}

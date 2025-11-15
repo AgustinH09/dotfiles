@@ -1,0 +1,10 @@
+[settings]
+idiomatic_version_file_enable_tools = ["ruby"]
+
+[tools]
+chezmoi = "latest"
+go = "1.24.4"
+node = "24.3"
+ruby = "3.3.6"
+rust = "latest"
+tmux = "latest"

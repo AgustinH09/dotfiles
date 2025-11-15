@@ -1,0 +1,146 @@
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+format = "via [🐳 Docker]($style) "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = "⌘ "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[meson]
+symbol = "喝 "
+
+[nix_shell]
+symbol = " "
+
+[os.symbols]
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+FreeBSD = " "
+Garuda = "﯑ "
+Gentoo = " "
+HardenedBSD = "ﲊ "
+Illumos = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = " "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = " "
+Solus = "ﴱ "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
+
+
+[rlang]
+symbol = "ﳒ "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+# Node.js
+[nodejs]
+disabled = false
+
+# Ruby
+[ruby]
+disabled = false
+
+# Ruby on Rails
+[custom.rails]
+command = "rails -v"
+format = "on [🛤️ $output]($style)"
+when = "exists 'rails'"
+
+# Fedora (assumes you have the "lsb_release" package installed)
+[custom.fedora]
+command = "lsb_release -sd"
+format = "on [$output](bold blue)"
+when = "exists 'lsb_release' && lsb_release -is == 'Fedora'"
+
+# Nim
+[nim]
+disabled = false
+
+# Package (NPM)
+[package]
+disabled = false
+
+# Python
+[python]
+disabled = false
+
+# Rust
+[rust]
+disabled = false
+
+# Golang
+[golang]
+disabled = false

@@ -1,0 +1,3169 @@
+[2025-02-21 13:25:12.133]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:25:12.142]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:25:12.171]	Installing "tmux-copycat"
+[2025-02-21 13:25:12.180]	Installing "tmux-cpu"
+[2025-02-21 13:25:12.190]	Installing "tmux-resurrect"
+[2025-02-21 13:25:12.638]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:25:12.651]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:25:12.688]	Already installed "tmux-copycat"
+[2025-02-21 13:25:12.699]	Already installed "tmux-cpu"
+[2025-02-21 13:25:12.709]	Already installed "tmux-resurrect"
+[2025-02-21 13:25:12.720]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:25:12.741]	Updating all plugins!
+[2025-02-21 13:25:12.751]	
+[2025-02-21 13:25:13.221]	  "tmux-cpu" download success
+[2025-02-21 13:25:13.336]	  "tmux-cpu" update fail
+[2025-02-21 13:25:13.346]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:13.356]	    | From https://github.com/tmux-plugins/tmux-cpu
+[2025-02-21 13:25:13.366]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:25:13.377]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:25:13.383]	  "tmux-copycat" download success
+[2025-02-21 13:25:13.389]	    | 	.editorconfig
+[2025-02-21 13:25:13.401]	    | 	.github/workflows/check.yml
+[2025-02-21 13:25:13.413]	    | 	.mailmap
+[2025-02-21 13:25:13.425]	    | 	LICENSE
+[2025-02-21 13:25:13.435]	    | 	README.md
+[2025-02-21 13:25:13.444]	    | 	cpu.tmux
+[2025-02-21 13:25:13.454]	    | 	screenshots/high_bg.png
+[2025-02-21 13:25:13.463]	    | 	screenshots/high_fg.png
+[2025-02-21 13:25:13.473]	    | 	screenshots/high_icon.png
+[2025-02-21 13:25:13.483]	    | 	screenshots/low_bg.png
+[2025-02-21 13:25:13.493]	    | 	screenshots/low_fg.png
+[2025-02-21 13:25:13.503]	    | 	screenshots/low_icon.png
+[2025-02-21 13:25:13.513]	    | 	screenshots/medium_bg.png
+[2025-02-21 13:25:13.524]	    | 	screenshots/medium_fg.png
+[2025-02-21 13:25:13.535]	    | 	screenshots/medium_icon.png
+[2025-02-21 13:25:13.546]	    | 	scripts/cpu_bg_color.sh
+[2025-02-21 13:25:13.557]	    | 	scripts/cpu_fg_color.sh
+[2025-02-21 13:25:13.568]	    | 	scripts/cpu_icon.sh
+[2025-02-21 13:25:13.579]	    | 	scripts/cpu_percentage.sh
+[2025-02-21 13:25:13.590]	    | 	scripts/cpu_temp.sh
+[2025-02-21 13:25:13.601]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-21 13:25:13.612]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-21 13:25:13.624]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-21 13:25:13.634]	    | 	scripts/gpu_bg_color.sh
+[2025-02-21 13:25:13.645]	    | 	scripts/gpu_fg_color.sh
+[2025-02-21 13:25:13.655]	    | 	scripts/gpu_icon.sh
+[2025-02-21 13:25:13.665]	    | 	scripts/gpu_percentage.sh
+[2025-02-21 13:25:13.675]	    | 	scripts/gpu_temp.sh
+[2025-02-21 13:25:13.685]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-21 13:25:13.695]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-21 13:25:13.705]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-21 13:25:13.716]	    | 	scripts/gram_bg_color.sh
+[2025-02-21 13:25:13.727]	    | 	scripts/gram_fg_color.sh
+[2025-02-21 13:25:13.738]	    | 	scripts/gram_icon.sh
+[2025-02-21 13:25:13.749]	    | 	scripts/gram_percentage.sh
+[2025-02-21 13:25:13.760]	    | 	scripts/helpers.sh
+[2025-02-21 13:25:13.772]	    | 	scripts/ram_bg_color.sh
+[2025-02-21 13:25:13.784]	    | 	scripts/ram_fg_color.sh
+[2025-02-21 13:25:13.796]	    | 	scripts/ram_icon.sh
+[2025-02-21 13:25:13.806]	    | 	scripts/ram_percentage.sh
+[2025-02-21 13:25:13.817]	    | Please move or remove them before you merge.
+[2025-02-21 13:25:13.827]	    | Aborting
+[2025-02-21 13:25:14.122]	  "tmux-copycat" update fail
+[2025-02-21 13:25:14.132]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:14.141]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-21 13:25:14.151]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:25:14.161]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:25:14.171]	    | 	.gitattributes
+[2025-02-21 13:25:14.181]	    | 	.gitignore
+[2025-02-21 13:25:14.191]	    | 	.travis.yml
+[2025-02-21 13:25:14.201]	    | 	CHANGELOG.md
+[2025-02-21 13:25:14.211]	    | 	LICENSE.md
+[2025-02-21 13:25:14.220]	    | 	README.md
+[2025-02-21 13:25:14.230]	    | 	Vagrantfile
+[2025-02-21 13:25:14.240]	    | 	copycat.tmux
+[2025-02-21 13:25:14.251]	    | 	docs/customizations.md
+[2025-02-21 13:25:14.262]	    | 	docs/defining_new_stored_searches.md
+[2025-02-21 13:25:14.273]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-21 13:25:14.285]	    | 	docs/limitations.md
+[2025-02-21 13:25:14.298]	    | 	run-tests
+[2025-02-21 13:25:14.309]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:25:14.321]	    | 	scripts/copycat_generate_results.sh
+[2025-02-21 13:25:14.333]	    | 	scripts/copycat_git_special.sh
+[2025-02-21 13:25:14.344]	    | 	scripts/copycat_jump.sh
+[2025-02-21 13:25:14.355]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-21 13:25:14.365]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-21 13:25:14.376]	    | 	scripts/copycat_mode_start.sh
+[2025-02-21 13:25:14.387]	    | 	scripts/copycat_search.sh
+[2025-02-21 13:25:14.397]	    | 	scripts/helpers.sh
+[2025-02-21 13:25:14.408]	    | 	scripts/stored_search_helpers.sh
+[2025-02-21 13:25:14.419]	    | 	scripts/variables.sh
+[2025-02-21 13:25:14.429]	    | 	test/README.md
+[2025-02-21 13:25:14.440]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-21 13:25:14.450]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-21 13:25:14.460]	    | 	test/helpers/expect_helpers.exp
+[2025-02-21 13:25:14.470]	    | 	test/helpers/run_tmux.exp
+[2025-02-21 13:25:14.479]	    | 	test/helpers/setup.exp
+[2025-02-21 13:25:14.489]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-21 13:25:14.499]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-21 13:25:14.510]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-21 13:25:14.520]	    | 	test/helpers/test.exp
+[2025-02-21 13:25:14.530]	    | 	test/run-tests-within-vm
+[2025-02-21 13:25:14.540]	    | 	test/test_digit_search.exp
+[2025-02-21 13:25:14.550]	    | 	test/test_file_search.exp
+[2025-02-21 13:25:14.559]	    | 	test/test_free_search.exp
+[2025-02-21 13:25:14.569]	    | 	test/test_git_hash_search.exp
+[2025-02-21 13:25:14.579]	    | 	test/test_git_status_search.exp
+[2025-02-21 13:25:14.590]	    | 	test/test_url_search.exp
+[2025-02-21 13:25:14.600]	    | 	test/test_user_defined_search.exp
+[2025-02-21 13:25:14.611]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-21 13:25:14.621]	    | 	video/README.md
+[2025-02-21 13:25:14.631]	    | 	video/screencast_img.png
+[2025-02-21 13:25:14.641]	    | 	video/script.md
+[2025-02-21 13:25:14.651]	    | Please move or remove them before you merge.
+[2025-02-21 13:25:14.661]	    | Aborting
+[2025-02-21 13:25:15.284]	  "tmux-resurrect" update fail
+[2025-02-21 13:25:15.294]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:15.304]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:25:15.314]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:25:15.324]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:25:15.334]	    | 	.gitattributes
+[2025-02-21 13:25:15.345]	    | 	.gitignore
+[2025-02-21 13:25:15.355]	    | 	.gitmodules
+[2025-02-21 13:25:15.365]	    | 	.travis.yml
+[2025-02-21 13:25:15.375]	    | 	CHANGELOG.md
+[2025-02-21 13:25:15.384]	    | 	CONTRIBUTING.md
+[2025-02-21 13:25:15.394]	    | 	LICENSE.md
+[2025-02-21 13:25:15.403]	    | 	README.md
+[2025-02-21 13:25:15.413]	    | 	docs/custom_key_bindings.md
+[2025-02-21 13:25:15.424]	    | 	docs/hooks.md
+[2025-02-21 13:25:15.434]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-21 13:25:15.445]	    | 	docs/restoring_bash_history.md
+[2025-02-21 13:25:15.448]	  "tmux-resurrect" download success
+[2025-02-21 13:25:15.455]	    | 	docs/restoring_pane_contents.md
+[2025-02-21 13:25:15.459]	Done.
+
+[2025-02-21 13:25:15.465]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-21 13:25:15.475]	    | 	docs/restoring_programs.md
+[2025-02-21 13:25:15.485]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-21 13:25:15.494]	    | 	docs/save_dir.md
+[2025-02-21 13:25:15.504]	    | 	resurrect.tmux
+[2025-02-21 13:25:15.515]	    | 	run_tests
+[2025-02-21 13:25:15.526]	    | 	save_command_strategies/gdb.sh
+[2025-02-21 13:25:15.535]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-21 13:25:15.546]	    | 	save_command_strategies/pgrep.sh
+[2025-02-21 13:25:15.556]	    | 	save_command_strategies/ps.sh
+[2025-02-21 13:25:15.567]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:25:15.579]	    | 	scripts/helpers.sh
+[2025-02-21 13:25:15.592]	    | 	scripts/process_restore_helpers.sh
+[2025-02-21 13:25:15.605]	    | 	scripts/restore.exp
+[2025-02-21 13:25:15.616]	    | 	scripts/restore.sh
+[2025-02-21 13:25:15.627]	    | 	scripts/save.sh
+[2025-02-21 13:25:15.638]	    | 	scripts/spinner_helpers.sh
+[2025-02-21 13:25:15.648]	    | 	scripts/tmux_spinner.sh
+[2025-02-21 13:25:15.659]	    | 	scripts/variables.sh
+[2025-02-21 13:25:15.670]	    | 	strategies/irb_default_strategy.sh
+[2025-02-21 13:25:15.682]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-21 13:25:15.695]	    | 	strategies/nvim_session.sh
+[2025-02-21 13:25:15.707]	    | 	strategies/vim_session.sh
+[2025-02-21 13:25:15.723]	    | 	tests/fixtures/restore_file.txt
+[2025-02-21 13:25:15.742]	    | 	tests/fixtures/save_file.txt
+[2025-02-21 13:25:15.756]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-21 13:25:15.772]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-21 13:25:15.793]	    | 	tests/helpers/helpers.sh
+[2025-02-21 13:25:15.807]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-21 13:25:15.819]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-21 13:25:15.830]	    | 	tests/run_tests_in_isolation
+[2025-02-21 13:25:15.841]	    | 	tests/test_resurrect_restore.sh
+[2025-02-21 13:25:15.851]	    | 	tests/test_resurrect_save.sh
+[2025-02-21 13:25:15.861]	    | 	video/issue_vid.png
+[2025-02-21 13:25:15.870]	    | 	video/screencast_img.png
+[2025-02-21 13:25:15.880]	    | 	video/script.md
+[2025-02-21 13:25:15.890]	    | Please move or remove them before you merge.
+[2025-02-21 13:25:15.900]	    | Aborting
+[2025-02-21 13:25:15.910]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:25:15.940]	Removing "tmux-copycat"
+[2025-02-21 13:25:15.952]	  "tmux-copycat" clean success
+[2025-02-21 13:25:15.964]	Removing "tmux-cpu"
+[2025-02-21 13:25:15.975]	  "tmux-cpu" clean success
+[2025-02-21 13:25:15.986]	Removing "tmux-resurrect"
+[2025-02-21 13:25:15.997]	  "tmux-resurrect" clean success
+[2025-02-21 13:25:16.008]	Done.
+
+[2025-02-21 13:25:20.013]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:25:20.023]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:25:20.055]	Installing "tmux-copycat"
+[2025-02-21 13:25:20.066]	Installing "tmux-cpu"
+[2025-02-21 13:25:20.078]	Installing "tmux-resurrect"
+[2025-02-21 13:25:20.698]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:25:20.709]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:25:20.739]	Already installed "tmux-copycat"
+[2025-02-21 13:25:20.749]	Already installed "tmux-cpu"
+[2025-02-21 13:25:20.758]	Already installed "tmux-resurrect"
+[2025-02-21 13:25:20.768]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:25:20.789]	Updating all plugins!
+[2025-02-21 13:25:20.799]	
+[2025-02-21 13:25:21.362]	  "tmux-cpu" download success
+[2025-02-21 13:25:21.529]	  "tmux-copycat" download success
+[2025-02-21 13:25:21.747]	  "tmux-cpu" update fail
+[2025-02-21 13:25:21.756]	  "tmux-copycat" update fail
+[2025-02-21 13:25:21.766]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:21.777]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:25:21.788]	    | 	.gitattributes
+[2025-02-21 13:25:21.800]	    | 	.gitignore
+[2025-02-21 13:25:21.811]	    | 	.travis.yml
+[2025-02-21 13:25:21.821]	    | 	CHANGELOG.md
+[2025-02-21 13:25:21.831]	    | 	LICENSE.md
+[2025-02-21 13:25:21.841]	    | 	README.md
+[2025-02-21 13:25:21.851]	    | 	Vagrantfile
+[2025-02-21 13:25:21.861]	    | 	copycat.tmux
+[2025-02-21 13:25:21.871]	    | 	docs/customizations.md
+[2025-02-21 13:25:21.882]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:21.893]	    | 	docs/defining_new_stored_searches.md
+[2025-02-21 13:25:21.904]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-21 13:25:21.916]	    | 	docs/limitations.md
+[2025-02-21 13:25:21.926]	    | 	run-tests
+[2025-02-21 13:25:21.937]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:25:21.947]	    | 	scripts/copycat_generate_results.sh
+[2025-02-21 13:25:21.957]	    | 	scripts/copycat_git_special.sh
+[2025-02-21 13:25:21.967]	    | 	scripts/copycat_jump.sh
+[2025-02-21 13:25:21.977]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:25:21.987]	    | 	.editorconfig
+[2025-02-21 13:25:21.997]	    | 	.github/workflows/check.yml
+[2025-02-21 13:25:22.007]	    | 	.mailmap
+[2025-02-21 13:25:22.017]	    | 	LICENSE
+[2025-02-21 13:25:22.027]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-21 13:25:22.039]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-21 13:25:22.050]	    | 	scripts/copycat_mode_start.sh
+[2025-02-21 13:25:22.062]	    | 	README.md
+[2025-02-21 13:25:22.074]	    | 	cpu.tmux
+[2025-02-21 13:25:22.085]	    | 	screenshots/high_bg.png
+[2025-02-21 13:25:22.097]	    | 	screenshots/high_fg.png
+[2025-02-21 13:25:22.107]	    | 	screenshots/high_icon.png
+[2025-02-21 13:25:22.118]	    | 	scripts/copycat_search.sh
+[2025-02-21 13:25:22.128]	    | 	scripts/helpers.sh
+[2025-02-21 13:25:22.138]	    | 	scripts/stored_search_helpers.sh
+[2025-02-21 13:25:22.149]	    | 	scripts/variables.sh
+[2025-02-21 13:25:22.159]	    | 	test/README.md
+[2025-02-21 13:25:22.170]	    | 	screenshots/low_bg.png
+[2025-02-21 13:25:22.181]	    | 	screenshots/low_fg.png
+[2025-02-21 13:25:22.191]	    | 	screenshots/low_icon.png
+[2025-02-21 13:25:22.202]	    | 	screenshots/medium_bg.png
+[2025-02-21 13:25:22.214]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-21 13:25:22.225]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-21 13:25:22.236]	    | 	test/helpers/expect_helpers.exp
+[2025-02-21 13:25:22.247]	    | 	screenshots/medium_fg.png
+[2025-02-21 13:25:22.257]	    | 	screenshots/medium_icon.png
+[2025-02-21 13:25:22.267]	    | 	scripts/cpu_bg_color.sh
+[2025-02-21 13:25:22.277]	    | 	scripts/cpu_fg_color.sh
+[2025-02-21 13:25:22.288]	    | 	test/helpers/run_tmux.exp
+[2025-02-21 13:25:22.298]	    | 	test/helpers/setup.exp
+[2025-02-21 13:25:22.309]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-21 13:25:22.319]	    | 	scripts/cpu_icon.sh
+[2025-02-21 13:25:22.331]	    | 	scripts/cpu_percentage.sh
+[2025-02-21 13:25:22.343]	    | 	scripts/cpu_temp.sh
+[2025-02-21 13:25:22.356]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-21 13:25:22.369]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-21 13:25:22.382]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-21 13:25:22.395]	    | 	test/helpers/test.exp
+[2025-02-21 13:25:22.408]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-21 13:25:22.420]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-21 13:25:22.432]	    | 	scripts/gpu_bg_color.sh
+[2025-02-21 13:25:22.444]	    | 	scripts/gpu_fg_color.sh
+[2025-02-21 13:25:22.456]	    | 	test/run-tests-within-vm
+[2025-02-21 13:25:22.468]	    | 	test/test_digit_search.exp
+[2025-02-21 13:25:22.480]	    | 	test/test_file_search.exp
+[2025-02-21 13:25:22.493]	    | 	test/test_free_search.exp
+[2025-02-21 13:25:22.506]	    | 	scripts/gpu_icon.sh
+[2025-02-21 13:25:22.518]	    | 	scripts/gpu_percentage.sh
+[2025-02-21 13:25:22.529]	    | 	scripts/gpu_temp.sh
+[2025-02-21 13:25:22.541]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-21 13:25:22.551]	    | 	test/test_git_hash_search.exp
+[2025-02-21 13:25:22.562]	    | 	test/test_git_status_search.exp
+[2025-02-21 13:25:22.572]	    | 	test/test_url_search.exp
+[2025-02-21 13:25:22.583]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-21 13:25:22.593]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-21 13:25:22.604]	    | 	scripts/gram_bg_color.sh
+[2025-02-21 13:25:22.614]	  "tmux-resurrect" download success
+[2025-02-21 13:25:22.614]	    | 	scripts/gram_fg_color.sh
+[2025-02-21 13:25:22.625]	    | 	test/test_user_defined_search.exp
+[2025-02-21 13:25:22.625]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:25:22.636]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-21 13:25:22.647]	Updating all plugins!
+[2025-02-21 13:25:22.648]	    | 	video/README.md
+[2025-02-21 13:25:22.660]	
+[2025-02-21 13:25:22.661]	    | 	video/screencast_img.png
+[2025-02-21 13:25:22.675]	    | 	scripts/gram_icon.sh
+[2025-02-21 13:25:22.688]	    | 	scripts/gram_percentage.sh
+[2025-02-21 13:25:22.702]	    | 	scripts/helpers.sh
+[2025-02-21 13:25:22.714]	    | 	scripts/ram_bg_color.sh
+[2025-02-21 13:25:22.725]	    | 	video/script.md
+[2025-02-21 13:25:22.736]	    | Please move or remove them before you merge.
+[2025-02-21 13:25:22.747]	    | 	scripts/ram_fg_color.sh
+[2025-02-21 13:25:22.758]	    | 	scripts/ram_icon.sh
+[2025-02-21 13:25:22.774]	    | 	scripts/ram_percentage.sh
+[2025-02-21 13:25:22.786]	    | Please move or remove them before you merge.
+[2025-02-21 13:25:22.797]	    | Aborting
+[2025-02-21 13:25:22.808]	    | Aborting
+[2025-02-21 13:25:22.819]	  "tmux-resurrect" update fail
+[2025-02-21 13:25:22.829]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:22.840]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:25:22.851]	    | 	.gitattributes
+[2025-02-21 13:25:22.861]	    | 	.gitignore
+[2025-02-21 13:25:22.873]	    | 	.gitmodules
+[2025-02-21 13:25:22.884]	    | 	.travis.yml
+[2025-02-21 13:25:22.895]	    | 	CHANGELOG.md
+[2025-02-21 13:25:22.906]	    | 	CONTRIBUTING.md
+[2025-02-21 13:25:22.917]	    | 	LICENSE.md
+[2025-02-21 13:25:22.928]	    | 	README.md
+[2025-02-21 13:25:22.939]	    | 	docs/custom_key_bindings.md
+[2025-02-21 13:25:22.949]	    | 	docs/hooks.md
+[2025-02-21 13:25:22.960]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-21 13:25:22.970]	    | 	docs/restoring_bash_history.md
+[2025-02-21 13:25:22.982]	    | 	docs/restoring_pane_contents.md
+[2025-02-21 13:25:22.995]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-21 13:25:23.013]	    | 	docs/restoring_programs.md
+[2025-02-21 13:25:23.031]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-21 13:25:23.050]	    | 	docs/save_dir.md
+[2025-02-21 13:25:23.067]	    | 	resurrect.tmux
+[2025-02-21 13:25:23.081]	    | 	run_tests
+[2025-02-21 13:25:23.094]	    | 	save_command_strategies/gdb.sh
+[2025-02-21 13:25:23.107]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-21 13:25:23.119]	    | 	save_command_strategies/pgrep.sh
+[2025-02-21 13:25:23.129]	    | 	save_command_strategies/ps.sh
+[2025-02-21 13:25:23.139]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:25:23.148]	    | 	scripts/helpers.sh
+[2025-02-21 13:25:23.158]	    | 	scripts/process_restore_helpers.sh
+[2025-02-21 13:25:23.167]	    | 	scripts/restore.exp
+[2025-02-21 13:25:23.177]	    | 	scripts/restore.sh
+[2025-02-21 13:25:23.187]	    | 	scripts/save.sh
+[2025-02-21 13:25:23.200]	    | 	scripts/spinner_helpers.sh
+[2025-02-21 13:25:23.214]	    | 	scripts/tmux_spinner.sh
+[2025-02-21 13:25:23.227]	    | 	scripts/variables.sh
+[2025-02-21 13:25:23.240]	    | 	strategies/irb_default_strategy.sh
+[2025-02-21 13:25:23.253]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-21 13:25:23.265]	    | 	strategies/nvim_session.sh
+[2025-02-21 13:25:23.275]	    | 	strategies/vim_session.sh
+[2025-02-21 13:25:23.286]	    | 	tests/fixtures/restore_file.txt
+[2025-02-21 13:25:23.295]	    | 	tests/fixtures/save_file.txt
+[2025-02-21 13:25:23.304]	  "tmux-copycat" update success
+[2025-02-21 13:25:23.306]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-21 13:25:23.317]	  "tmux-resurrect" update success
+[2025-02-21 13:25:23.319]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-21 13:25:23.331]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:23.332]	    | 	tests/helpers/helpers.sh
+[2025-02-21 13:25:23.345]	    | Already up to date.
+[2025-02-21 13:25:23.347]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-21 13:25:23.359]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:23.361]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-21 13:25:23.373]	    | Already up to date.
+[2025-02-21 13:25:23.374]	    | 	tests/run_tests_in_isolation
+[2025-02-21 13:25:23.385]	  "tmux-cpu" update success
+[2025-02-21 13:25:23.386]	    | 	tests/test_resurrect_restore.sh
+[2025-02-21 13:25:23.397]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:25:23.397]	    | 	tests/test_resurrect_save.sh
+[2025-02-21 13:25:23.409]	    | Already up to date.
+[2025-02-21 13:25:23.409]	    | 	video/issue_vid.png
+[2025-02-21 13:25:23.421]	    | 	video/screencast_img.png
+[2025-02-21 13:25:23.421]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:25:23.432]	    | 	video/script.md
+[2025-02-21 13:25:23.444]	    | Please move or remove them before you merge.
+[2025-02-21 13:25:23.456]	    | Aborting
+[2025-02-21 13:25:23.457]	Done.
+
+[2025-02-21 13:25:23.467]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:25:23.496]	Removing "tmux-copycat"
+[2025-02-21 13:25:23.507]	  "tmux-copycat" clean success
+[2025-02-21 13:25:23.518]	Removing "tmux-cpu"
+[2025-02-21 13:25:23.529]	  "tmux-cpu" clean success
+[2025-02-21 13:25:23.538]	Removing "tmux-resurrect"
+[2025-02-21 13:25:23.548]	  "tmux-resurrect" clean success
+[2025-02-21 13:25:23.558]	Done.
+
+[2025-02-21 13:26:27.922]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:26:27.932]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:26:27.960]	Installing "tmux-copycat"
+[2025-02-21 13:26:27.970]	Installing "tmux-cpu"
+[2025-02-21 13:26:27.980]	Installing "tmux-resurrect"
+[2025-02-21 13:26:28.030]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:26:28.040]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:26:28.070]	Already installed "tmux-copycat"
+[2025-02-21 13:26:28.079]	Already installed "tmux-cpu"
+[2025-02-21 13:26:28.089]	Already installed "tmux-resurrect"
+[2025-02-21 13:26:28.099]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:26:28.118]	Updating all plugins!
+[2025-02-21 13:26:28.128]	
+[2025-02-21 13:26:28.821]	  "tmux-cpu" download success
+[2025-02-21 13:26:29.448]	  "tmux-copycat" download success
+[2025-02-21 13:26:29.519]	  "tmux-resurrect" update fail
+[2025-02-21 13:26:29.532]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:26:29.544]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:26:29.555]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:26:29.566]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:26:29.575]	    | 	.gitattributes
+[2025-02-21 13:26:29.585]	    | 	.gitignore
+[2025-02-21 13:26:29.595]	    | 	.gitmodules
+[2025-02-21 13:26:29.604]	    | 	.travis.yml
+[2025-02-21 13:26:29.614]	    | 	CHANGELOG.md
+[2025-02-21 13:26:29.625]	    | 	CONTRIBUTING.md
+[2025-02-21 13:26:29.635]	    | 	LICENSE.md
+[2025-02-21 13:26:29.645]	    | 	README.md
+[2025-02-21 13:26:29.656]	    | 	docs/custom_key_bindings.md
+[2025-02-21 13:26:29.666]	    | 	docs/hooks.md
+[2025-02-21 13:26:29.676]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-21 13:26:29.686]	    | 	docs/restoring_bash_history.md
+[2025-02-21 13:26:29.695]	    | 	docs/restoring_pane_contents.md
+[2025-02-21 13:26:29.705]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-21 13:26:29.715]	    | 	docs/restoring_programs.md
+[2025-02-21 13:26:29.725]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-21 13:26:29.735]	    | 	docs/save_dir.md
+[2025-02-21 13:26:29.744]	    | 	resurrect.tmux
+[2025-02-21 13:26:29.754]	    | 	run_tests
+[2025-02-21 13:26:29.764]	    | 	save_command_strategies/gdb.sh
+[2025-02-21 13:26:29.774]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-21 13:26:29.785]	    | 	save_command_strategies/pgrep.sh
+[2025-02-21 13:26:29.795]	    | 	save_command_strategies/ps.sh
+[2025-02-21 13:26:29.805]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:26:29.815]	    | 	scripts/helpers.sh
+[2025-02-21 13:26:29.825]	    | 	scripts/process_restore_helpers.sh
+[2025-02-21 13:26:29.835]	    | 	scripts/restore.exp
+[2025-02-21 13:26:29.845]	    | 	scripts/restore.sh
+[2025-02-21 13:26:29.855]	    | 	scripts/save.sh
+[2025-02-21 13:26:29.864]	    | 	scripts/spinner_helpers.sh
+[2025-02-21 13:26:29.874]	    | 	scripts/tmux_spinner.sh
+[2025-02-21 13:26:29.884]	    | 	scripts/variables.sh
+[2025-02-21 13:26:29.894]	    | 	strategies/irb_default_strategy.sh
+[2025-02-21 13:26:29.904]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-21 13:26:29.913]	    | 	strategies/nvim_session.sh
+[2025-02-21 13:26:29.923]	    | 	strategies/vim_session.sh
+[2025-02-21 13:26:29.933]	    | 	tests/fixtures/restore_file.txt
+[2025-02-21 13:26:29.943]	    | 	tests/fixtures/save_file.txt
+[2025-02-21 13:26:29.953]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-21 13:26:29.963]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-21 13:26:29.974]	    | 	tests/helpers/helpers.sh
+[2025-02-21 13:26:29.984]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-21 13:26:29.994]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-21 13:26:30.004]	    | 	tests/run_tests_in_isolation
+[2025-02-21 13:26:30.013]	    | 	tests/test_resurrect_restore.sh
+[2025-02-21 13:26:30.023]	    | 	tests/test_resurrect_save.sh
+[2025-02-21 13:26:30.032]	    | 	video/issue_vid.png
+[2025-02-21 13:26:30.042]	    | 	video/screencast_img.png
+[2025-02-21 13:26:30.052]	    | 	video/script.md
+[2025-02-21 13:26:30.061]	    | Please move or remove them before you merge.
+[2025-02-21 13:26:30.072]	    | Aborting
+[2025-02-21 13:26:30.083]	  "tmux-copycat" update fail
+[2025-02-21 13:26:30.096]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:26:30.107]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-21 13:26:30.119]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:26:30.131]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:26:30.141]	    | 	.gitattributes
+[2025-02-21 13:26:30.151]	    | 	.gitignore
+[2025-02-21 13:26:30.161]	    | 	.travis.yml
+[2025-02-21 13:26:30.171]	    | 	CHANGELOG.md
+[2025-02-21 13:26:30.181]	    | 	LICENSE.md
+[2025-02-21 13:26:30.191]	    | 	README.md
+[2025-02-21 13:26:30.201]	    | 	Vagrantfile
+[2025-02-21 13:26:30.211]	    | 	copycat.tmux
+[2025-02-21 13:26:30.221]	    | 	docs/customizations.md
+[2025-02-21 13:26:30.231]	    | 	docs/defining_new_stored_searches.md
+[2025-02-21 13:26:30.241]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-21 13:26:30.251]	    | 	docs/limitations.md
+[2025-02-21 13:26:30.262]	    | 	run-tests
+[2025-02-21 13:26:30.272]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:26:30.281]	    | 	scripts/copycat_generate_results.sh
+[2025-02-21 13:26:30.291]	    | 	scripts/copycat_git_special.sh
+[2025-02-21 13:26:30.301]	    | 	scripts/copycat_jump.sh
+[2025-02-21 13:26:30.311]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-21 13:26:30.320]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-21 13:26:30.331]	  "tmux-resurrect" download success
+[2025-02-21 13:26:30.331]	    | 	scripts/copycat_mode_start.sh
+[2025-02-21 13:26:30.343]	    | 	scripts/copycat_search.sh
+[2025-02-21 13:26:30.343]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:26:30.355]	    | 	scripts/helpers.sh
+[2025-02-21 13:26:30.366]	Updating all plugins!
+[2025-02-21 13:26:30.366]	    | 	scripts/stored_search_helpers.sh
+[2025-02-21 13:26:30.378]	
+[2025-02-21 13:26:30.378]	    | 	scripts/variables.sh
+[2025-02-21 13:26:30.390]	    | 	test/README.md
+[2025-02-21 13:26:30.403]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-21 13:26:30.415]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-21 13:26:30.426]	    | 	test/helpers/expect_helpers.exp
+[2025-02-21 13:26:30.436]	    | 	test/helpers/run_tmux.exp
+[2025-02-21 13:26:30.447]	    | 	test/helpers/setup.exp
+[2025-02-21 13:26:30.457]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-21 13:26:30.467]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-21 13:26:30.477]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-21 13:26:30.487]	    | 	test/helpers/test.exp
+[2025-02-21 13:26:30.496]	    | 	test/run-tests-within-vm
+[2025-02-21 13:26:30.506]	    | 	test/test_digit_search.exp
+[2025-02-21 13:26:30.516]	    | 	test/test_file_search.exp
+[2025-02-21 13:26:30.526]	    | 	test/test_free_search.exp
+[2025-02-21 13:26:30.536]	    | 	test/test_git_hash_search.exp
+[2025-02-21 13:26:30.547]	    | 	test/test_git_status_search.exp
+[2025-02-21 13:26:30.557]	    | 	test/test_url_search.exp
+[2025-02-21 13:26:30.567]	    | 	test/test_user_defined_search.exp
+[2025-02-21 13:26:30.577]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-21 13:26:30.587]	    | 	video/README.md
+[2025-02-21 13:26:30.597]	    | 	video/screencast_img.png
+[2025-02-21 13:26:30.609]	    | 	video/script.md
+[2025-02-21 13:26:30.618]	    | Please move or remove them before you merge.
+[2025-02-21 13:26:30.629]	    | Aborting
+[2025-02-21 13:26:30.639]	  "tmux-cpu" update fail
+[2025-02-21 13:26:30.649]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:26:30.660]	    | From https://github.com/tmux-plugins/tmux-cpu
+[2025-02-21 13:26:30.671]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:26:30.682]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:26:30.693]	    | 	.editorconfig
+[2025-02-21 13:26:30.704]	    | 	.github/workflows/check.yml
+[2025-02-21 13:26:30.715]	    | 	.mailmap
+[2025-02-21 13:26:30.725]	    | 	LICENSE
+[2025-02-21 13:26:30.736]	    | 	README.md
+[2025-02-21 13:26:30.746]	    | 	cpu.tmux
+[2025-02-21 13:26:30.757]	    | 	screenshots/high_bg.png
+[2025-02-21 13:26:30.769]	    | 	screenshots/high_fg.png
+[2025-02-21 13:26:30.780]	    | 	screenshots/high_icon.png
+[2025-02-21 13:26:30.791]	    | 	screenshots/low_bg.png
+[2025-02-21 13:26:30.802]	    | 	screenshots/low_fg.png
+[2025-02-21 13:26:30.812]	    | 	screenshots/low_icon.png
+[2025-02-21 13:26:30.822]	    | 	screenshots/medium_bg.png
+[2025-02-21 13:26:30.832]	    | 	screenshots/medium_fg.png
+[2025-02-21 13:26:30.842]	    | 	screenshots/medium_icon.png
+[2025-02-21 13:26:30.853]	    | 	scripts/cpu_bg_color.sh
+[2025-02-21 13:26:30.864]	    | 	scripts/cpu_fg_color.sh
+[2025-02-21 13:26:30.874]	    | 	scripts/cpu_icon.sh
+[2025-02-21 13:26:30.885]	    | 	scripts/cpu_percentage.sh
+[2025-02-21 13:26:30.895]	    | 	scripts/cpu_temp.sh
+[2025-02-21 13:26:30.905]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-21 13:26:30.914]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-21 13:26:30.924]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-21 13:26:30.934]	    | 	scripts/gpu_bg_color.sh
+[2025-02-21 13:26:30.944]	    | 	scripts/gpu_fg_color.sh
+[2025-02-21 13:26:30.955]	    | 	scripts/gpu_icon.sh
+[2025-02-21 13:26:30.966]	    | 	scripts/gpu_percentage.sh
+[2025-02-21 13:26:30.977]	    | 	scripts/gpu_temp.sh
+[2025-02-21 13:26:30.987]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-21 13:26:30.997]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-21 13:26:31.007]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-21 13:26:31.017]	    | 	scripts/gram_bg_color.sh
+[2025-02-21 13:26:31.027]	    | 	scripts/gram_fg_color.sh
+[2025-02-21 13:26:31.038]	    | 	scripts/gram_icon.sh
+[2025-02-21 13:26:31.048]	    | 	scripts/gram_percentage.sh
+[2025-02-21 13:26:31.061]	    | 	scripts/helpers.sh
+[2025-02-21 13:26:31.077]	    | 	scripts/ram_bg_color.sh
+[2025-02-21 13:26:31.090]	    | 	scripts/ram_fg_color.sh
+[2025-02-21 13:26:31.103]	    | 	scripts/ram_icon.sh
+[2025-02-21 13:26:31.116]	    | 	scripts/ram_percentage.sh
+[2025-02-21 13:26:31.128]	    | Please move or remove them before you merge.
+[2025-02-21 13:26:31.141]	    | Aborting
+[2025-02-21 13:26:31.153]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:26:31.187]	Done.
+
+[2025-02-21 13:26:31.529]	  "tmux-cpu" update success
+[2025-02-21 13:26:31.539]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:26:31.549]	    | Already up to date.
+[2025-02-21 13:26:33.751]	  "tmux-copycat" update success
+[2025-02-21 13:26:33.763]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:26:33.776]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-21 13:26:33.788]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-21 13:26:33.799]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-21 13:26:33.811]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-21 13:26:33.823]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-21 13:26:33.836]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-21 13:26:33.849]	    |  * [new tag]         v0.0.6     -> v0.0.6
+[2025-02-21 13:26:33.861]	    |  * [new tag]         v0.0.7     -> v0.0.7
+[2025-02-21 13:26:33.873]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-21 13:26:33.884]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-21 13:26:33.895]	    |  * [new tag]         v1.1.0     -> v1.1.0
+[2025-02-21 13:26:33.904]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-21 13:26:33.914]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-21 13:26:33.923]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-21 13:26:33.933]	    | Already up to date.
+[2025-02-21 13:26:34.373]	  "tmux-resurrect" update success
+[2025-02-21 13:26:34.382]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:26:34.392]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:26:34.401]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-21 13:26:34.411]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-21 13:26:34.421]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-21 13:26:34.431]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-21 13:26:34.440]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-21 13:26:34.450]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-21 13:26:34.460]	    |  * [new tag]         v0.2.0     -> v0.2.0
+[2025-02-21 13:26:34.470]	    |  * [new tag]         v0.3.0     -> v0.3.0
+[2025-02-21 13:26:34.480]	    |  * [new tag]         v0.4.0     -> v0.4.0
+[2025-02-21 13:26:34.490]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-21 13:26:34.501]	    |  * [new tag]         v1.2.0     -> v1.2.0
+[2025-02-21 13:26:34.510]	    |  * [new tag]         v1.2.1     -> v1.2.1
+[2025-02-21 13:26:34.519]	    |  * [new tag]         v1.3.0     -> v1.3.0
+[2025-02-21 13:26:34.529]	    |  * [new tag]         v1.4.0     -> v1.4.0
+[2025-02-21 13:26:34.538]	    |  * [new tag]         v1.5.0     -> v1.5.0
+[2025-02-21 13:26:34.548]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-21 13:26:34.557]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-21 13:26:34.567]	    |  * [new tag]         v2.2.0     -> v2.2.0
+[2025-02-21 13:26:34.577]	    |  * [new tag]         v2.4.0     -> v2.4.0
+[2025-02-21 13:26:34.587]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-21 13:26:34.596]	    |  * [new tag]         v4.0.0     -> v4.0.0
+[2025-02-21 13:26:34.607]	    | Already up to date.
+[2025-02-21 13:26:34.619]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:26:34.646]	Removing "tmux-copycat"
+[2025-02-21 13:26:34.656]	  "tmux-copycat" clean success
+[2025-02-21 13:26:34.666]	Removing "tmux-cpu"
+[2025-02-21 13:26:34.676]	  "tmux-cpu" clean success
+[2025-02-21 13:26:34.686]	Removing "tmux-resurrect"
+[2025-02-21 13:26:34.697]	  "tmux-resurrect" clean success
+[2025-02-21 13:26:34.708]	Done.
+
+[2025-02-21 13:27:22.179]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:27:22.189]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:27:22.218]	Installing "tmux-copycat"
+[2025-02-21 13:27:22.229]	Installing "tmux-cpu"
+[2025-02-21 13:27:22.241]	Installing "tmux-resurrect"
+[2025-02-21 13:27:22.502]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:27:22.512]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:27:22.542]	Already installed "tmux-copycat"
+[2025-02-21 13:27:22.553]	Already installed "tmux-cpu"
+[2025-02-21 13:27:22.565]	Already installed "tmux-resurrect"
+[2025-02-21 13:27:22.579]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:27:22.602]	Updating all plugins!
+[2025-02-21 13:27:22.612]	
+[2025-02-21 13:27:23.225]	  "tmux-cpu" download success
+[2025-02-21 13:27:23.317]	  "tmux-cpu" update fail
+[2025-02-21 13:27:23.327]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:27:23.336]	    | From https://github.com/tmux-plugins/tmux-cpu
+[2025-02-21 13:27:23.346]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:27:23.353]	  "tmux-copycat" download success
+[2025-02-21 13:27:23.355]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:27:23.365]	    | 	.editorconfig
+[2025-02-21 13:27:23.375]	    | 	.github/workflows/check.yml
+[2025-02-21 13:27:23.386]	    | 	.mailmap
+[2025-02-21 13:27:23.396]	    | 	LICENSE
+[2025-02-21 13:27:23.406]	    | 	README.md
+[2025-02-21 13:27:23.417]	    | 	cpu.tmux
+[2025-02-21 13:27:23.427]	    | 	screenshots/high_bg.png
+[2025-02-21 13:27:23.437]	    | 	screenshots/high_fg.png
+[2025-02-21 13:27:23.447]	    | 	screenshots/high_icon.png
+[2025-02-21 13:27:23.457]	    | 	screenshots/low_bg.png
+[2025-02-21 13:27:23.467]	    | 	screenshots/low_fg.png
+[2025-02-21 13:27:23.477]	    | 	screenshots/low_icon.png
+[2025-02-21 13:27:23.487]	    | 	screenshots/medium_bg.png
+[2025-02-21 13:27:23.497]	    | 	screenshots/medium_fg.png
+[2025-02-21 13:27:23.506]	    | 	screenshots/medium_icon.png
+[2025-02-21 13:27:23.516]	    | 	scripts/cpu_bg_color.sh
+[2025-02-21 13:27:23.527]	    | 	scripts/cpu_fg_color.sh
+[2025-02-21 13:27:23.538]	    | 	scripts/cpu_icon.sh
+[2025-02-21 13:27:23.550]	    | 	scripts/cpu_percentage.sh
+[2025-02-21 13:27:23.561]	    | 	scripts/cpu_temp.sh
+[2025-02-21 13:27:23.572]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-21 13:27:23.583]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-21 13:27:23.594]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-21 13:27:23.604]	    | 	scripts/gpu_bg_color.sh
+[2025-02-21 13:27:23.615]	    | 	scripts/gpu_fg_color.sh
+[2025-02-21 13:27:23.625]	    | 	scripts/gpu_icon.sh
+[2025-02-21 13:27:23.636]	    | 	scripts/gpu_percentage.sh
+[2025-02-21 13:27:23.646]	    | 	scripts/gpu_temp.sh
+[2025-02-21 13:27:23.656]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-21 13:27:23.666]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-21 13:27:23.676]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-21 13:27:23.686]	    | 	scripts/gram_bg_color.sh
+[2025-02-21 13:27:23.696]	    | 	scripts/gram_fg_color.sh
+[2025-02-21 13:27:23.707]	    | 	scripts/gram_icon.sh
+[2025-02-21 13:27:23.718]	    | 	scripts/gram_percentage.sh
+[2025-02-21 13:27:23.728]	    | 	scripts/helpers.sh
+[2025-02-21 13:27:23.739]	    | 	scripts/ram_bg_color.sh
+[2025-02-21 13:27:23.749]	    | 	scripts/ram_fg_color.sh
+[2025-02-21 13:27:23.759]	    | 	scripts/ram_icon.sh
+[2025-02-21 13:27:23.769]	    | 	scripts/ram_percentage.sh
+[2025-02-21 13:27:23.779]	    | Please move or remove them before you merge.
+[2025-02-21 13:27:23.789]	    | Aborting
+[2025-02-21 13:27:23.799]	  "tmux-copycat" update fail
+[2025-02-21 13:27:23.809]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:27:23.820]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-21 13:27:23.831]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:27:23.841]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:27:23.850]	    | 	.gitattributes
+[2025-02-21 13:27:23.860]	    | 	.gitignore
+[2025-02-21 13:27:23.869]	    | 	.travis.yml
+[2025-02-21 13:27:23.879]	    | 	CHANGELOG.md
+[2025-02-21 13:27:23.888]	    | 	LICENSE.md
+[2025-02-21 13:27:23.898]	    | 	README.md
+[2025-02-21 13:27:23.908]	    | 	Vagrantfile
+[2025-02-21 13:27:23.918]	    | 	copycat.tmux
+[2025-02-21 13:27:23.928]	    | 	docs/customizations.md
+[2025-02-21 13:27:23.938]	    | 	docs/defining_new_stored_searches.md
+[2025-02-21 13:27:23.948]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-21 13:27:23.958]	    | 	docs/limitations.md
+[2025-02-21 13:27:23.969]	    | 	run-tests
+[2025-02-21 13:27:23.979]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:27:23.989]	    | 	scripts/copycat_generate_results.sh
+[2025-02-21 13:27:23.998]	    | 	scripts/copycat_git_special.sh
+[2025-02-21 13:27:24.008]	    | 	scripts/copycat_jump.sh
+[2025-02-21 13:27:24.018]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-21 13:27:24.028]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-21 13:27:24.039]	    | 	scripts/copycat_mode_start.sh
+[2025-02-21 13:27:24.049]	    | 	scripts/copycat_search.sh
+[2025-02-21 13:27:24.060]	    | 	scripts/helpers.sh
+[2025-02-21 13:27:24.071]	    | 	scripts/stored_search_helpers.sh
+[2025-02-21 13:27:24.082]	    | 	scripts/variables.sh
+[2025-02-21 13:27:24.095]	    | 	test/README.md
+[2025-02-21 13:27:24.106]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-21 13:27:24.116]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-21 13:27:24.126]	    | 	test/helpers/expect_helpers.exp
+[2025-02-21 13:27:24.135]	    | 	test/helpers/run_tmux.exp
+[2025-02-21 13:27:24.145]	    | 	test/helpers/setup.exp
+[2025-02-21 13:27:24.155]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-21 13:27:24.165]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-21 13:27:24.174]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-21 13:27:24.185]	    | 	test/helpers/test.exp
+[2025-02-21 13:27:24.194]	    | 	test/run-tests-within-vm
+[2025-02-21 13:27:24.205]	    | 	test/test_digit_search.exp
+[2025-02-21 13:27:24.215]	    | 	test/test_file_search.exp
+[2025-02-21 13:27:24.226]	    | 	test/test_free_search.exp
+[2025-02-21 13:27:24.236]	    | 	test/test_git_hash_search.exp
+[2025-02-21 13:27:24.246]	    | 	test/test_git_status_search.exp
+[2025-02-21 13:27:24.256]	    | 	test/test_url_search.exp
+[2025-02-21 13:27:24.266]	    | 	test/test_user_defined_search.exp
+[2025-02-21 13:27:24.277]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-21 13:27:24.287]	    | 	video/README.md
+[2025-02-21 13:27:24.298]	    | 	video/screencast_img.png
+[2025-02-21 13:27:24.308]	    | 	video/script.md
+[2025-02-21 13:27:24.319]	    | Please move or remove them before you merge.
+[2025-02-21 13:27:24.329]	    | Aborting
+[2025-02-21 13:27:24.339]	  "tmux-resurrect" update fail
+[2025-02-21 13:27:24.348]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:27:24.358]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:27:24.368]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:27:24.379]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:27:24.389]	    | 	.gitattributes
+[2025-02-21 13:27:24.400]	    | 	.gitignore
+[2025-02-21 13:27:24.412]	    | 	.gitmodules
+[2025-02-21 13:27:24.425]	    | 	.travis.yml
+[2025-02-21 13:27:24.437]	    | 	CHANGELOG.md
+[2025-02-21 13:27:24.449]	    | 	CONTRIBUTING.md
+[2025-02-21 13:27:24.460]	    | 	LICENSE.md
+[2025-02-21 13:27:24.470]	    | 	README.md
+[2025-02-21 13:27:24.480]	    | 	docs/custom_key_bindings.md
+[2025-02-21 13:27:24.490]	    | 	docs/hooks.md
+[2025-02-21 13:27:24.500]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-21 13:27:24.510]	    | 	docs/restoring_bash_history.md
+[2025-02-21 13:27:24.519]	    | 	docs/restoring_pane_contents.md
+[2025-02-21 13:27:24.529]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-21 13:27:24.539]	    | 	docs/restoring_programs.md
+[2025-02-21 13:27:24.549]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-21 13:27:24.559]	    | 	docs/save_dir.md
+[2025-02-21 13:27:24.569]	    | 	resurrect.tmux
+[2025-02-21 13:27:24.580]	    | 	run_tests
+[2025-02-21 13:27:24.589]	    | 	save_command_strategies/gdb.sh
+[2025-02-21 13:27:24.599]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-21 13:27:24.609]	    | 	save_command_strategies/pgrep.sh
+[2025-02-21 13:27:24.619]	    | 	save_command_strategies/ps.sh
+[2025-02-21 13:27:24.629]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:27:24.633]	  "tmux-resurrect" download success
+[2025-02-21 13:27:24.640]	    | 	scripts/helpers.sh
+[2025-02-21 13:27:24.643]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:27:24.650]	    | 	scripts/process_restore_helpers.sh
+[2025-02-21 13:27:24.661]	    | 	scripts/restore.exp
+[2025-02-21 13:27:24.664]	Updating all plugins!
+[2025-02-21 13:27:24.672]	    | 	scripts/restore.sh
+[2025-02-21 13:27:24.676]	
+[2025-02-21 13:27:24.685]	    | 	scripts/save.sh
+[2025-02-21 13:27:24.699]	    | 	scripts/spinner_helpers.sh
+[2025-02-21 13:27:24.713]	    | 	scripts/tmux_spinner.sh
+[2025-02-21 13:27:24.726]	    | 	scripts/variables.sh
+[2025-02-21 13:27:24.741]	    | 	strategies/irb_default_strategy.sh
+[2025-02-21 13:27:24.754]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-21 13:27:24.767]	    | 	strategies/nvim_session.sh
+[2025-02-21 13:27:24.779]	    | 	strategies/vim_session.sh
+[2025-02-21 13:27:24.791]	    | 	tests/fixtures/restore_file.txt
+[2025-02-21 13:27:24.802]	    | 	tests/fixtures/save_file.txt
+[2025-02-21 13:27:24.813]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-21 13:27:24.824]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-21 13:27:24.836]	    | 	tests/helpers/helpers.sh
+[2025-02-21 13:27:24.847]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-21 13:27:24.858]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-21 13:27:24.869]	    | 	tests/run_tests_in_isolation
+[2025-02-21 13:27:24.879]	    | 	tests/test_resurrect_restore.sh
+[2025-02-21 13:27:24.890]	    | 	tests/test_resurrect_save.sh
+[2025-02-21 13:27:24.901]	    | 	video/issue_vid.png
+[2025-02-21 13:27:24.912]	    | 	video/screencast_img.png
+[2025-02-21 13:27:24.924]	    | 	video/script.md
+[2025-02-21 13:27:24.935]	    | Please move or remove them before you merge.
+[2025-02-21 13:27:24.946]	    | Aborting
+[2025-02-21 13:27:24.957]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:27:24.991]	Done.
+
+[2025-02-21 13:27:25.436]	  "tmux-cpu" update success
+[2025-02-21 13:27:25.446]	  "tmux-copycat" update success
+[2025-02-21 13:27:25.456]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:27:25.466]	    | Already up to date.
+[2025-02-21 13:27:25.477]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:27:25.487]	    | Already up to date.
+[2025-02-21 13:27:26.359]	  "tmux-resurrect" update success
+[2025-02-21 13:27:26.369]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:27:26.378]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:27:26.388]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-21 13:27:26.398]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-21 13:27:26.407]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-21 13:27:26.416]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-21 13:27:26.426]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-21 13:27:26.436]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-21 13:27:26.446]	    |  * [new tag]         v0.2.0     -> v0.2.0
+[2025-02-21 13:27:26.456]	    |  * [new tag]         v0.3.0     -> v0.3.0
+[2025-02-21 13:27:26.465]	    |  * [new tag]         v0.4.0     -> v0.4.0
+[2025-02-21 13:27:26.476]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-21 13:27:26.488]	    |  * [new tag]         v1.2.0     -> v1.2.0
+[2025-02-21 13:27:26.500]	    |  * [new tag]         v1.2.1     -> v1.2.1
+[2025-02-21 13:27:26.510]	    |  * [new tag]         v1.3.0     -> v1.3.0
+[2025-02-21 13:27:26.520]	    |  * [new tag]         v1.4.0     -> v1.4.0
+[2025-02-21 13:27:26.529]	    |  * [new tag]         v1.5.0     -> v1.5.0
+[2025-02-21 13:27:26.539]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-21 13:27:26.549]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-21 13:27:26.559]	    |  * [new tag]         v2.2.0     -> v2.2.0
+[2025-02-21 13:27:26.569]	    |  * [new tag]         v2.4.0     -> v2.4.0
+[2025-02-21 13:27:26.579]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-21 13:27:26.589]	    |  * [new tag]         v4.0.0     -> v4.0.0
+[2025-02-21 13:27:26.599]	    | Already up to date.
+[2025-02-21 13:27:26.610]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:27:26.637]	Removing "tmux-copycat"
+[2025-02-21 13:27:26.647]	  "tmux-copycat" clean success
+[2025-02-21 13:27:26.658]	Removing "tmux-cpu"
+[2025-02-21 13:27:26.668]	  "tmux-cpu" clean success
+[2025-02-21 13:27:26.678]	Removing "tmux-resurrect"
+[2025-02-21 13:27:26.688]	  "tmux-resurrect" clean success
+[2025-02-21 13:27:26.699]	Done.
+
+[2025-02-21 13:29:27.148]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:29:27.159]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:29:27.188]	Installing "tmux-copycat"
+[2025-02-21 13:29:27.200]	Installing "tmux-cpu"
+[2025-02-21 13:29:27.212]	Installing "tmux-resurrect"
+[2025-02-21 13:29:27.369]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:29:27.379]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:29:27.409]	Already installed "tmux-copycat"
+[2025-02-21 13:29:27.419]	Already installed "tmux-cpu"
+[2025-02-21 13:29:27.428]	Already installed "tmux-resurrect"
+[2025-02-21 13:29:27.438]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:29:27.460]	Updating all plugins!
+[2025-02-21 13:29:27.470]	
+[2025-02-21 13:29:27.975]	  "tmux-cpu" download success
+[2025-02-21 13:29:27.981]	  "tmux-cpu" update fail
+[2025-02-21 13:29:27.991]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:29:28.001]	    | From https://github.com/tmux-plugins/tmux-cpu
+[2025-02-21 13:29:28.010]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:29:28.020]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:29:28.030]	    | 	.editorconfig
+[2025-02-21 13:29:28.043]	    | 	.github/workflows/check.yml
+[2025-02-21 13:29:28.060]	    | 	.mailmap
+[2025-02-21 13:29:28.086]	    | 	LICENSE
+[2025-02-21 13:29:28.106]	    | 	README.md
+[2025-02-21 13:29:28.122]	    | 	cpu.tmux
+[2025-02-21 13:29:28.137]	    | 	screenshots/high_bg.png
+[2025-02-21 13:29:28.141]	  "tmux-copycat" download success
+[2025-02-21 13:29:28.153]	    | 	screenshots/high_fg.png
+[2025-02-21 13:29:28.165]	    | 	screenshots/high_icon.png
+[2025-02-21 13:29:28.176]	    | 	screenshots/low_bg.png
+[2025-02-21 13:29:28.186]	    | 	screenshots/low_fg.png
+[2025-02-21 13:29:28.198]	    | 	screenshots/low_icon.png
+[2025-02-21 13:29:28.208]	    | 	screenshots/medium_bg.png
+[2025-02-21 13:29:28.218]	    | 	screenshots/medium_fg.png
+[2025-02-21 13:29:28.229]	    | 	screenshots/medium_icon.png
+[2025-02-21 13:29:28.240]	    | 	scripts/cpu_bg_color.sh
+[2025-02-21 13:29:28.250]	    | 	scripts/cpu_fg_color.sh
+[2025-02-21 13:29:28.260]	    | 	scripts/cpu_icon.sh
+[2025-02-21 13:29:28.270]	    | 	scripts/cpu_percentage.sh
+[2025-02-21 13:29:28.281]	    | 	scripts/cpu_temp.sh
+[2025-02-21 13:29:28.293]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-21 13:29:28.304]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-21 13:29:28.315]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-21 13:29:28.326]	    | 	scripts/gpu_bg_color.sh
+[2025-02-21 13:29:28.337]	    | 	scripts/gpu_fg_color.sh
+[2025-02-21 13:29:28.348]	    | 	scripts/gpu_icon.sh
+[2025-02-21 13:29:28.360]	    | 	scripts/gpu_percentage.sh
+[2025-02-21 13:29:28.371]	    | 	scripts/gpu_temp.sh
+[2025-02-21 13:29:28.382]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-21 13:29:28.393]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-21 13:29:28.403]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-21 13:29:28.414]	    | 	scripts/gram_bg_color.sh
+[2025-02-21 13:29:28.424]	    | 	scripts/gram_fg_color.sh
+[2025-02-21 13:29:28.434]	    | 	scripts/gram_icon.sh
+[2025-02-21 13:29:28.445]	    | 	scripts/gram_percentage.sh
+[2025-02-21 13:29:28.455]	    | 	scripts/helpers.sh
+[2025-02-21 13:29:28.464]	    | 	scripts/ram_bg_color.sh
+[2025-02-21 13:29:28.474]	    | 	scripts/ram_fg_color.sh
+[2025-02-21 13:29:28.484]	    | 	scripts/ram_icon.sh
+[2025-02-21 13:29:28.493]	    | 	scripts/ram_percentage.sh
+[2025-02-21 13:29:28.503]	    | Please move or remove them before you merge.
+[2025-02-21 13:29:28.513]	    | Aborting
+[2025-02-21 13:29:28.522]	  "tmux-copycat" update fail
+[2025-02-21 13:29:28.532]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:29:28.543]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-21 13:29:28.553]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:29:28.562]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:29:28.572]	    | 	.gitattributes
+[2025-02-21 13:29:28.582]	    | 	.gitignore
+[2025-02-21 13:29:28.592]	    | 	.travis.yml
+[2025-02-21 13:29:28.602]	    | 	CHANGELOG.md
+[2025-02-21 13:29:28.612]	    | 	LICENSE.md
+[2025-02-21 13:29:28.623]	    | 	README.md
+[2025-02-21 13:29:28.635]	    | 	Vagrantfile
+[2025-02-21 13:29:28.645]	    | 	copycat.tmux
+[2025-02-21 13:29:28.656]	    | 	docs/customizations.md
+[2025-02-21 13:29:28.667]	    | 	docs/defining_new_stored_searches.md
+[2025-02-21 13:29:28.677]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-21 13:29:28.687]	    | 	docs/limitations.md
+[2025-02-21 13:29:28.696]	    | 	run-tests
+[2025-02-21 13:29:28.706]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:29:28.717]	    | 	scripts/copycat_generate_results.sh
+[2025-02-21 13:29:28.728]	    | 	scripts/copycat_git_special.sh
+[2025-02-21 13:29:28.740]	    | 	scripts/copycat_jump.sh
+[2025-02-21 13:29:28.751]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-21 13:29:28.762]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-21 13:29:28.772]	    | 	scripts/copycat_mode_start.sh
+[2025-02-21 13:29:28.783]	    | 	scripts/copycat_search.sh
+[2025-02-21 13:29:28.792]	    | 	scripts/helpers.sh
+[2025-02-21 13:29:28.802]	    | 	scripts/stored_search_helpers.sh
+[2025-02-21 13:29:28.812]	    | 	scripts/variables.sh
+[2025-02-21 13:29:28.823]	    | 	test/README.md
+[2025-02-21 13:29:28.833]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-21 13:29:28.843]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-21 13:29:28.853]	    | 	test/helpers/expect_helpers.exp
+[2025-02-21 13:29:28.862]	    | 	test/helpers/run_tmux.exp
+[2025-02-21 13:29:28.872]	    | 	test/helpers/setup.exp
+[2025-02-21 13:29:28.882]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-21 13:29:28.892]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-21 13:29:28.902]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-21 13:29:28.912]	    | 	test/helpers/test.exp
+[2025-02-21 13:29:28.921]	    | 	test/run-tests-within-vm
+[2025-02-21 13:29:28.931]	    | 	test/test_digit_search.exp
+[2025-02-21 13:29:28.940]	    | 	test/test_file_search.exp
+[2025-02-21 13:29:28.949]	    | 	test/test_free_search.exp
+[2025-02-21 13:29:28.959]	    | 	test/test_git_hash_search.exp
+[2025-02-21 13:29:28.968]	    | 	test/test_git_status_search.exp
+[2025-02-21 13:29:28.978]	    | 	test/test_url_search.exp
+[2025-02-21 13:29:28.987]	    | 	test/test_user_defined_search.exp
+[2025-02-21 13:29:28.997]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-21 13:29:29.007]	    | 	video/README.md
+[2025-02-21 13:29:29.018]	    | 	video/screencast_img.png
+[2025-02-21 13:29:29.029]	    | 	video/script.md
+[2025-02-21 13:29:29.040]	    | Please move or remove them before you merge.
+[2025-02-21 13:29:29.050]	    | Aborting
+[2025-02-21 13:29:29.059]	  "tmux-resurrect" update fail
+[2025-02-21 13:29:29.063]	  "tmux-resurrect" download success
+[2025-02-21 13:29:29.069]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:29:29.073]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:29:29.079]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:29:29.090]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:29:29.093]	Updating all plugins!
+[2025-02-21 13:29:29.101]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:29:29.104]	
+[2025-02-21 13:29:29.112]	    | 	.gitattributes
+[2025-02-21 13:29:29.124]	    | 	.gitignore
+[2025-02-21 13:29:29.136]	    | 	.gitmodules
+[2025-02-21 13:29:29.147]	    | 	.travis.yml
+[2025-02-21 13:29:29.158]	    | 	CHANGELOG.md
+[2025-02-21 13:29:29.169]	    | 	CONTRIBUTING.md
+[2025-02-21 13:29:29.181]	    | 	LICENSE.md
+[2025-02-21 13:29:29.192]	    | 	README.md
+[2025-02-21 13:29:29.205]	    | 	docs/custom_key_bindings.md
+[2025-02-21 13:29:29.217]	    | 	docs/hooks.md
+[2025-02-21 13:29:29.229]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-21 13:29:29.240]	    | 	docs/restoring_bash_history.md
+[2025-02-21 13:29:29.250]	    | 	docs/restoring_pane_contents.md
+[2025-02-21 13:29:29.259]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-21 13:29:29.269]	    | 	docs/restoring_programs.md
+[2025-02-21 13:29:29.279]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-21 13:29:29.289]	    | 	docs/save_dir.md
+[2025-02-21 13:29:29.300]	    | 	resurrect.tmux
+[2025-02-21 13:29:29.311]	    | 	run_tests
+[2025-02-21 13:29:29.322]	    | 	save_command_strategies/gdb.sh
+[2025-02-21 13:29:29.332]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-21 13:29:29.342]	    | 	save_command_strategies/pgrep.sh
+[2025-02-21 13:29:29.353]	    | 	save_command_strategies/ps.sh
+[2025-02-21 13:29:29.364]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:29:29.374]	    | 	scripts/helpers.sh
+[2025-02-21 13:29:29.386]	    | 	scripts/process_restore_helpers.sh
+[2025-02-21 13:29:29.398]	    | 	scripts/restore.exp
+[2025-02-21 13:29:29.410]	    | 	scripts/restore.sh
+[2025-02-21 13:29:29.421]	    | 	scripts/save.sh
+[2025-02-21 13:29:29.432]	    | 	scripts/spinner_helpers.sh
+[2025-02-21 13:29:29.442]	    | 	scripts/tmux_spinner.sh
+[2025-02-21 13:29:29.452]	    | 	scripts/variables.sh
+[2025-02-21 13:29:29.462]	    | 	strategies/irb_default_strategy.sh
+[2025-02-21 13:29:29.473]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-21 13:29:29.483]	    | 	strategies/nvim_session.sh
+[2025-02-21 13:29:29.494]	    | 	strategies/vim_session.sh
+[2025-02-21 13:29:29.504]	    | 	tests/fixtures/restore_file.txt
+[2025-02-21 13:29:29.514]	    | 	tests/fixtures/save_file.txt
+[2025-02-21 13:29:29.524]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-21 13:29:29.533]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-21 13:29:29.543]	    | 	tests/helpers/helpers.sh
+[2025-02-21 13:29:29.552]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-21 13:29:29.562]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-21 13:29:29.572]	    | 	tests/run_tests_in_isolation
+[2025-02-21 13:29:29.582]	    | 	tests/test_resurrect_restore.sh
+[2025-02-21 13:29:29.592]	    | 	tests/test_resurrect_save.sh
+[2025-02-21 13:29:29.601]	  "tmux-cpu" update success
+[2025-02-21 13:29:29.605]	    | 	video/issue_vid.png
+[2025-02-21 13:29:29.615]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:29:29.619]	    | 	video/screencast_img.png
+[2025-02-21 13:29:29.635]	    | Already up to date.
+[2025-02-21 13:29:29.637]	    | 	video/script.md
+[2025-02-21 13:29:29.653]	    | Please move or remove them before you merge.
+[2025-02-21 13:29:29.671]	    | Aborting
+[2025-02-21 13:29:29.688]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:29:29.730]	Done.
+
+[2025-02-21 13:29:30.238]	  "tmux-copycat" update success
+[2025-02-21 13:29:30.248]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:29:30.257]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-21 13:29:30.267]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-21 13:29:30.277]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-21 13:29:30.287]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-21 13:29:30.297]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-21 13:29:30.307]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-21 13:29:30.317]	    |  * [new tag]         v0.0.6     -> v0.0.6
+[2025-02-21 13:29:30.327]	    |  * [new tag]         v0.0.7     -> v0.0.7
+[2025-02-21 13:29:30.337]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-21 13:29:30.348]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-21 13:29:30.359]	    |  * [new tag]         v1.1.0     -> v1.1.0
+[2025-02-21 13:29:30.369]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-21 13:29:30.380]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-21 13:29:30.390]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-21 13:29:30.400]	    | Already up to date.
+[2025-02-21 13:29:30.411]	  "tmux-resurrect" update success
+[2025-02-21 13:29:30.422]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:29:30.432]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:29:30.442]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-21 13:29:30.452]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-21 13:29:30.462]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-21 13:29:30.472]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-21 13:29:30.482]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-21 13:29:30.492]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-21 13:29:30.502]	    |  * [new tag]         v0.2.0     -> v0.2.0
+[2025-02-21 13:29:30.512]	    |  * [new tag]         v0.3.0     -> v0.3.0
+[2025-02-21 13:29:30.521]	    |  * [new tag]         v0.4.0     -> v0.4.0
+[2025-02-21 13:29:30.531]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-21 13:29:30.541]	    |  * [new tag]         v1.2.0     -> v1.2.0
+[2025-02-21 13:29:30.551]	    |  * [new tag]         v1.2.1     -> v1.2.1
+[2025-02-21 13:29:30.561]	    |  * [new tag]         v1.3.0     -> v1.3.0
+[2025-02-21 13:29:30.571]	    |  * [new tag]         v1.4.0     -> v1.4.0
+[2025-02-21 13:29:30.582]	    |  * [new tag]         v1.5.0     -> v1.5.0
+[2025-02-21 13:29:30.592]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-21 13:29:30.602]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-21 13:29:30.613]	    |  * [new tag]         v2.2.0     -> v2.2.0
+[2025-02-21 13:29:30.624]	    |  * [new tag]         v2.4.0     -> v2.4.0
+[2025-02-21 13:29:30.635]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-21 13:29:30.645]	    |  * [new tag]         v4.0.0     -> v4.0.0
+[2025-02-21 13:29:30.655]	    | Already up to date.
+[2025-02-21 13:29:30.666]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:29:30.693]	Removing "tmux-copycat"
+[2025-02-21 13:29:30.703]	  "tmux-copycat" clean success
+[2025-02-21 13:29:30.714]	Removing "tmux-cpu"
+[2025-02-21 13:29:30.725]	  "tmux-cpu" clean success
+[2025-02-21 13:29:30.736]	Removing "tmux-resurrect"
+[2025-02-21 13:29:30.749]	  "tmux-resurrect" clean success
+[2025-02-21 13:29:30.768]	Done.
+
+[2025-02-21 13:30:38.684]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:30:38.695]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:30:38.724]	Installing "tmux-copycat"
+[2025-02-21 13:30:38.734]	Installing "tmux-cpu"
+[2025-02-21 13:30:38.745]	Installing "tmux-resurrect"
+[2025-02-21 13:30:38.791]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-21 13:30:38.802]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-21 13:30:38.832]	Already installed "tmux-copycat"
+[2025-02-21 13:30:38.843]	Already installed "tmux-cpu"
+[2025-02-21 13:30:38.855]	Already installed "tmux-resurrect"
+[2025-02-21 13:30:38.868]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:30:38.890]	Updating all plugins!
+[2025-02-21 13:30:38.901]	
+[2025-02-21 13:30:39.505]	  "tmux-cpu" download success
+[2025-02-21 13:30:39.621]	  "tmux-copycat" download success
+[2025-02-21 13:30:39.836]	  "tmux-cpu" update fail
+[2025-02-21 13:30:39.850]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:30:39.863]	    | From https://github.com/tmux-plugins/tmux-cpu
+[2025-02-21 13:30:39.877]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:30:39.889]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:30:39.901]	    | 	.editorconfig
+[2025-02-21 13:30:39.913]	    | 	.github/workflows/check.yml
+[2025-02-21 13:30:39.924]	    | 	.mailmap
+[2025-02-21 13:30:39.935]	    | 	LICENSE
+[2025-02-21 13:30:39.946]	    | 	README.md
+[2025-02-21 13:30:39.957]	    | 	cpu.tmux
+[2025-02-21 13:30:39.968]	    | 	screenshots/high_bg.png
+[2025-02-21 13:30:39.979]	    | 	screenshots/high_fg.png
+[2025-02-21 13:30:39.990]	    | 	screenshots/high_icon.png
+[2025-02-21 13:30:40.001]	    | 	screenshots/low_bg.png
+[2025-02-21 13:30:40.011]	    | 	screenshots/low_fg.png
+[2025-02-21 13:30:40.021]	    | 	screenshots/low_icon.png
+[2025-02-21 13:30:40.032]	    | 	screenshots/medium_bg.png
+[2025-02-21 13:30:40.042]	    | 	screenshots/medium_fg.png
+[2025-02-21 13:30:40.053]	    | 	screenshots/medium_icon.png
+[2025-02-21 13:30:40.065]	    | 	scripts/cpu_bg_color.sh
+[2025-02-21 13:30:40.079]	    | 	scripts/cpu_fg_color.sh
+[2025-02-21 13:30:40.091]	    | 	scripts/cpu_icon.sh
+[2025-02-21 13:30:40.102]	    | 	scripts/cpu_percentage.sh
+[2025-02-21 13:30:40.113]	    | 	scripts/cpu_temp.sh
+[2025-02-21 13:30:40.123]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-21 13:30:40.133]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-21 13:30:40.143]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-21 13:30:40.153]	    | 	scripts/gpu_bg_color.sh
+[2025-02-21 13:30:40.164]	    | 	scripts/gpu_fg_color.sh
+[2025-02-21 13:30:40.175]	    | 	scripts/gpu_icon.sh
+[2025-02-21 13:30:40.185]	    | 	scripts/gpu_percentage.sh
+[2025-02-21 13:30:40.195]	    | 	scripts/gpu_temp.sh
+[2025-02-21 13:30:40.205]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-21 13:30:40.215]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-21 13:30:40.225]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-21 13:30:40.234]	    | 	scripts/gram_bg_color.sh
+[2025-02-21 13:30:40.244]	    | 	scripts/gram_fg_color.sh
+[2025-02-21 13:30:40.253]	    | 	scripts/gram_icon.sh
+[2025-02-21 13:30:40.263]	    | 	scripts/gram_percentage.sh
+[2025-02-21 13:30:40.272]	    | 	scripts/helpers.sh
+[2025-02-21 13:30:40.282]	    | 	scripts/ram_bg_color.sh
+[2025-02-21 13:30:40.291]	    | 	scripts/ram_fg_color.sh
+[2025-02-21 13:30:40.301]	    | 	scripts/ram_icon.sh
+[2025-02-21 13:30:40.311]	    | 	scripts/ram_percentage.sh
+[2025-02-21 13:30:40.323]	    | Please move or remove them before you merge.
+[2025-02-21 13:30:40.333]	    | Aborting
+[2025-02-21 13:30:40.343]	  "tmux-copycat" update fail
+[2025-02-21 13:30:40.352]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:30:40.362]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-21 13:30:40.372]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:30:40.382]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:30:40.391]	    | 	.gitattributes
+[2025-02-21 13:30:40.401]	    | 	.gitignore
+[2025-02-21 13:30:40.411]	    | 	.travis.yml
+[2025-02-21 13:30:40.420]	    | 	CHANGELOG.md
+[2025-02-21 13:30:40.430]	    | 	LICENSE.md
+[2025-02-21 13:30:40.439]	    | 	README.md
+[2025-02-21 13:30:40.449]	    | 	Vagrantfile
+[2025-02-21 13:30:40.459]	    | 	copycat.tmux
+[2025-02-21 13:30:40.475]	    | 	docs/customizations.md
+[2025-02-21 13:30:40.491]	    | 	docs/defining_new_stored_searches.md
+[2025-02-21 13:30:40.505]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-21 13:30:40.518]	    | 	docs/limitations.md
+[2025-02-21 13:30:40.530]	    | 	run-tests
+[2025-02-21 13:30:40.541]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:30:40.551]	    | 	scripts/copycat_generate_results.sh
+[2025-02-21 13:30:40.560]	    | 	scripts/copycat_git_special.sh
+[2025-02-21 13:30:40.571]	    | 	scripts/copycat_jump.sh
+[2025-02-21 13:30:40.581]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-21 13:30:40.592]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-21 13:30:40.602]	    | 	scripts/copycat_mode_start.sh
+[2025-02-21 13:30:40.614]	    | 	scripts/copycat_search.sh
+[2025-02-21 13:30:40.624]	    | 	scripts/helpers.sh
+[2025-02-21 13:30:40.635]	    | 	scripts/stored_search_helpers.sh
+[2025-02-21 13:30:40.646]	    | 	scripts/variables.sh
+[2025-02-21 13:30:40.658]	    | 	test/README.md
+[2025-02-21 13:30:40.671]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-21 13:30:40.684]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-21 13:30:40.696]	    | 	test/helpers/expect_helpers.exp
+[2025-02-21 13:30:40.707]	    | 	test/helpers/run_tmux.exp
+[2025-02-21 13:30:40.712]	  "tmux-resurrect" download success
+[2025-02-21 13:30:40.717]	    | 	test/helpers/setup.exp
+[2025-02-21 13:30:40.722]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-21 13:30:40.727]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-21 13:30:40.738]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-21 13:30:40.743]	Updating all plugins!
+[2025-02-21 13:30:40.750]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-21 13:30:40.756]	
+[2025-02-21 13:30:40.763]	    | 	test/helpers/test.exp
+[2025-02-21 13:30:40.776]	    | 	test/run-tests-within-vm
+[2025-02-21 13:30:40.789]	    | 	test/test_digit_search.exp
+[2025-02-21 13:30:40.801]	    | 	test/test_file_search.exp
+[2025-02-21 13:30:40.813]	    | 	test/test_free_search.exp
+[2025-02-21 13:30:40.823]	    | 	test/test_git_hash_search.exp
+[2025-02-21 13:30:40.833]	    | 	test/test_git_status_search.exp
+[2025-02-21 13:30:40.843]	    | 	test/test_url_search.exp
+[2025-02-21 13:30:40.852]	    | 	test/test_user_defined_search.exp
+[2025-02-21 13:30:40.862]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-21 13:30:40.872]	    | 	video/README.md
+[2025-02-21 13:30:40.882]	    | 	video/screencast_img.png
+[2025-02-21 13:30:40.891]	    | 	video/script.md
+[2025-02-21 13:30:40.901]	    | Please move or remove them before you merge.
+[2025-02-21 13:30:40.911]	    | Aborting
+[2025-02-21 13:30:40.922]	  "tmux-resurrect" update fail
+[2025-02-21 13:30:40.932]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:30:40.941]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:30:40.951]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-21 13:30:40.960]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-21 13:30:40.970]	    | 	.gitattributes
+[2025-02-21 13:30:40.979]	    | 	.gitignore
+[2025-02-21 13:30:40.989]	    | 	.gitmodules
+[2025-02-21 13:30:40.999]	    | 	.travis.yml
+[2025-02-21 13:30:41.009]	    | 	CHANGELOG.md
+[2025-02-21 13:30:41.018]	    | 	CONTRIBUTING.md
+[2025-02-21 13:30:41.028]	    | 	LICENSE.md
+[2025-02-21 13:30:41.038]	    | 	README.md
+[2025-02-21 13:30:41.048]	    | 	docs/custom_key_bindings.md
+[2025-02-21 13:30:41.057]	    | 	docs/hooks.md
+[2025-02-21 13:30:41.067]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-21 13:30:41.077]	    | 	docs/restoring_bash_history.md
+[2025-02-21 13:30:41.087]	    | 	docs/restoring_pane_contents.md
+[2025-02-21 13:30:41.097]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-21 13:30:41.107]	    | 	docs/restoring_programs.md
+[2025-02-21 13:30:41.117]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-21 13:30:41.127]	    | 	docs/save_dir.md
+[2025-02-21 13:30:41.138]	    | 	resurrect.tmux
+[2025-02-21 13:30:41.149]	    | 	run_tests
+[2025-02-21 13:30:41.161]	    | 	save_command_strategies/gdb.sh
+[2025-02-21 13:30:41.172]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-21 13:30:41.181]	    | 	save_command_strategies/pgrep.sh
+[2025-02-21 13:30:41.191]	    | 	save_command_strategies/ps.sh
+[2025-02-21 13:30:41.200]	    | 	scripts/check_tmux_version.sh
+[2025-02-21 13:30:41.210]	    | 	scripts/helpers.sh
+[2025-02-21 13:30:41.219]	    | 	scripts/process_restore_helpers.sh
+[2025-02-21 13:30:41.229]	    | 	scripts/restore.exp
+[2025-02-21 13:30:41.238]	  "tmux-cpu" update success
+[2025-02-21 13:30:41.238]	    | 	scripts/restore.sh
+[2025-02-21 13:30:41.249]	    | 	scripts/save.sh
+[2025-02-21 13:30:41.249]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:30:41.260]	    | Already up to date.
+[2025-02-21 13:30:41.260]	    | 	scripts/spinner_helpers.sh
+[2025-02-21 13:30:41.271]	    | 	scripts/tmux_spinner.sh
+[2025-02-21 13:30:41.283]	    | 	scripts/variables.sh
+[2025-02-21 13:30:41.294]	    | 	strategies/irb_default_strategy.sh
+[2025-02-21 13:30:41.305]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-21 13:30:41.316]	    | 	strategies/nvim_session.sh
+[2025-02-21 13:30:41.326]	    | 	strategies/vim_session.sh
+[2025-02-21 13:30:41.338]	    | 	tests/fixtures/restore_file.txt
+[2025-02-21 13:30:41.350]	    | 	tests/fixtures/save_file.txt
+[2025-02-21 13:30:41.362]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-21 13:30:41.374]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-21 13:30:41.386]	    | 	tests/helpers/helpers.sh
+[2025-02-21 13:30:41.399]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-21 13:30:41.410]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-21 13:30:41.422]	    | 	tests/run_tests_in_isolation
+[2025-02-21 13:30:41.435]	    | 	tests/test_resurrect_restore.sh
+[2025-02-21 13:30:41.448]	    | 	tests/test_resurrect_save.sh
+[2025-02-21 13:30:41.460]	    | 	video/issue_vid.png
+[2025-02-21 13:30:41.473]	    | 	video/screencast_img.png
+[2025-02-21 13:30:41.484]	    | 	video/script.md
+[2025-02-21 13:30:41.495]	    | Please move or remove them before you merge.
+[2025-02-21 13:30:41.504]	    | Aborting
+[2025-02-21 13:30:41.514]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:30:41.543]	Done.
+
+[2025-02-21 13:30:42.041]	  "tmux-copycat" update success
+[2025-02-21 13:30:42.053]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:30:42.064]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-21 13:30:42.075]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-21 13:30:42.089]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-21 13:30:42.105]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-21 13:30:42.123]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-21 13:30:42.142]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-21 13:30:42.161]	    |  * [new tag]         v0.0.6     -> v0.0.6
+[2025-02-21 13:30:42.177]	    |  * [new tag]         v0.0.7     -> v0.0.7
+[2025-02-21 13:30:42.190]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-21 13:30:42.203]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-21 13:30:42.214]	    |  * [new tag]         v1.1.0     -> v1.1.0
+[2025-02-21 13:30:42.224]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-21 13:30:42.234]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-21 13:30:42.244]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-21 13:30:42.253]	    | Already up to date.
+[2025-02-21 13:30:42.263]	  "tmux-resurrect" update success
+[2025-02-21 13:30:42.273]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-21 13:30:42.282]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-21 13:30:42.292]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-21 13:30:42.303]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-21 13:30:42.314]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-21 13:30:42.326]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-21 13:30:42.337]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-21 13:30:42.348]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-21 13:30:42.358]	    |  * [new tag]         v0.2.0     -> v0.2.0
+[2025-02-21 13:30:42.368]	    |  * [new tag]         v0.3.0     -> v0.3.0
+[2025-02-21 13:30:42.378]	    |  * [new tag]         v0.4.0     -> v0.4.0
+[2025-02-21 13:30:42.387]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-21 13:30:42.398]	    |  * [new tag]         v1.2.0     -> v1.2.0
+[2025-02-21 13:30:42.410]	    |  * [new tag]         v1.2.1     -> v1.2.1
+[2025-02-21 13:30:42.421]	    |  * [new tag]         v1.3.0     -> v1.3.0
+[2025-02-21 13:30:42.431]	    |  * [new tag]         v1.4.0     -> v1.4.0
+[2025-02-21 13:30:42.441]	    |  * [new tag]         v1.5.0     -> v1.5.0
+[2025-02-21 13:30:42.453]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-21 13:30:42.463]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-21 13:30:42.473]	    |  * [new tag]         v2.2.0     -> v2.2.0
+[2025-02-21 13:30:42.483]	    |  * [new tag]         v2.4.0     -> v2.4.0
+[2025-02-21 13:30:42.493]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-21 13:30:42.503]	    |  * [new tag]         v4.0.0     -> v4.0.0
+[2025-02-21 13:30:42.513]	    | Already up to date.
+[2025-02-21 13:30:42.525]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-21 13:30:42.558]	Removing "tmux-copycat"
+[2025-02-21 13:30:42.568]	  "tmux-copycat" clean success
+[2025-02-21 13:30:42.579]	Removing "tmux-cpu"
+[2025-02-21 13:30:42.590]	  "tmux-cpu" clean success
+[2025-02-21 13:30:42.600]	Removing "tmux-resurrect"
+[2025-02-21 13:30:42.610]	  "tmux-resurrect" clean success
+[2025-02-21 13:30:42.621]	Done.
+
+[2025-02-23 11:26:29.760]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-23 11:26:29.774]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:26:29.813]	Installing "tmux-copycat"
+[2025-02-23 11:26:29.826]	Installing "tmux-cpu"
+[2025-02-23 11:26:29.839]	Installing "tmux-resurrect"
+[2025-02-23 11:26:30.218]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-23 11:26:30.234]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:26:30.278]	Already installed "tmux-copycat"
+[2025-02-23 11:26:30.304]	Already installed "tmux-resurrect"
+[2025-02-23 11:26:30.328]	Already installed "tmux-cpu"
+[2025-02-23 11:26:30.348]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:26:30.381]	Updating all plugins!
+[2025-02-23 11:26:30.399]	
+[2025-02-23 11:26:30.617]	  "tmux-cpu" download success
+[2025-02-23 11:26:30.675]	  "tmux-copycat" download success
+[2025-02-23 11:26:30.889]	  "tmux-cpu" update fail
+[2025-02-23 11:26:30.906]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:26:30.921]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:26:30.934]	    | 	.editorconfig
+[2025-02-23 11:26:30.947]	    | 	.github/workflows/check.yml
+[2025-02-23 11:26:30.960]	    | 	.mailmap
+[2025-02-23 11:26:30.973]	    | 	LICENSE
+[2025-02-23 11:26:30.986]	    | 	README.md
+[2025-02-23 11:26:31.004]	    | 	cpu.tmux
+[2025-02-23 11:26:31.026]	    | 	screenshots/high_bg.png
+[2025-02-23 11:26:31.049]	    | 	screenshots/high_fg.png
+[2025-02-23 11:26:31.070]	    | 	screenshots/high_icon.png
+[2025-02-23 11:26:31.087]	    | 	screenshots/low_bg.png
+[2025-02-23 11:26:31.105]	    | 	screenshots/low_fg.png
+[2025-02-23 11:26:31.124]	    | 	screenshots/low_icon.png
+[2025-02-23 11:26:31.142]	    | 	screenshots/medium_bg.png
+[2025-02-23 11:26:31.157]	    | 	screenshots/medium_fg.png
+[2025-02-23 11:26:31.172]	    | 	screenshots/medium_icon.png
+[2025-02-23 11:26:31.185]	    | 	scripts/cpu_bg_color.sh
+[2025-02-23 11:26:31.197]	    | 	scripts/cpu_fg_color.sh
+[2025-02-23 11:26:31.209]	    | 	scripts/cpu_icon.sh
+[2025-02-23 11:26:31.221]	    | 	scripts/cpu_percentage.sh
+[2025-02-23 11:26:31.233]	    | 	scripts/cpu_temp.sh
+[2025-02-23 11:26:31.246]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-23 11:26:31.260]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-23 11:26:31.273]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-23 11:26:31.285]	    | 	scripts/gpu_bg_color.sh
+[2025-02-23 11:26:31.297]	    | 	scripts/gpu_fg_color.sh
+[2025-02-23 11:26:31.310]	    | 	scripts/gpu_icon.sh
+[2025-02-23 11:26:31.323]	    | 	scripts/gpu_percentage.sh
+[2025-02-23 11:26:31.335]	    | 	scripts/gpu_temp.sh
+[2025-02-23 11:26:31.347]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-23 11:26:31.367]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-23 11:26:31.389]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-23 11:26:31.410]	    | 	scripts/gram_bg_color.sh
+[2025-02-23 11:26:31.428]	    | 	scripts/gram_fg_color.sh
+[2025-02-23 11:26:31.445]	    | 	scripts/gram_icon.sh
+[2025-02-23 11:26:31.461]	    | 	scripts/gram_percentage.sh
+[2025-02-23 11:26:31.478]	    | 	scripts/helpers.sh
+[2025-02-23 11:26:31.495]	    | 	scripts/ram_bg_color.sh
+[2025-02-23 11:26:31.510]	    | 	scripts/ram_fg_color.sh
+[2025-02-23 11:26:31.523]	    | 	scripts/ram_icon.sh
+[2025-02-23 11:26:31.538]	    | 	scripts/ram_percentage.sh
+[2025-02-23 11:26:31.552]	    | Please move or remove them before you merge.
+[2025-02-23 11:26:31.565]	    | Aborting
+[2025-02-23 11:26:31.577]	  "tmux-copycat" update fail
+[2025-02-23 11:26:31.590]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:26:31.601]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:26:31.612]	    | 	.gitattributes
+[2025-02-23 11:26:31.624]	    | 	.gitignore
+[2025-02-23 11:26:31.637]	    | 	.travis.yml
+[2025-02-23 11:26:31.651]	    | 	CHANGELOG.md
+[2025-02-23 11:26:31.657]	  "tmux-resurrect" download success
+[2025-02-23 11:26:31.667]	    | 	LICENSE.md
+[2025-02-23 11:26:31.673]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:26:31.684]	    | 	README.md
+[2025-02-23 11:26:31.700]	    | 	Vagrantfile
+[2025-02-23 11:26:31.702]	Updating all plugins!
+[2025-02-23 11:26:31.714]	    | 	copycat.tmux
+[2025-02-23 11:26:31.716]	
+[2025-02-23 11:26:31.728]	    | 	docs/customizations.md
+[2025-02-23 11:26:31.742]	    | 	docs/defining_new_stored_searches.md
+[2025-02-23 11:26:31.755]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-23 11:26:31.768]	    | 	docs/limitations.md
+[2025-02-23 11:26:31.782]	    | 	run-tests
+[2025-02-23 11:26:31.809]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 11:26:31.835]	    | 	scripts/copycat_generate_results.sh
+[2025-02-23 11:26:31.863]	    | 	scripts/copycat_git_special.sh
+[2025-02-23 11:26:31.888]	    | 	scripts/copycat_jump.sh
+[2025-02-23 11:26:31.906]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-23 11:26:31.923]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-23 11:26:31.942]	    | 	scripts/copycat_mode_start.sh
+[2025-02-23 11:26:31.957]	    | 	scripts/copycat_search.sh
+[2025-02-23 11:26:31.970]	    | 	scripts/helpers.sh
+[2025-02-23 11:26:31.983]	    | 	scripts/stored_search_helpers.sh
+[2025-02-23 11:26:31.996]	    | 	scripts/variables.sh
+[2025-02-23 11:26:32.007]	    | 	test/README.md
+[2025-02-23 11:26:32.018]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-23 11:26:32.030]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-23 11:26:32.042]	    | 	test/helpers/expect_helpers.exp
+[2025-02-23 11:26:32.055]	    | 	test/helpers/run_tmux.exp
+[2025-02-23 11:26:32.068]	    | 	test/helpers/setup.exp
+[2025-02-23 11:26:32.081]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-23 11:26:32.093]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-23 11:26:32.106]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-23 11:26:32.118]	    | 	test/helpers/test.exp
+[2025-02-23 11:26:32.131]	    | 	test/run-tests-within-vm
+[2025-02-23 11:26:32.142]	    | 	test/test_digit_search.exp
+[2025-02-23 11:26:32.154]	    | 	test/test_file_search.exp
+[2025-02-23 11:26:32.167]	    | 	test/test_free_search.exp
+[2025-02-23 11:26:32.181]	    | 	test/test_git_hash_search.exp
+[2025-02-23 11:26:32.196]	    | 	test/test_git_status_search.exp
+[2025-02-23 11:26:32.214]	    | 	test/test_url_search.exp
+[2025-02-23 11:26:32.222]	  "tmux-cpu" update success
+[2025-02-23 11:26:32.236]	    | 	test/test_user_defined_search.exp
+[2025-02-23 11:26:32.247]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:26:32.259]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-23 11:26:32.267]	    | Already up to date.
+[2025-02-23 11:26:32.285]	    | 	video/README.md
+[2025-02-23 11:26:32.286]	  "tmux-copycat" update success
+[2025-02-23 11:26:32.305]	    | 	video/screencast_img.png
+[2025-02-23 11:26:32.310]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:26:32.325]	    | 	video/script.md
+[2025-02-23 11:26:32.332]	    | Already up to date.
+[2025-02-23 11:26:32.344]	    | Please move or remove them before you merge.
+[2025-02-23 11:26:32.349]	  "tmux-resurrect" update success
+[2025-02-23 11:26:32.359]	    | Aborting
+[2025-02-23 11:26:32.365]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:26:32.374]	  "tmux-resurrect" update fail
+[2025-02-23 11:26:32.381]	    | Already up to date.
+[2025-02-23 11:26:32.392]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:26:32.397]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:26:32.407]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:26:32.421]	    | 	.gitattributes
+[2025-02-23 11:26:32.437]	    | 	.gitignore
+[2025-02-23 11:26:32.440]	Done.
+
+[2025-02-23 11:26:32.452]	    | 	.gitmodules
+[2025-02-23 11:26:32.465]	    | 	.travis.yml
+[2025-02-23 11:26:32.477]	    | 	CHANGELOG.md
+[2025-02-23 11:26:32.489]	    | 	CONTRIBUTING.md
+[2025-02-23 11:26:32.502]	    | 	LICENSE.md
+[2025-02-23 11:26:32.516]	    | 	README.md
+[2025-02-23 11:26:32.530]	    | 	docs/custom_key_bindings.md
+[2025-02-23 11:26:32.543]	    | 	docs/hooks.md
+[2025-02-23 11:26:32.556]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-23 11:26:32.569]	    | 	docs/restoring_bash_history.md
+[2025-02-23 11:26:32.583]	    | 	docs/restoring_pane_contents.md
+[2025-02-23 11:26:32.603]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-23 11:26:32.619]	    | 	docs/restoring_programs.md
+[2025-02-23 11:26:32.636]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-23 11:26:32.655]	    | 	docs/save_dir.md
+[2025-02-23 11:26:32.673]	    | 	resurrect.tmux
+[2025-02-23 11:26:32.690]	    | 	run_tests
+[2025-02-23 11:26:32.707]	    | 	save_command_strategies/gdb.sh
+[2025-02-23 11:26:32.723]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-23 11:26:32.737]	    | 	save_command_strategies/pgrep.sh
+[2025-02-23 11:26:32.753]	    | 	save_command_strategies/ps.sh
+[2025-02-23 11:26:32.768]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 11:26:32.783]	    | 	scripts/helpers.sh
+[2025-02-23 11:26:32.797]	    | 	scripts/process_restore_helpers.sh
+[2025-02-23 11:26:32.811]	    | 	scripts/restore.exp
+[2025-02-23 11:26:32.825]	    | 	scripts/restore.sh
+[2025-02-23 11:26:32.838]	    | 	scripts/save.sh
+[2025-02-23 11:26:32.853]	    | 	scripts/spinner_helpers.sh
+[2025-02-23 11:26:32.867]	    | 	scripts/tmux_spinner.sh
+[2025-02-23 11:26:32.887]	    | 	scripts/variables.sh
+[2025-02-23 11:26:32.900]	    | 	strategies/irb_default_strategy.sh
+[2025-02-23 11:26:32.914]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-23 11:26:32.927]	    | 	strategies/nvim_session.sh
+[2025-02-23 11:26:32.939]	    | 	strategies/vim_session.sh
+[2025-02-23 11:26:32.953]	    | 	tests/fixtures/restore_file.txt
+[2025-02-23 11:26:32.970]	    | 	tests/fixtures/save_file.txt
+[2025-02-23 11:26:32.999]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-23 11:26:33.017]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-23 11:26:33.035]	    | 	tests/helpers/helpers.sh
+[2025-02-23 11:26:33.052]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-23 11:26:33.067]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-23 11:26:33.087]	    | 	tests/run_tests_in_isolation
+[2025-02-23 11:26:33.102]	    | 	tests/test_resurrect_restore.sh
+[2025-02-23 11:26:33.116]	    | 	tests/test_resurrect_save.sh
+[2025-02-23 11:26:33.130]	    | 	video/issue_vid.png
+[2025-02-23 11:26:33.144]	    | 	video/screencast_img.png
+[2025-02-23 11:26:33.159]	    | 	video/script.md
+[2025-02-23 11:26:33.171]	    | Please move or remove them before you merge.
+[2025-02-23 11:26:33.183]	    | Aborting
+[2025-02-23 11:26:33.194]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:26:33.221]	Removing "tmux-copycat"
+[2025-02-23 11:26:33.233]	  "tmux-copycat" clean success
+[2025-02-23 11:26:33.244]	Removing "tmux-cpu"
+[2025-02-23 11:26:33.257]	  "tmux-cpu" clean success
+[2025-02-23 11:26:33.269]	Removing "tmux-resurrect"
+[2025-02-23 11:26:33.284]	  "tmux-resurrect" clean success
+[2025-02-23 11:26:33.302]	Done.
+
+[2025-02-23 11:27:00.173]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-23 11:27:00.191]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:27:00.239]	Installing "tmux-copycat"
+[2025-02-23 11:27:00.254]	Installing "tmux-cpu"
+[2025-02-23 11:27:00.268]	Installing "tmux-resurrect"
+[2025-02-23 11:27:01.038]	  "tmux-cpu" download success
+[2025-02-23 11:27:01.116]	  "tmux-copycat" download success
+[2025-02-23 11:27:02.143]	  "tmux-resurrect" download success
+[2025-02-23 11:27:02.157]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:27:02.184]	Updating all plugins!
+[2025-02-23 11:27:02.198]	
+[2025-02-23 11:27:02.693]	  "tmux-cpu" update success
+[2025-02-23 11:27:02.706]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:02.719]	    | Already up to date.
+[2025-02-23 11:27:02.731]	  "tmux-resurrect" update success
+[2025-02-23 11:27:02.743]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:02.756]	    | Already up to date.
+[2025-02-23 11:27:02.820]	  "tmux-copycat" update success
+[2025-02-23 11:27:02.833]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:02.845]	    | Already up to date.
+[2025-02-23 11:27:02.863]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:27:02.894]	Done.
+
+[2025-02-23 11:27:07.303]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-23 11:27:07.314]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:27:07.349]	Already installed "tmux-copycat"
+[2025-02-23 11:27:07.360]	Already installed "tmux-cpu"
+[2025-02-23 11:27:07.371]	Already installed "tmux-resurrect"
+[2025-02-23 11:27:07.383]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:27:07.404]	Updating all plugins!
+[2025-02-23 11:27:07.416]	
+[2025-02-23 11:27:07.923]	  "tmux-cpu" update success
+[2025-02-23 11:27:07.944]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:07.967]	    | Already up to date.
+[2025-02-23 11:27:07.990]	  "tmux-resurrect" update success
+[2025-02-23 11:27:08.012]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:08.030]	    | Already up to date.
+[2025-02-23 11:27:08.046]	  "tmux-copycat" update success
+[2025-02-23 11:27:08.062]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:08.078]	    | Already up to date.
+[2025-02-23 11:27:08.095]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:27:08.137]	Done.
+
+[2025-02-23 11:27:19.577]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-23 11:27:19.592]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:27:19.633]	Already installed "tmux-copycat"
+[2025-02-23 11:27:19.649]	Already installed "tmux-cpu"
+[2025-02-23 11:27:19.664]	Already installed "tmux-resurrect"
+[2025-02-23 11:27:19.680]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:27:19.707]	Updating all plugins!
+[2025-02-23 11:27:19.720]	
+[2025-02-23 11:27:20.236]	  "tmux-copycat" update success
+[2025-02-23 11:27:20.249]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:20.262]	    | Already up to date.
+[2025-02-23 11:27:20.275]	  "tmux-cpu" update success
+[2025-02-23 11:27:20.288]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:20.300]	    | Already up to date.
+[2025-02-23 11:27:20.320]	  "tmux-resurrect" update success
+[2025-02-23 11:27:20.340]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:20.358]	    | Already up to date.
+[2025-02-23 11:27:20.378]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:27:20.433]	Done.
+
+[2025-02-23 11:27:22.536]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect
+[2025-02-23 11:27:22.549]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:27:22.590]	Already installed "tmux-copycat"
+[2025-02-23 11:27:22.603]	Already installed "tmux-cpu"
+[2025-02-23 11:27:22.617]	Already installed "tmux-resurrect"
+[2025-02-23 11:27:22.631]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:27:22.656]	Updating all plugins!
+[2025-02-23 11:27:22.669]	
+[2025-02-23 11:27:23.166]	  "tmux-cpu" update success
+[2025-02-23 11:27:23.179]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:23.203]	    | Already up to date.
+[2025-02-23 11:27:23.226]	  "tmux-copycat" update success
+[2025-02-23 11:27:23.244]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:23.264]	    | Already up to date.
+[2025-02-23 11:27:23.281]	  "tmux-resurrect" update success
+[2025-02-23 11:27:23.297]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:27:23.311]	    | Already up to date.
+[2025-02-23 11:27:23.326]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:27:23.371]	Done.
+
+[2025-02-23 11:52:26.672]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 11:52:26.687]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:52:26.734]	Installing "tokyo-night-tmux"
+[2025-02-23 11:52:26.748]	Already installed "tmux-cpu"
+[2025-02-23 11:52:26.763]	Already installed "tmux-copycat"
+[2025-02-23 11:52:26.777]	Already installed "tmux-resurrect"
+[2025-02-23 11:52:26.920]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 11:52:26.930]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:52:26.964]	Already installed "tmux-copycat"
+[2025-02-23 11:52:26.974]	Already installed "tmux-cpu"
+[2025-02-23 11:52:26.983]	Already installed "tmux-resurrect"
+[2025-02-23 11:52:26.992]	Already installed "tokyo-night-tmux"
+[2025-02-23 11:52:27.002]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:52:27.021]	Updating all plugins!
+[2025-02-23 11:52:27.030]	
+[2025-02-23 11:52:27.589]	  "tmux-cpu" update success
+[2025-02-23 11:52:27.603]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:27.616]	    | Already up to date.
+[2025-02-23 11:52:27.627]	  "tmux-resurrect" update success
+[2025-02-23 11:52:27.639]	  "tmux-copycat" update success
+[2025-02-23 11:52:27.651]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:27.662]	    | Already up to date.
+[2025-02-23 11:52:27.674]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:27.686]	    | Already up to date.
+[2025-02-23 11:52:27.737]	  "tokyo-night-tmux" download success
+[2025-02-23 11:52:27.751]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:52:27.776]	Updating all plugins!
+[2025-02-23 11:52:27.788]	
+[2025-02-23 11:52:28.094]	  "tokyo-night-tmux" update fail
+[2025-02-23 11:52:28.105]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:28.116]	    | From https://github.com/janoamaral/tokyo-night-tmux
+[2025-02-23 11:52:28.128]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 11:52:28.139]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:52:28.150]	    | 	.editorconfig
+[2025-02-23 11:52:28.161]	    | 	.github/ISSUE_TEMPLATE/bug_report.md
+[2025-02-23 11:52:28.173]	    | 	.github/ISSUE_TEMPLATE/feature_request.md
+[2025-02-23 11:52:28.184]	    | 	.github/ISSUE_TEMPLATE/security_report.md
+[2025-02-23 11:52:28.196]	    | 	.github/pull_request_template.md
+[2025-02-23 11:52:28.213]	    | 	.github/workflows/bats.yml
+[2025-02-23 11:52:28.233]	    | 	.github/workflows/pre-commit.yml
+[2025-02-23 11:52:28.251]	    | 	.github/workflows/report.yml
+[2025-02-23 11:52:28.270]	    | 	.gitignore
+[2025-02-23 11:52:28.289]	    | 	.pre-commit-config.yaml
+[2025-02-23 11:52:28.294]	  "tmux-resurrect" update success
+[2025-02-23 11:52:28.311]	    | 	CODE_OF_CONDUCT.md
+[2025-02-23 11:52:28.312]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:28.327]	    | Already up to date.
+[2025-02-23 11:52:28.327]	    | 	CONTRIBUTING.md
+[2025-02-23 11:52:28.340]	  "tmux-copycat" update success
+[2025-02-23 11:52:28.341]	    | 	LICENSE.md
+[2025-02-23 11:52:28.354]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:28.354]	    | 	README.md
+[2025-02-23 11:52:28.366]	    | 	SECURITY.md
+[2025-02-23 11:52:28.366]	    | Already up to date.
+[2025-02-23 11:52:28.377]	    | 	lib/coreutils-compat.sh
+[2025-02-23 11:52:28.377]	  "tokyo-night-tmux" update success
+[2025-02-23 11:52:28.388]	    | 	lib/netspeed.sh
+[2025-02-23 11:52:28.388]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:28.400]	    | 	snaps/hostname.png
+[2025-02-23 11:52:28.400]	    | Already up to date.
+[2025-02-23 11:52:28.410]	    | 	snaps/l01.png
+[2025-02-23 11:52:28.411]	  "tmux-cpu" update success
+[2025-02-23 11:52:28.423]	    | 	snaps/logico.png
+[2025-02-23 11:52:28.423]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:28.435]	    | Already up to date.
+[2025-02-23 11:52:28.435]	    | 	snaps/n01.png
+[2025-02-23 11:52:28.448]	    | 	snaps/n02.png
+[2025-02-23 11:52:28.448]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:52:28.460]	    | 	snaps/netspeed.png
+[2025-02-23 11:52:28.479]	    | 	src/battery-widget.sh
+[2025-02-23 11:52:28.493]	    | 	src/cmus-tmux-statusbar.sh
+[2025-02-23 11:52:28.496]	Done.
+
+[2025-02-23 11:52:28.506]	    | 	src/custom-number.sh
+[2025-02-23 11:52:28.517]	    | 	src/datetime-widget.sh
+[2025-02-23 11:52:28.528]	    | 	src/git-status.sh
+[2025-02-23 11:52:28.538]	    | 	src/hostname-widget.sh
+[2025-02-23 11:52:28.548]	    | 	src/music-tmux-statusbar.sh
+[2025-02-23 11:52:28.557]	    | 	src/netspeed.sh
+[2025-02-23 11:52:28.567]	    | 	src/path-widget.sh
+[2025-02-23 11:52:28.577]	    | 	src/themes.sh
+[2025-02-23 11:52:28.587]	    | 	src/wb-git-status.sh
+[2025-02-23 11:52:28.597]	    | 	test/netspeed.bats
+[2025-02-23 11:52:28.607]	    | 	tokyo-night.tmux
+[2025-02-23 11:52:28.618]	    | Please move or remove them before you merge.
+[2025-02-23 11:52:28.628]	    | Aborting
+[2025-02-23 11:52:28.639]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:52:28.665]	Removing "tmux-copycat"
+[2025-02-23 11:52:28.674]	  "tmux-copycat" clean success
+[2025-02-23 11:52:28.684]	Removing "tmux-cpu"
+[2025-02-23 11:52:28.694]	  "tmux-cpu" clean success
+[2025-02-23 11:52:28.706]	Removing "tmux-resurrect"
+[2025-02-23 11:52:28.722]	  "tmux-resurrect" clean success
+[2025-02-23 11:52:28.734]	Removing "tokyo-night-tmux"
+[2025-02-23 11:52:28.745]	  "tokyo-night-tmux" clean success
+[2025-02-23 11:52:28.758]	Done.
+
+[2025-02-23 11:52:34.299]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 11:52:34.312]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:52:34.349]	Installing "tmux-copycat"
+[2025-02-23 11:52:34.363]	Installing "tmux-cpu"
+[2025-02-23 11:52:34.378]	Installing "tmux-resurrect"
+[2025-02-23 11:52:34.393]	Installing "tokyo-night-tmux"
+[2025-02-23 11:52:34.752]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 11:52:34.765]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:52:34.804]	Already installed "tmux-copycat"
+[2025-02-23 11:52:34.816]	Already installed "tmux-cpu"
+[2025-02-23 11:52:34.829]	Already installed "tokyo-night-tmux"
+[2025-02-23 11:52:34.840]	Already installed "tmux-resurrect"
+[2025-02-23 11:52:34.853]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:52:34.877]	Updating all plugins!
+[2025-02-23 11:52:34.889]	
+[2025-02-23 11:52:35.173]	  "tmux-cpu" download success
+[2025-02-23 11:52:35.241]	  "tmux-copycat" download success
+[2025-02-23 11:52:35.361]	  "tokyo-night-tmux" download success
+[2025-02-23 11:52:35.375]	  "tmux-cpu" update fail
+[2025-02-23 11:52:35.387]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:35.399]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:52:35.411]	    | 	.editorconfig
+[2025-02-23 11:52:35.426]	    | 	.github/workflows/check.yml
+[2025-02-23 11:52:35.441]	    | 	.mailmap
+[2025-02-23 11:52:35.457]	    | 	LICENSE
+[2025-02-23 11:52:35.477]	    | 	README.md
+[2025-02-23 11:52:35.492]	    | 	cpu.tmux
+[2025-02-23 11:52:35.508]	    | 	screenshots/high_bg.png
+[2025-02-23 11:52:35.522]	    | 	screenshots/high_fg.png
+[2025-02-23 11:52:35.535]	    | 	screenshots/high_icon.png
+[2025-02-23 11:52:35.548]	    | 	screenshots/low_bg.png
+[2025-02-23 11:52:35.560]	    | 	screenshots/low_fg.png
+[2025-02-23 11:52:35.572]	    | 	screenshots/low_icon.png
+[2025-02-23 11:52:35.585]	    | 	screenshots/medium_bg.png
+[2025-02-23 11:52:35.598]	    | 	screenshots/medium_fg.png
+[2025-02-23 11:52:35.610]	    | 	screenshots/medium_icon.png
+[2025-02-23 11:52:35.623]	    | 	scripts/cpu_bg_color.sh
+[2025-02-23 11:52:35.640]	    | 	scripts/cpu_fg_color.sh
+[2025-02-23 11:52:35.655]	    | 	scripts/cpu_icon.sh
+[2025-02-23 11:52:35.672]	    | 	scripts/cpu_percentage.sh
+[2025-02-23 11:52:35.689]	    | 	scripts/cpu_temp.sh
+[2025-02-23 11:52:35.703]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-23 11:52:35.721]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-23 11:52:35.735]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-23 11:52:35.748]	    | 	scripts/gpu_bg_color.sh
+[2025-02-23 11:52:35.761]	    | 	scripts/gpu_fg_color.sh
+[2025-02-23 11:52:35.773]	    | 	scripts/gpu_icon.sh
+[2025-02-23 11:52:35.784]	    | 	scripts/gpu_percentage.sh
+[2025-02-23 11:52:35.795]	    | 	scripts/gpu_temp.sh
+[2025-02-23 11:52:35.806]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-23 11:52:35.817]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-23 11:52:35.828]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-23 11:52:35.838]	    | 	scripts/gram_bg_color.sh
+[2025-02-23 11:52:35.848]	    | 	scripts/gram_fg_color.sh
+[2025-02-23 11:52:35.858]	    | 	scripts/gram_icon.sh
+[2025-02-23 11:52:35.869]	    | 	scripts/gram_percentage.sh
+[2025-02-23 11:52:35.880]	    | 	scripts/helpers.sh
+[2025-02-23 11:52:35.890]	    | 	scripts/ram_bg_color.sh
+[2025-02-23 11:52:35.901]	    | 	scripts/ram_fg_color.sh
+[2025-02-23 11:52:35.913]	    | 	scripts/ram_icon.sh
+[2025-02-23 11:52:35.923]	    | 	scripts/ram_percentage.sh
+[2025-02-23 11:52:35.933]	    | Please move or remove them before you merge.
+[2025-02-23 11:52:35.942]	    | Aborting
+[2025-02-23 11:52:35.952]	  "tmux-copycat" update fail
+[2025-02-23 11:52:35.962]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:35.977]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:52:35.987]	    | 	.gitattributes
+[2025-02-23 11:52:35.997]	    | 	.gitignore
+[2025-02-23 11:52:36.008]	    | 	.travis.yml
+[2025-02-23 11:52:36.018]	    | 	CHANGELOG.md
+[2025-02-23 11:52:36.030]	    | 	LICENSE.md
+[2025-02-23 11:52:36.040]	    | 	README.md
+[2025-02-23 11:52:36.051]	    | 	Vagrantfile
+[2025-02-23 11:52:36.062]	    | 	copycat.tmux
+[2025-02-23 11:52:36.072]	    | 	docs/customizations.md
+[2025-02-23 11:52:36.083]	    | 	docs/defining_new_stored_searches.md
+[2025-02-23 11:52:36.094]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-23 11:52:36.106]	    | 	docs/limitations.md
+[2025-02-23 11:52:36.117]	    | 	run-tests
+[2025-02-23 11:52:36.127]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 11:52:36.143]	    | 	scripts/copycat_generate_results.sh
+[2025-02-23 11:52:36.157]	    | 	scripts/copycat_git_special.sh
+[2025-02-23 11:52:36.158]	  "tmux-resurrect" download success
+[2025-02-23 11:52:36.173]	    | 	scripts/copycat_jump.sh
+[2025-02-23 11:52:36.176]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:52:36.190]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-23 11:52:36.206]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-23 11:52:36.212]	Updating all plugins!
+[2025-02-23 11:52:36.229]	    | 	scripts/copycat_mode_start.sh
+[2025-02-23 11:52:36.234]	
+[2025-02-23 11:52:36.252]	    | 	scripts/copycat_search.sh
+[2025-02-23 11:52:36.266]	    | 	scripts/helpers.sh
+[2025-02-23 11:52:36.279]	    | 	scripts/stored_search_helpers.sh
+[2025-02-23 11:52:36.292]	    | 	scripts/variables.sh
+[2025-02-23 11:52:36.305]	    | 	test/README.md
+[2025-02-23 11:52:36.318]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-23 11:52:36.330]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-23 11:52:36.342]	    | 	test/helpers/expect_helpers.exp
+[2025-02-23 11:52:36.354]	    | 	test/helpers/run_tmux.exp
+[2025-02-23 11:52:36.370]	    | 	test/helpers/setup.exp
+[2025-02-23 11:52:36.389]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-23 11:52:36.405]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-23 11:52:36.419]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-23 11:52:36.432]	    | 	test/helpers/test.exp
+[2025-02-23 11:52:36.446]	    | 	test/run-tests-within-vm
+[2025-02-23 11:52:36.459]	    | 	test/test_digit_search.exp
+[2025-02-23 11:52:36.475]	    | 	test/test_file_search.exp
+[2025-02-23 11:52:36.487]	    | 	test/test_free_search.exp
+[2025-02-23 11:52:36.498]	    | 	test/test_git_hash_search.exp
+[2025-02-23 11:52:36.509]	    | 	test/test_git_status_search.exp
+[2025-02-23 11:52:36.520]	    | 	test/test_url_search.exp
+[2025-02-23 11:52:36.531]	    | 	test/test_user_defined_search.exp
+[2025-02-23 11:52:36.541]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-23 11:52:36.551]	    | 	video/README.md
+[2025-02-23 11:52:36.560]	    | 	video/screencast_img.png
+[2025-02-23 11:52:36.570]	    | 	video/script.md
+[2025-02-23 11:52:36.580]	    | Please move or remove them before you merge.
+[2025-02-23 11:52:36.590]	    | Aborting
+[2025-02-23 11:52:36.602]	  "tokyo-night-tmux" update fail
+[2025-02-23 11:52:36.613]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:36.624]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:52:36.634]	    | 	.editorconfig
+[2025-02-23 11:52:36.645]	    | 	.github/ISSUE_TEMPLATE/bug_report.md
+[2025-02-23 11:52:36.654]	    | 	.github/ISSUE_TEMPLATE/feature_request.md
+[2025-02-23 11:52:36.664]	    | 	.github/ISSUE_TEMPLATE/security_report.md
+[2025-02-23 11:52:36.674]	    | 	.github/pull_request_template.md
+[2025-02-23 11:52:36.684]	    | 	.github/workflows/bats.yml
+[2025-02-23 11:52:36.696]	    | 	.github/workflows/pre-commit.yml
+[2025-02-23 11:52:36.707]	    | 	.github/workflows/report.yml
+[2025-02-23 11:52:36.724]	    | 	.gitignore
+[2025-02-23 11:52:36.736]	  "tmux-resurrect" update success
+[2025-02-23 11:52:36.739]	    | 	.pre-commit-config.yaml
+[2025-02-23 11:52:36.751]	  "tmux-cpu" update success
+[2025-02-23 11:52:36.754]	    | 	CODE_OF_CONDUCT.md
+[2025-02-23 11:52:36.767]	  "tokyo-night-tmux" update success
+[2025-02-23 11:52:36.768]	    | 	CONTRIBUTING.md
+[2025-02-23 11:52:36.781]	  "tmux-copycat" update success
+[2025-02-23 11:52:36.782]	    | 	LICENSE.md
+[2025-02-23 11:52:36.794]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:36.795]	    | 	README.md
+[2025-02-23 11:52:36.807]	    | Already up to date.
+[2025-02-23 11:52:36.808]	    | 	SECURITY.md
+[2025-02-23 11:52:36.820]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:36.821]	    | 	lib/coreutils-compat.sh
+[2025-02-23 11:52:36.833]	    | 	lib/netspeed.sh
+[2025-02-23 11:52:36.833]	    | Already up to date.
+[2025-02-23 11:52:36.846]	    | 	snaps/hostname.png
+[2025-02-23 11:52:36.846]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:36.860]	    | Already up to date.
+[2025-02-23 11:52:36.860]	    | 	snaps/l01.png
+[2025-02-23 11:52:36.873]	    | 	snaps/logico.png
+[2025-02-23 11:52:36.873]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:36.892]	    | Already up to date.
+[2025-02-23 11:52:36.899]	    | 	snaps/n01.png
+[2025-02-23 11:52:36.912]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:52:36.915]	    | 	snaps/n02.png
+[2025-02-23 11:52:36.932]	    | 	snaps/netspeed.png
+[2025-02-23 11:52:36.949]	    | 	src/battery-widget.sh
+[2025-02-23 11:52:36.964]	    | 	src/cmus-tmux-statusbar.sh
+[2025-02-23 11:52:36.965]	Done.
+
+[2025-02-23 11:52:36.987]	    | 	src/custom-number.sh
+[2025-02-23 11:52:37.001]	    | 	src/datetime-widget.sh
+[2025-02-23 11:52:37.016]	    | 	src/git-status.sh
+[2025-02-23 11:52:37.030]	    | 	src/hostname-widget.sh
+[2025-02-23 11:52:37.044]	    | 	src/music-tmux-statusbar.sh
+[2025-02-23 11:52:37.057]	    | 	src/netspeed.sh
+[2025-02-23 11:52:37.071]	    | 	src/path-widget.sh
+[2025-02-23 11:52:37.084]	    | 	src/themes.sh
+[2025-02-23 11:52:37.098]	    | 	src/wb-git-status.sh
+[2025-02-23 11:52:37.111]	    | 	test/netspeed.bats
+[2025-02-23 11:52:37.130]	    | 	tokyo-night.tmux
+[2025-02-23 11:52:37.147]	    | Please move or remove them before you merge.
+[2025-02-23 11:52:37.166]	    | Aborting
+[2025-02-23 11:52:37.185]	  "tmux-resurrect" update fail
+[2025-02-23 11:52:37.200]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:52:37.220]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:52:37.243]	    | 	.gitattributes
+[2025-02-23 11:52:37.259]	    | 	.gitignore
+[2025-02-23 11:52:37.276]	    | 	.gitmodules
+[2025-02-23 11:52:37.293]	    | 	.travis.yml
+[2025-02-23 11:52:37.308]	    | 	CHANGELOG.md
+[2025-02-23 11:52:37.323]	    | 	CONTRIBUTING.md
+[2025-02-23 11:52:37.337]	    | 	LICENSE.md
+[2025-02-23 11:52:37.351]	    | 	README.md
+[2025-02-23 11:52:37.364]	    | 	docs/custom_key_bindings.md
+[2025-02-23 11:52:37.378]	    | 	docs/hooks.md
+[2025-02-23 11:52:37.391]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-23 11:52:37.405]	    | 	docs/restoring_bash_history.md
+[2025-02-23 11:52:37.418]	    | 	docs/restoring_pane_contents.md
+[2025-02-23 11:52:37.433]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-23 11:52:37.447]	    | 	docs/restoring_programs.md
+[2025-02-23 11:52:37.461]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-23 11:52:37.480]	    | 	docs/save_dir.md
+[2025-02-23 11:52:37.495]	    | 	resurrect.tmux
+[2025-02-23 11:52:37.510]	    | 	run_tests
+[2025-02-23 11:52:37.522]	    | 	save_command_strategies/gdb.sh
+[2025-02-23 11:52:37.533]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-23 11:52:37.543]	    | 	save_command_strategies/pgrep.sh
+[2025-02-23 11:52:37.553]	    | 	save_command_strategies/ps.sh
+[2025-02-23 11:52:37.562]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 11:52:37.571]	    | 	scripts/helpers.sh
+[2025-02-23 11:52:37.580]	    | 	scripts/process_restore_helpers.sh
+[2025-02-23 11:52:37.590]	    | 	scripts/restore.exp
+[2025-02-23 11:52:37.599]	    | 	scripts/restore.sh
+[2025-02-23 11:52:37.608]	    | 	scripts/save.sh
+[2025-02-23 11:52:37.618]	    | 	scripts/spinner_helpers.sh
+[2025-02-23 11:52:37.627]	    | 	scripts/tmux_spinner.sh
+[2025-02-23 11:52:37.636]	    | 	scripts/variables.sh
+[2025-02-23 11:52:37.645]	    | 	strategies/irb_default_strategy.sh
+[2025-02-23 11:52:37.655]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-23 11:52:37.664]	    | 	strategies/nvim_session.sh
+[2025-02-23 11:52:37.673]	    | 	strategies/vim_session.sh
+[2025-02-23 11:52:37.683]	    | 	tests/fixtures/restore_file.txt
+[2025-02-23 11:52:37.693]	    | 	tests/fixtures/save_file.txt
+[2025-02-23 11:52:37.703]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-23 11:52:37.713]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-23 11:52:37.730]	    | 	tests/helpers/helpers.sh
+[2025-02-23 11:52:37.740]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-23 11:52:37.750]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-23 11:52:37.760]	    | 	tests/run_tests_in_isolation
+[2025-02-23 11:52:37.772]	    | 	tests/test_resurrect_restore.sh
+[2025-02-23 11:52:37.785]	    | 	tests/test_resurrect_save.sh
+[2025-02-23 11:52:37.798]	    | 	video/issue_vid.png
+[2025-02-23 11:52:37.810]	    | 	video/screencast_img.png
+[2025-02-23 11:52:37.822]	    | 	video/script.md
+[2025-02-23 11:52:37.834]	    | Please move or remove them before you merge.
+[2025-02-23 11:52:37.847]	    | Aborting
+[2025-02-23 11:52:37.860]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:52:37.895]	Removing "tmux-copycat"
+[2025-02-23 11:52:37.909]	  "tmux-copycat" clean success
+[2025-02-23 11:52:37.922]	Removing "tmux-cpu"
+[2025-02-23 11:52:37.940]	  "tmux-cpu" clean success
+[2025-02-23 11:52:37.955]	Removing "tmux-resurrect"
+[2025-02-23 11:52:37.976]	  "tmux-resurrect" clean success
+[2025-02-23 11:52:37.994]	Removing "tokyo-night-tmux"
+[2025-02-23 11:52:38.012]	  "tokyo-night-tmux" clean success
+[2025-02-23 11:52:38.033]	Done.
+
+[2025-02-23 11:53:46.867]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 11:53:46.879]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:53:46.912]	Installing "tmux-copycat"
+[2025-02-23 11:53:46.926]	Installing "tmux-resurrect"
+[2025-02-23 11:53:46.939]	Installing "tmux-cpu"
+[2025-02-23 11:53:46.952]	Installing "tokyo-night-tmux"
+[2025-02-23 11:53:47.287]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 11:53:47.305]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 11:53:47.357]	Already installed "tokyo-night-tmux"
+[2025-02-23 11:53:47.372]	Already installed "tmux-copycat"
+[2025-02-23 11:53:47.387]	Already installed "tmux-cpu"
+[2025-02-23 11:53:47.400]	Already installed "tmux-resurrect"
+[2025-02-23 11:53:47.413]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:53:47.434]	Updating all plugins!
+[2025-02-23 11:53:47.444]	
+[2025-02-23 11:53:47.695]	  "tmux-cpu" download success
+[2025-02-23 11:53:47.779]	  "tmux-copycat" download success
+[2025-02-23 11:53:47.914]	  "tmux-cpu" update fail
+[2025-02-23 11:53:47.930]	  "tmux-resurrect" update fail
+[2025-02-23 11:53:47.930]	  "tokyo-night-tmux" download success
+[2025-02-23 11:53:47.944]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:53:47.957]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:53:47.970]	    | 	.editorconfig
+[2025-02-23 11:53:47.981]	    | 	.github/workflows/check.yml
+[2025-02-23 11:53:47.993]	    | 	.mailmap
+[2025-02-23 11:53:48.005]	    | 	LICENSE
+[2025-02-23 11:53:48.025]	    | 	README.md
+[2025-02-23 11:53:48.041]	    | 	cpu.tmux
+[2025-02-23 11:53:48.064]	    | 	screenshots/high_bg.png
+[2025-02-23 11:53:48.081]	    | 	screenshots/high_fg.png
+[2025-02-23 11:53:48.099]	    | 	screenshots/high_icon.png
+[2025-02-23 11:53:48.114]	    | 	screenshots/low_bg.png
+[2025-02-23 11:53:48.132]	    | 	screenshots/low_fg.png
+[2025-02-23 11:53:48.148]	    | 	screenshots/low_icon.png
+[2025-02-23 11:53:48.161]	    | 	screenshots/medium_bg.png
+[2025-02-23 11:53:48.175]	    | 	screenshots/medium_fg.png
+[2025-02-23 11:53:48.187]	    | 	screenshots/medium_icon.png
+[2025-02-23 11:53:48.197]	    | 	scripts/cpu_bg_color.sh
+[2025-02-23 11:53:48.207]	    | 	scripts/cpu_fg_color.sh
+[2025-02-23 11:53:48.218]	    | 	scripts/cpu_icon.sh
+[2025-02-23 11:53:48.229]	    | 	scripts/cpu_percentage.sh
+[2025-02-23 11:53:48.241]	    | 	scripts/cpu_temp.sh
+[2025-02-23 11:53:48.254]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-23 11:53:48.272]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-23 11:53:48.285]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-23 11:53:48.297]	    | 	scripts/gpu_bg_color.sh
+[2025-02-23 11:53:48.308]	    | 	scripts/gpu_fg_color.sh
+[2025-02-23 11:53:48.318]	    | 	scripts/gpu_icon.sh
+[2025-02-23 11:53:48.329]	    | 	scripts/gpu_percentage.sh
+[2025-02-23 11:53:48.339]	    | 	scripts/gpu_temp.sh
+[2025-02-23 11:53:48.349]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-23 11:53:48.359]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-23 11:53:48.369]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-23 11:53:48.380]	    | 	scripts/gram_bg_color.sh
+[2025-02-23 11:53:48.392]	    | 	scripts/gram_fg_color.sh
+[2025-02-23 11:53:48.403]	    | 	scripts/gram_icon.sh
+[2025-02-23 11:53:48.415]	    | 	scripts/gram_percentage.sh
+[2025-02-23 11:53:48.426]	    | 	scripts/helpers.sh
+[2025-02-23 11:53:48.439]	    | 	scripts/ram_bg_color.sh
+[2025-02-23 11:53:48.452]	    | 	scripts/ram_fg_color.sh
+[2025-02-23 11:53:48.465]	    | 	scripts/ram_icon.sh
+[2025-02-23 11:53:48.478]	    | 	scripts/ram_percentage.sh
+[2025-02-23 11:53:48.492]	    | Please move or remove them before you merge.
+[2025-02-23 11:53:48.506]	    | Aborting
+[2025-02-23 11:53:48.524]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:53:48.538]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:53:48.553]	    | 	.gitattributes
+[2025-02-23 11:53:48.567]	    | 	.gitignore
+[2025-02-23 11:53:48.582]	    | 	.gitmodules
+[2025-02-23 11:53:48.602]	    | 	.travis.yml
+[2025-02-23 11:53:48.618]	    | 	CHANGELOG.md
+[2025-02-23 11:53:48.635]	    | 	CONTRIBUTING.md
+[2025-02-23 11:53:48.652]	    | 	LICENSE.md
+[2025-02-23 11:53:48.668]	    | 	README.md
+[2025-02-23 11:53:48.689]	    | 	docs/custom_key_bindings.md
+[2025-02-23 11:53:48.702]	    | 	docs/hooks.md
+[2025-02-23 11:53:48.716]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-23 11:53:48.729]	    | 	docs/restoring_bash_history.md
+[2025-02-23 11:53:48.742]	    | 	docs/restoring_pane_contents.md
+[2025-02-23 11:53:48.755]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-23 11:53:48.775]	    | 	docs/restoring_programs.md
+[2025-02-23 11:53:48.790]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-23 11:53:48.804]	    | 	docs/save_dir.md
+[2025-02-23 11:53:48.819]	    | 	resurrect.tmux
+[2025-02-23 11:53:48.830]	  "tmux-resurrect" download success
+[2025-02-23 11:53:48.834]	    | 	run_tests
+[2025-02-23 11:53:48.845]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 11:53:48.848]	    | 	save_command_strategies/gdb.sh
+[2025-02-23 11:53:48.862]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-23 11:53:48.872]	Updating all plugins!
+[2025-02-23 11:53:48.875]	    | 	save_command_strategies/pgrep.sh
+[2025-02-23 11:53:48.885]	
+[2025-02-23 11:53:48.887]	    | 	save_command_strategies/ps.sh
+[2025-02-23 11:53:48.901]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 11:53:48.914]	    | 	scripts/helpers.sh
+[2025-02-23 11:53:48.928]	    | 	scripts/process_restore_helpers.sh
+[2025-02-23 11:53:48.941]	    | 	scripts/restore.exp
+[2025-02-23 11:53:48.955]	    | 	scripts/restore.sh
+[2025-02-23 11:53:48.969]	    | 	scripts/save.sh
+[2025-02-23 11:53:48.982]	    | 	scripts/spinner_helpers.sh
+[2025-02-23 11:53:48.994]	    | 	scripts/tmux_spinner.sh
+[2025-02-23 11:53:49.006]	    | 	scripts/variables.sh
+[2025-02-23 11:53:49.022]	    | 	strategies/irb_default_strategy.sh
+[2025-02-23 11:53:49.033]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-23 11:53:49.045]	    | 	strategies/nvim_session.sh
+[2025-02-23 11:53:49.056]	    | 	strategies/vim_session.sh
+[2025-02-23 11:53:49.068]	    | 	tests/fixtures/restore_file.txt
+[2025-02-23 11:53:49.079]	    | 	tests/fixtures/save_file.txt
+[2025-02-23 11:53:49.091]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-23 11:53:49.103]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-23 11:53:49.113]	    | 	tests/helpers/helpers.sh
+[2025-02-23 11:53:49.123]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-23 11:53:49.133]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-23 11:53:49.144]	    | 	tests/run_tests_in_isolation
+[2025-02-23 11:53:49.155]	    | 	tests/test_resurrect_restore.sh
+[2025-02-23 11:53:49.165]	    | 	tests/test_resurrect_save.sh
+[2025-02-23 11:53:49.178]	    | 	video/issue_vid.png
+[2025-02-23 11:53:49.190]	    | 	video/screencast_img.png
+[2025-02-23 11:53:49.202]	    | 	video/script.md
+[2025-02-23 11:53:49.215]	    | Please move or remove them before you merge.
+[2025-02-23 11:53:49.227]	    | Aborting
+[2025-02-23 11:53:49.241]	  "tokyo-night-tmux" update fail
+[2025-02-23 11:53:49.260]	  "tmux-copycat" update fail
+[2025-02-23 11:53:49.286]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:53:49.308]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:53:49.325]	    | 	.editorconfig
+[2025-02-23 11:53:49.344]	    | 	.github/ISSUE_TEMPLATE/bug_report.md
+[2025-02-23 11:53:49.361]	    | 	.github/ISSUE_TEMPLATE/feature_request.md
+[2025-02-23 11:53:49.375]	    | 	.github/ISSUE_TEMPLATE/security_report.md
+[2025-02-23 11:53:49.376]	  "tmux-copycat" update success
+[2025-02-23 11:53:49.389]	    | 	.github/pull_request_template.md
+[2025-02-23 11:53:49.390]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:53:49.403]	    | 	.github/workflows/bats.yml
+[2025-02-23 11:53:49.404]	    | Already up to date.
+[2025-02-23 11:53:49.416]	    | 	.github/workflows/pre-commit.yml
+[2025-02-23 11:53:49.417]	  "tmux-cpu" update success
+[2025-02-23 11:53:49.429]	    | 	.github/workflows/report.yml
+[2025-02-23 11:53:49.429]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:53:49.441]	    | 	.gitignore
+[2025-02-23 11:53:49.441]	    | Already up to date.
+[2025-02-23 11:53:49.454]	  "tmux-resurrect" update success
+[2025-02-23 11:53:49.454]	    | 	.pre-commit-config.yaml
+[2025-02-23 11:53:49.466]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:53:49.466]	    | 	CODE_OF_CONDUCT.md
+[2025-02-23 11:53:49.477]	    | Already up to date.
+[2025-02-23 11:53:49.477]	    | 	CONTRIBUTING.md
+[2025-02-23 11:53:49.488]	    | 	LICENSE.md
+[2025-02-23 11:53:49.488]	  "tokyo-night-tmux" update success
+[2025-02-23 11:53:49.499]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:53:49.499]	    | 	README.md
+[2025-02-23 11:53:49.510]	    | 	SECURITY.md
+[2025-02-23 11:53:49.511]	    | Already up to date.
+[2025-02-23 11:53:49.527]	    | 	lib/coreutils-compat.sh
+[2025-02-23 11:53:49.530]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:53:49.540]	    | 	lib/netspeed.sh
+[2025-02-23 11:53:49.553]	    | 	snaps/hostname.png
+[2025-02-23 11:53:49.567]	    | 	snaps/l01.png
+[2025-02-23 11:53:49.571]	Done.
+
+[2025-02-23 11:53:49.578]	    | 	snaps/logico.png
+[2025-02-23 11:53:49.591]	    | 	snaps/n01.png
+[2025-02-23 11:53:49.601]	    | 	snaps/n02.png
+[2025-02-23 11:53:49.612]	    | 	snaps/netspeed.png
+[2025-02-23 11:53:49.623]	    | 	src/battery-widget.sh
+[2025-02-23 11:53:49.633]	    | 	src/cmus-tmux-statusbar.sh
+[2025-02-23 11:53:49.643]	    | 	src/custom-number.sh
+[2025-02-23 11:53:49.655]	    | 	src/datetime-widget.sh
+[2025-02-23 11:53:49.665]	    | 	src/git-status.sh
+[2025-02-23 11:53:49.675]	    | 	src/hostname-widget.sh
+[2025-02-23 11:53:49.685]	    | 	src/music-tmux-statusbar.sh
+[2025-02-23 11:53:49.695]	    | 	src/netspeed.sh
+[2025-02-23 11:53:49.704]	    | 	src/path-widget.sh
+[2025-02-23 11:53:49.715]	    | 	src/themes.sh
+[2025-02-23 11:53:49.726]	    | 	src/wb-git-status.sh
+[2025-02-23 11:53:49.737]	    | 	test/netspeed.bats
+[2025-02-23 11:53:49.750]	    | 	tokyo-night.tmux
+[2025-02-23 11:53:49.764]	    | Please move or remove them before you merge.
+[2025-02-23 11:53:49.783]	    | Aborting
+[2025-02-23 11:53:49.798]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 11:53:49.811]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 11:53:49.825]	    | 	.gitattributes
+[2025-02-23 11:53:49.838]	    | 	.gitignore
+[2025-02-23 11:53:49.850]	    | 	.travis.yml
+[2025-02-23 11:53:49.862]	    | 	CHANGELOG.md
+[2025-02-23 11:53:49.873]	    | 	LICENSE.md
+[2025-02-23 11:53:49.883]	    | 	README.md
+[2025-02-23 11:53:49.893]	    | 	Vagrantfile
+[2025-02-23 11:53:49.904]	    | 	copycat.tmux
+[2025-02-23 11:53:49.915]	    | 	docs/customizations.md
+[2025-02-23 11:53:49.929]	    | 	docs/defining_new_stored_searches.md
+[2025-02-23 11:53:49.943]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-23 11:53:49.957]	    | 	docs/limitations.md
+[2025-02-23 11:53:49.970]	    | 	run-tests
+[2025-02-23 11:53:49.981]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 11:53:49.992]	    | 	scripts/copycat_generate_results.sh
+[2025-02-23 11:53:50.003]	    | 	scripts/copycat_git_special.sh
+[2025-02-23 11:53:50.019]	    | 	scripts/copycat_jump.sh
+[2025-02-23 11:53:50.035]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-23 11:53:50.046]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-23 11:53:50.058]	    | 	scripts/copycat_mode_start.sh
+[2025-02-23 11:53:50.070]	    | 	scripts/copycat_search.sh
+[2025-02-23 11:53:50.082]	    | 	scripts/helpers.sh
+[2025-02-23 11:53:50.093]	    | 	scripts/stored_search_helpers.sh
+[2025-02-23 11:53:50.118]	    | 	scripts/variables.sh
+[2025-02-23 11:53:50.135]	    | 	test/README.md
+[2025-02-23 11:53:50.154]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-23 11:53:50.171]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-23 11:53:50.190]	    | 	test/helpers/expect_helpers.exp
+[2025-02-23 11:53:50.203]	    | 	test/helpers/run_tmux.exp
+[2025-02-23 11:53:50.216]	    | 	test/helpers/setup.exp
+[2025-02-23 11:53:50.229]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-23 11:53:50.242]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-23 11:53:50.254]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-23 11:53:50.269]	    | 	test/helpers/test.exp
+[2025-02-23 11:53:50.280]	    | 	test/run-tests-within-vm
+[2025-02-23 11:53:50.293]	    | 	test/test_digit_search.exp
+[2025-02-23 11:53:50.307]	    | 	test/test_file_search.exp
+[2025-02-23 11:53:50.321]	    | 	test/test_free_search.exp
+[2025-02-23 11:53:50.342]	    | 	test/test_git_hash_search.exp
+[2025-02-23 11:53:50.361]	    | 	test/test_git_status_search.exp
+[2025-02-23 11:53:50.379]	    | 	test/test_url_search.exp
+[2025-02-23 11:53:50.399]	    | 	test/test_user_defined_search.exp
+[2025-02-23 11:53:50.414]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-23 11:53:50.431]	    | 	video/README.md
+[2025-02-23 11:53:50.445]	    | 	video/screencast_img.png
+[2025-02-23 11:53:50.458]	    | 	video/script.md
+[2025-02-23 11:53:50.469]	    | Please move or remove them before you merge.
+[2025-02-23 11:53:50.480]	    | Aborting
+[2025-02-23 11:53:50.491]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 11:53:50.523]	Removing "tmux-copycat"
+[2025-02-23 11:53:50.535]	  "tmux-copycat" clean success
+[2025-02-23 11:53:50.548]	Removing "tmux-cpu"
+[2025-02-23 11:53:50.560]	  "tmux-cpu" clean success
+[2025-02-23 11:53:50.572]	Removing "tmux-resurrect"
+[2025-02-23 11:53:50.588]	  "tmux-resurrect" clean success
+[2025-02-23 11:53:50.605]	Removing "tokyo-night-tmux"
+[2025-02-23 11:53:50.622]	  "tokyo-night-tmux" clean success
+[2025-02-23 11:53:50.640]	Done.
+
+[2025-02-23 12:04:18.500]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 12:04:18.511]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 12:04:18.542]	Installing "tmux-cpu"
+[2025-02-23 12:04:18.552]	Installing "tmux-copycat"
+[2025-02-23 12:04:18.563]	Installing "tmux-resurrect"
+[2025-02-23 12:04:18.576]	Installing "tokyo-night-tmux"
+[2025-02-23 12:04:18.819]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 12:04:18.830]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 12:04:18.864]	Already installed "tmux-copycat"
+[2025-02-23 12:04:18.875]	Already installed "tmux-cpu"
+[2025-02-23 12:04:18.885]	Already installed "tmux-resurrect"
+[2025-02-23 12:04:18.896]	Already installed "tokyo-night-tmux"
+[2025-02-23 12:04:18.906]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 12:04:18.925]	Updating all plugins!
+[2025-02-23 12:04:18.935]	
+[2025-02-23 12:04:19.312]	  "tmux-cpu" download success
+[2025-02-23 12:04:19.394]	  "tmux-cpu" update fail
+[2025-02-23 12:04:19.404]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:04:19.414]	    | From https://github.com/tmux-plugins/tmux-cpu
+[2025-02-23 12:04:19.424]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:04:19.435]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:04:19.447]	    | 	.editorconfig
+[2025-02-23 12:04:19.460]	    | 	.github/workflows/check.yml
+[2025-02-23 12:04:19.471]	    | 	.mailmap
+[2025-02-23 12:04:19.482]	    | 	LICENSE
+[2025-02-23 12:04:19.492]	    | 	README.md
+[2025-02-23 12:04:19.503]	    | 	cpu.tmux
+[2025-02-23 12:04:19.516]	    | 	screenshots/high_bg.png
+[2025-02-23 12:04:19.526]	    | 	screenshots/high_fg.png
+[2025-02-23 12:04:19.538]	    | 	screenshots/high_icon.png
+[2025-02-23 12:04:19.545]	  "tokyo-night-tmux" download success
+[2025-02-23 12:04:19.548]	    | 	screenshots/low_bg.png
+[2025-02-23 12:04:19.558]	    | 	screenshots/low_fg.png
+[2025-02-23 12:04:19.568]	    | 	screenshots/low_icon.png
+[2025-02-23 12:04:19.578]	    | 	screenshots/medium_bg.png
+[2025-02-23 12:04:19.589]	    | 	screenshots/medium_fg.png
+[2025-02-23 12:04:19.599]	    | 	screenshots/medium_icon.png
+[2025-02-23 12:04:19.609]	    | 	scripts/cpu_bg_color.sh
+[2025-02-23 12:04:19.620]	    | 	scripts/cpu_fg_color.sh
+[2025-02-23 12:04:19.630]	    | 	scripts/cpu_icon.sh
+[2025-02-23 12:04:19.640]	    | 	scripts/cpu_percentage.sh
+[2025-02-23 12:04:19.650]	    | 	scripts/cpu_temp.sh
+[2025-02-23 12:04:19.660]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-23 12:04:19.670]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-23 12:04:19.680]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-23 12:04:19.690]	    | 	scripts/gpu_bg_color.sh
+[2025-02-23 12:04:19.698]	  "tmux-copycat" download success
+[2025-02-23 12:04:19.700]	    | 	scripts/gpu_fg_color.sh
+[2025-02-23 12:04:19.710]	    | 	scripts/gpu_icon.sh
+[2025-02-23 12:04:19.721]	    | 	scripts/gpu_percentage.sh
+[2025-02-23 12:04:19.732]	    | 	scripts/gpu_temp.sh
+[2025-02-23 12:04:19.742]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-23 12:04:19.752]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-23 12:04:19.762]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-23 12:04:19.772]	    | 	scripts/gram_bg_color.sh
+[2025-02-23 12:04:19.782]	    | 	scripts/gram_fg_color.sh
+[2025-02-23 12:04:19.792]	    | 	scripts/gram_icon.sh
+[2025-02-23 12:04:19.803]	    | 	scripts/gram_percentage.sh
+[2025-02-23 12:04:19.813]	    | 	scripts/helpers.sh
+[2025-02-23 12:04:19.824]	    | 	scripts/ram_bg_color.sh
+[2025-02-23 12:04:19.833]	    | 	scripts/ram_fg_color.sh
+[2025-02-23 12:04:19.844]	    | 	scripts/ram_icon.sh
+[2025-02-23 12:04:19.854]	    | 	scripts/ram_percentage.sh
+[2025-02-23 12:04:19.864]	    | Please move or remove them before you merge.
+[2025-02-23 12:04:19.874]	    | Aborting
+[2025-02-23 12:04:19.884]	  "tmux-resurrect" update fail
+[2025-02-23 12:04:19.894]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:04:19.904]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-23 12:04:19.914]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:04:19.925]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:04:19.935]	    | 	.gitattributes
+[2025-02-23 12:04:19.945]	    | 	.gitignore
+[2025-02-23 12:04:19.956]	    | 	.gitmodules
+[2025-02-23 12:04:19.966]	    | 	.travis.yml
+[2025-02-23 12:04:19.976]	    | 	CHANGELOG.md
+[2025-02-23 12:04:19.987]	    | 	CONTRIBUTING.md
+[2025-02-23 12:04:19.997]	    | 	LICENSE.md
+[2025-02-23 12:04:20.006]	    | 	README.md
+[2025-02-23 12:04:20.017]	    | 	docs/custom_key_bindings.md
+[2025-02-23 12:04:20.026]	    | 	docs/hooks.md
+[2025-02-23 12:04:20.036]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-23 12:04:20.046]	    | 	docs/restoring_bash_history.md
+[2025-02-23 12:04:20.055]	    | 	docs/restoring_pane_contents.md
+[2025-02-23 12:04:20.065]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-23 12:04:20.075]	    | 	docs/restoring_programs.md
+[2025-02-23 12:04:20.084]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-23 12:04:20.095]	    | 	docs/save_dir.md
+[2025-02-23 12:04:20.106]	    | 	resurrect.tmux
+[2025-02-23 12:04:20.116]	    | 	run_tests
+[2025-02-23 12:04:20.127]	    | 	save_command_strategies/gdb.sh
+[2025-02-23 12:04:20.138]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-23 12:04:20.148]	    | 	save_command_strategies/pgrep.sh
+[2025-02-23 12:04:20.159]	    | 	save_command_strategies/ps.sh
+[2025-02-23 12:04:20.169]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 12:04:20.178]	    | 	scripts/helpers.sh
+[2025-02-23 12:04:20.189]	    | 	scripts/process_restore_helpers.sh
+[2025-02-23 12:04:20.199]	    | 	scripts/restore.exp
+[2025-02-23 12:04:20.209]	    | 	scripts/restore.sh
+[2025-02-23 12:04:20.220]	    | 	scripts/save.sh
+[2025-02-23 12:04:20.231]	    | 	scripts/spinner_helpers.sh
+[2025-02-23 12:04:20.242]	    | 	scripts/tmux_spinner.sh
+[2025-02-23 12:04:20.253]	    | 	scripts/variables.sh
+[2025-02-23 12:04:20.264]	    | 	strategies/irb_default_strategy.sh
+[2025-02-23 12:04:20.274]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-23 12:04:20.285]	    | 	strategies/nvim_session.sh
+[2025-02-23 12:04:20.296]	    | 	strategies/vim_session.sh
+[2025-02-23 12:04:20.307]	    | 	tests/fixtures/restore_file.txt
+[2025-02-23 12:04:20.319]	    | 	tests/fixtures/save_file.txt
+[2025-02-23 12:04:20.330]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-23 12:04:20.342]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-23 12:04:20.350]	  "tmux-resurrect" download success
+[2025-02-23 12:04:20.353]	    | 	tests/helpers/helpers.sh
+[2025-02-23 12:04:20.362]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 12:04:20.364]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-23 12:04:20.375]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-23 12:04:20.384]	Updating all plugins!
+[2025-02-23 12:04:20.387]	    | 	tests/run_tests_in_isolation
+[2025-02-23 12:04:20.396]	
+[2025-02-23 12:04:20.397]	    | 	tests/test_resurrect_restore.sh
+[2025-02-23 12:04:20.410]	    | 	tests/test_resurrect_save.sh
+[2025-02-23 12:04:20.422]	    | 	video/issue_vid.png
+[2025-02-23 12:04:20.434]	    | 	video/screencast_img.png
+[2025-02-23 12:04:20.446]	    | 	video/script.md
+[2025-02-23 12:04:20.457]	    | Please move or remove them before you merge.
+[2025-02-23 12:04:20.468]	    | Aborting
+[2025-02-23 12:04:20.479]	  "tokyo-night-tmux" update fail
+[2025-02-23 12:04:20.490]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:04:20.500]	    | From https://github.com/janoamaral/tokyo-night-tmux
+[2025-02-23 12:04:20.510]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:04:20.521]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:04:20.531]	    | 	.editorconfig
+[2025-02-23 12:04:20.542]	    | 	.github/ISSUE_TEMPLATE/bug_report.md
+[2025-02-23 12:04:20.553]	    | 	.github/ISSUE_TEMPLATE/feature_request.md
+[2025-02-23 12:04:20.563]	    | 	.github/ISSUE_TEMPLATE/security_report.md
+[2025-02-23 12:04:20.574]	    | 	.github/pull_request_template.md
+[2025-02-23 12:04:20.584]	    | 	.github/workflows/bats.yml
+[2025-02-23 12:04:20.595]	    | 	.github/workflows/pre-commit.yml
+[2025-02-23 12:04:20.606]	    | 	.github/workflows/report.yml
+[2025-02-23 12:04:20.617]	    | 	.gitignore
+[2025-02-23 12:04:20.628]	    | 	.pre-commit-config.yaml
+[2025-02-23 12:04:20.639]	    | 	CODE_OF_CONDUCT.md
+[2025-02-23 12:04:20.650]	    | 	CONTRIBUTING.md
+[2025-02-23 12:04:20.660]	    | 	LICENSE.md
+[2025-02-23 12:04:20.672]	    | 	README.md
+[2025-02-23 12:04:20.684]	    | 	SECURITY.md
+[2025-02-23 12:04:20.695]	    | 	lib/coreutils-compat.sh
+[2025-02-23 12:04:20.707]	    | 	lib/netspeed.sh
+[2025-02-23 12:04:20.718]	    | 	snaps/hostname.png
+[2025-02-23 12:04:20.729]	    | 	snaps/l01.png
+[2025-02-23 12:04:20.739]	    | 	snaps/logico.png
+[2025-02-23 12:04:20.749]	    | 	snaps/n01.png
+[2025-02-23 12:04:20.759]	    | 	snaps/n02.png
+[2025-02-23 12:04:20.770]	    | 	snaps/netspeed.png
+[2025-02-23 12:04:20.781]	    | 	src/battery-widget.sh
+[2025-02-23 12:04:20.792]	    | 	src/cmus-tmux-statusbar.sh
+[2025-02-23 12:04:20.802]	    | 	src/custom-number.sh
+[2025-02-23 12:04:20.813]	    | 	src/datetime-widget.sh
+[2025-02-23 12:04:20.825]	    | 	src/git-status.sh
+[2025-02-23 12:04:20.835]	    | 	src/hostname-widget.sh
+[2025-02-23 12:04:20.845]	    | 	src/music-tmux-statusbar.sh
+[2025-02-23 12:04:20.855]	    | 	src/netspeed.sh
+[2025-02-23 12:04:20.865]	    | 	src/path-widget.sh
+[2025-02-23 12:04:20.875]	    | 	src/themes.sh
+[2025-02-23 12:04:20.878]	  "tmux-resurrect" update success
+[2025-02-23 12:04:20.886]	    | 	src/wb-git-status.sh
+[2025-02-23 12:04:20.890]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:04:20.898]	    | 	test/netspeed.bats
+[2025-02-23 12:04:20.901]	    | Already up to date.
+[2025-02-23 12:04:20.910]	    | 	tokyo-night.tmux
+[2025-02-23 12:04:20.913]	  "tmux-cpu" update success
+[2025-02-23 12:04:20.921]	    | Please move or remove them before you merge.
+[2025-02-23 12:04:20.925]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:04:20.933]	    | Aborting
+[2025-02-23 12:04:20.936]	    | Already up to date.
+[2025-02-23 12:04:20.945]	  "tmux-copycat" update fail
+[2025-02-23 12:04:20.948]	  "tokyo-night-tmux" update success
+[2025-02-23 12:04:20.956]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:04:20.959]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:04:20.967]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-23 12:04:20.970]	    | From https://github.com/janoamaral/tokyo-night-tmux
+[2025-02-23 12:04:20.979]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:04:20.981]	    |  * [new tag]         v1.5       -> v1.5
+[2025-02-23 12:04:20.991]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:04:20.994]	    |  * [new tag]         v1.5.3     -> v1.5.3
+[2025-02-23 12:04:21.004]	    | 	.gitattributes
+[2025-02-23 12:04:21.006]	    |  * [new tag]         v1.5.5     -> v1.5.5
+[2025-02-23 12:04:21.017]	    | 	.gitignore
+[2025-02-23 12:04:21.019]	    | Already up to date.
+[2025-02-23 12:04:21.030]	    | 	.travis.yml
+[2025-02-23 12:04:21.042]	    | 	CHANGELOG.md
+[2025-02-23 12:04:21.053]	    | 	LICENSE.md
+[2025-02-23 12:04:21.063]	    | 	README.md
+[2025-02-23 12:04:21.073]	    | 	Vagrantfile
+[2025-02-23 12:04:21.084]	    | 	copycat.tmux
+[2025-02-23 12:04:21.096]	    | 	docs/customizations.md
+[2025-02-23 12:04:21.108]	    | 	docs/defining_new_stored_searches.md
+[2025-02-23 12:04:21.119]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-23 12:04:21.129]	    | 	docs/limitations.md
+[2025-02-23 12:04:21.139]	    | 	run-tests
+[2025-02-23 12:04:21.149]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 12:04:21.159]	    | 	scripts/copycat_generate_results.sh
+[2025-02-23 12:04:21.168]	    | 	scripts/copycat_git_special.sh
+[2025-02-23 12:04:21.178]	    | 	scripts/copycat_jump.sh
+[2025-02-23 12:04:21.188]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-23 12:04:21.198]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-23 12:04:21.209]	    | 	scripts/copycat_mode_start.sh
+[2025-02-23 12:04:21.221]	    | 	scripts/copycat_search.sh
+[2025-02-23 12:04:21.232]	    | 	scripts/helpers.sh
+[2025-02-23 12:04:21.242]	    | 	scripts/stored_search_helpers.sh
+[2025-02-23 12:04:21.253]	    | 	scripts/variables.sh
+[2025-02-23 12:04:21.263]	    | 	test/README.md
+[2025-02-23 12:04:21.273]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-23 12:04:21.283]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-23 12:04:21.293]	    | 	test/helpers/expect_helpers.exp
+[2025-02-23 12:04:21.304]	    | 	test/helpers/run_tmux.exp
+[2025-02-23 12:04:21.313]	    | 	test/helpers/setup.exp
+[2025-02-23 12:04:21.324]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-23 12:04:21.333]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-23 12:04:21.344]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-23 12:04:21.355]	    | 	test/helpers/test.exp
+[2025-02-23 12:04:21.366]	    | 	test/run-tests-within-vm
+[2025-02-23 12:04:21.376]	    | 	test/test_digit_search.exp
+[2025-02-23 12:04:21.387]	    | 	test/test_file_search.exp
+[2025-02-23 12:04:21.397]	    | 	test/test_free_search.exp
+[2025-02-23 12:04:21.407]	    | 	test/test_git_hash_search.exp
+[2025-02-23 12:04:21.418]	    | 	test/test_git_status_search.exp
+[2025-02-23 12:04:21.429]	    | 	test/test_url_search.exp
+[2025-02-23 12:04:21.440]	    | 	test/test_user_defined_search.exp
+[2025-02-23 12:04:21.452]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-23 12:04:21.463]	    | 	video/README.md
+[2025-02-23 12:04:21.474]	    | 	video/screencast_img.png
+[2025-02-23 12:04:21.484]	    | 	video/script.md
+[2025-02-23 12:04:21.494]	    | Please move or remove them before you merge.
+[2025-02-23 12:04:21.505]	    | Aborting
+[2025-02-23 12:04:21.517]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 12:04:21.536]	  "tmux-copycat" update success
+[2025-02-23 12:04:21.547]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:04:21.551]	Done.
+
+[2025-02-23 12:04:21.557]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-23 12:04:21.568]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-23 12:04:21.580]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-23 12:04:21.591]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-23 12:04:21.603]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-23 12:04:21.615]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-23 12:04:21.629]	    |  * [new tag]         v0.0.6     -> v0.0.6
+[2025-02-23 12:04:21.643]	    |  * [new tag]         v0.0.7     -> v0.0.7
+[2025-02-23 12:04:21.658]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-23 12:04:21.673]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-23 12:04:21.687]	    |  * [new tag]         v1.1.0     -> v1.1.0
+[2025-02-23 12:04:21.700]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-23 12:04:21.713]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-23 12:04:21.725]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-23 12:04:21.735]	    | Already up to date.
+[2025-02-23 12:04:21.745]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 12:04:21.771]	Removing "tmux-copycat"
+[2025-02-23 12:04:21.781]	  "tmux-copycat" clean success
+[2025-02-23 12:04:21.790]	Removing "tmux-cpu"
+[2025-02-23 12:04:21.800]	  "tmux-cpu" clean success
+[2025-02-23 12:04:21.809]	Removing "tmux-resurrect"
+[2025-02-23 12:04:21.820]	  "tmux-resurrect" clean success
+[2025-02-23 12:04:21.831]	Removing "tokyo-night-tmux"
+[2025-02-23 12:04:21.843]	  "tokyo-night-tmux" clean success
+[2025-02-23 12:04:21.854]	Done.
+
+[2025-02-23 12:12:58.089]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 12:12:58.101]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 12:12:58.133]	Installing "tmux-copycat"
+[2025-02-23 12:12:58.144]	Installing "tmux-cpu"
+[2025-02-23 12:12:58.156]	Installing "tmux-resurrect"
+[2025-02-23 12:12:58.167]	Installing "tokyo-night-tmux"
+[2025-02-23 12:12:58.448]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 12:12:58.459]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 12:12:58.490]	Already installed "tmux-copycat"
+[2025-02-23 12:12:58.500]	Already installed "tmux-cpu"
+[2025-02-23 12:12:58.509]	Already installed "tmux-resurrect"
+[2025-02-23 12:12:58.518]	Already installed "tokyo-night-tmux"
+[2025-02-23 12:12:58.528]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 12:12:58.547]	Updating all plugins!
+[2025-02-23 12:12:58.557]	
+[2025-02-23 12:12:58.929]	  "tmux-cpu" download success
+[2025-02-23 12:12:58.992]	  "tmux-copycat" download success
+[2025-02-23 12:12:59.029]	  "tmux-cpu" update fail
+[2025-02-23 12:12:59.039]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:12:59.048]	    | From https://github.com/tmux-plugins/tmux-cpu
+[2025-02-23 12:12:59.058]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:12:59.067]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:12:59.077]	    | 	.editorconfig
+[2025-02-23 12:12:59.086]	    | 	.github/workflows/check.yml
+[2025-02-23 12:12:59.095]	    | 	.mailmap
+[2025-02-23 12:12:59.105]	    | 	LICENSE
+[2025-02-23 12:12:59.115]	    | 	README.md
+[2025-02-23 12:12:59.125]	    | 	cpu.tmux
+[2025-02-23 12:12:59.135]	    | 	screenshots/high_bg.png
+[2025-02-23 12:12:59.145]	    | 	screenshots/high_fg.png
+[2025-02-23 12:12:59.155]	    | 	screenshots/high_icon.png
+[2025-02-23 12:12:59.164]	    | 	screenshots/low_bg.png
+[2025-02-23 12:12:59.174]	    | 	screenshots/low_fg.png
+[2025-02-23 12:12:59.183]	    | 	screenshots/low_icon.png
+[2025-02-23 12:12:59.193]	    | 	screenshots/medium_bg.png
+[2025-02-23 12:12:59.202]	    | 	screenshots/medium_fg.png
+[2025-02-23 12:12:59.210]	  "tokyo-night-tmux" download success
+[2025-02-23 12:12:59.212]	    | 	screenshots/medium_icon.png
+[2025-02-23 12:12:59.222]	    | 	scripts/cpu_bg_color.sh
+[2025-02-23 12:12:59.233]	    | 	scripts/cpu_fg_color.sh
+[2025-02-23 12:12:59.244]	    | 	scripts/cpu_icon.sh
+[2025-02-23 12:12:59.254]	    | 	scripts/cpu_percentage.sh
+[2025-02-23 12:12:59.265]	    | 	scripts/cpu_temp.sh
+[2025-02-23 12:12:59.275]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-23 12:12:59.285]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-23 12:12:59.296]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-23 12:12:59.307]	    | 	scripts/gpu_bg_color.sh
+[2025-02-23 12:12:59.317]	    | 	scripts/gpu_fg_color.sh
+[2025-02-23 12:12:59.327]	    | 	scripts/gpu_icon.sh
+[2025-02-23 12:12:59.336]	    | 	scripts/gpu_percentage.sh
+[2025-02-23 12:12:59.346]	    | 	scripts/gpu_temp.sh
+[2025-02-23 12:12:59.355]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-23 12:12:59.365]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-23 12:12:59.374]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-23 12:12:59.384]	    | 	scripts/gram_bg_color.sh
+[2025-02-23 12:12:59.395]	    | 	scripts/gram_fg_color.sh
+[2025-02-23 12:12:59.405]	    | 	scripts/gram_icon.sh
+[2025-02-23 12:12:59.416]	    | 	scripts/gram_percentage.sh
+[2025-02-23 12:12:59.428]	    | 	scripts/helpers.sh
+[2025-02-23 12:12:59.440]	    | 	scripts/ram_bg_color.sh
+[2025-02-23 12:12:59.451]	    | 	scripts/ram_fg_color.sh
+[2025-02-23 12:12:59.462]	    | 	scripts/ram_icon.sh
+[2025-02-23 12:12:59.473]	    | 	scripts/ram_percentage.sh
+[2025-02-23 12:12:59.484]	    | Please move or remove them before you merge.
+[2025-02-23 12:12:59.494]	    | Aborting
+[2025-02-23 12:12:59.505]	  "tmux-copycat" update fail
+[2025-02-23 12:12:59.515]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:12:59.526]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-23 12:12:59.537]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:12:59.547]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:12:59.557]	    | 	.gitattributes
+[2025-02-23 12:12:59.566]	    | 	.gitignore
+[2025-02-23 12:12:59.576]	    | 	.travis.yml
+[2025-02-23 12:12:59.585]	    | 	CHANGELOG.md
+[2025-02-23 12:12:59.594]	    | 	LICENSE.md
+[2025-02-23 12:12:59.604]	    | 	README.md
+[2025-02-23 12:12:59.613]	    | 	Vagrantfile
+[2025-02-23 12:12:59.623]	    | 	copycat.tmux
+[2025-02-23 12:12:59.632]	    | 	docs/customizations.md
+[2025-02-23 12:12:59.641]	    | 	docs/defining_new_stored_searches.md
+[2025-02-23 12:12:59.651]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-23 12:12:59.660]	    | 	docs/limitations.md
+[2025-02-23 12:12:59.670]	    | 	run-tests
+[2025-02-23 12:12:59.680]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 12:12:59.690]	    | 	scripts/copycat_generate_results.sh
+[2025-02-23 12:12:59.700]	    | 	scripts/copycat_git_special.sh
+[2025-02-23 12:12:59.711]	    | 	scripts/copycat_jump.sh
+[2025-02-23 12:12:59.721]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-23 12:12:59.732]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-23 12:12:59.742]	    | 	scripts/copycat_mode_start.sh
+[2025-02-23 12:12:59.753]	    | 	scripts/copycat_search.sh
+[2025-02-23 12:12:59.763]	    | 	scripts/helpers.sh
+[2025-02-23 12:12:59.774]	    | 	scripts/stored_search_helpers.sh
+[2025-02-23 12:12:59.785]	    | 	scripts/variables.sh
+[2025-02-23 12:12:59.796]	    | 	test/README.md
+[2025-02-23 12:12:59.807]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-23 12:12:59.818]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-23 12:12:59.828]	    | 	test/helpers/expect_helpers.exp
+[2025-02-23 12:12:59.838]	    | 	test/helpers/run_tmux.exp
+[2025-02-23 12:12:59.848]	    | 	test/helpers/setup.exp
+[2025-02-23 12:12:59.858]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-23 12:12:59.869]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-23 12:12:59.880]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-23 12:12:59.891]	    | 	test/helpers/test.exp
+[2025-02-23 12:12:59.901]	  "tmux-resurrect" download success
+[2025-02-23 12:12:59.902]	    | 	test/run-tests-within-vm
+[2025-02-23 12:12:59.913]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 12:12:59.913]	    | 	test/test_digit_search.exp
+[2025-02-23 12:12:59.924]	    | 	test/test_file_search.exp
+[2025-02-23 12:12:59.935]	Updating all plugins!
+[2025-02-23 12:12:59.935]	    | 	test/test_free_search.exp
+[2025-02-23 12:12:59.945]	
+[2025-02-23 12:12:59.946]	    | 	test/test_git_hash_search.exp
+[2025-02-23 12:12:59.957]	    | 	test/test_git_status_search.exp
+[2025-02-23 12:12:59.967]	    | 	test/test_url_search.exp
+[2025-02-23 12:12:59.978]	    | 	test/test_user_defined_search.exp
+[2025-02-23 12:12:59.988]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-23 12:12:59.998]	    | 	video/README.md
+[2025-02-23 12:13:00.008]	    | 	video/screencast_img.png
+[2025-02-23 12:13:00.018]	    | 	video/script.md
+[2025-02-23 12:13:00.028]	    | Please move or remove them before you merge.
+[2025-02-23 12:13:00.038]	    | Aborting
+[2025-02-23 12:13:00.048]	  "tmux-resurrect" update fail
+[2025-02-23 12:13:00.057]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:13:00.066]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-23 12:13:00.076]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:13:00.085]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:13:00.094]	    | 	.gitattributes
+[2025-02-23 12:13:00.103]	    | 	.gitignore
+[2025-02-23 12:13:00.113]	    | 	.gitmodules
+[2025-02-23 12:13:00.122]	    | 	.travis.yml
+[2025-02-23 12:13:00.132]	    | 	CHANGELOG.md
+[2025-02-23 12:13:00.141]	    | 	CONTRIBUTING.md
+[2025-02-23 12:13:00.151]	    | 	LICENSE.md
+[2025-02-23 12:13:00.161]	    | 	README.md
+[2025-02-23 12:13:00.170]	    | 	docs/custom_key_bindings.md
+[2025-02-23 12:13:00.179]	    | 	docs/hooks.md
+[2025-02-23 12:13:00.189]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-23 12:13:00.198]	    | 	docs/restoring_bash_history.md
+[2025-02-23 12:13:00.207]	    | 	docs/restoring_pane_contents.md
+[2025-02-23 12:13:00.217]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-23 12:13:00.227]	    | 	docs/restoring_programs.md
+[2025-02-23 12:13:00.237]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-23 12:13:00.247]	    | 	docs/save_dir.md
+[2025-02-23 12:13:00.256]	    | 	resurrect.tmux
+[2025-02-23 12:13:00.265]	    | 	run_tests
+[2025-02-23 12:13:00.275]	    | 	save_command_strategies/gdb.sh
+[2025-02-23 12:13:00.284]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-23 12:13:00.293]	    | 	save_command_strategies/pgrep.sh
+[2025-02-23 12:13:00.304]	    | 	save_command_strategies/ps.sh
+[2025-02-23 12:13:00.314]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 12:13:00.323]	    | 	scripts/helpers.sh
+[2025-02-23 12:13:00.332]	    | 	scripts/process_restore_helpers.sh
+[2025-02-23 12:13:00.342]	    | 	scripts/restore.exp
+[2025-02-23 12:13:00.351]	    | 	scripts/restore.sh
+[2025-02-23 12:13:00.360]	    | 	scripts/save.sh
+[2025-02-23 12:13:00.370]	    | 	scripts/spinner_helpers.sh
+[2025-02-23 12:13:00.379]	    | 	scripts/tmux_spinner.sh
+[2025-02-23 12:13:00.389]	    | 	scripts/variables.sh
+[2025-02-23 12:13:00.398]	    | 	strategies/irb_default_strategy.sh
+[2025-02-23 12:13:00.410]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-23 12:13:00.419]	    | 	strategies/nvim_session.sh
+[2025-02-23 12:13:00.429]	    | 	strategies/vim_session.sh
+[2025-02-23 12:13:00.435]	  "tmux-resurrect" update success
+[2025-02-23 12:13:00.440]	    | 	tests/fixtures/restore_file.txt
+[2025-02-23 12:13:00.447]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:13:00.452]	    | 	tests/fixtures/save_file.txt
+[2025-02-23 12:13:00.459]	    | Already up to date.
+[2025-02-23 12:13:00.463]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-23 12:13:00.470]	  "tokyo-night-tmux" update success
+[2025-02-23 12:13:00.475]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-23 12:13:00.481]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:13:00.486]	    | 	tests/helpers/helpers.sh
+[2025-02-23 12:13:00.492]	    | From https://github.com/janoamaral/tokyo-night-tmux
+[2025-02-23 12:13:00.496]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-23 12:13:00.503]	    |  * [new tag]         v1.5       -> v1.5
+[2025-02-23 12:13:00.507]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-23 12:13:00.515]	    |  * [new tag]         v1.5.3     -> v1.5.3
+[2025-02-23 12:13:00.519]	    | 	tests/run_tests_in_isolation
+[2025-02-23 12:13:00.527]	    |  * [new tag]         v1.5.5     -> v1.5.5
+[2025-02-23 12:13:00.531]	    | 	tests/test_resurrect_restore.sh
+[2025-02-23 12:13:00.539]	    | Already up to date.
+[2025-02-23 12:13:00.543]	    | 	tests/test_resurrect_save.sh
+[2025-02-23 12:13:00.551]	  "tmux-cpu" update success
+[2025-02-23 12:13:00.555]	    | 	video/issue_vid.png
+[2025-02-23 12:13:00.563]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:13:00.566]	    | 	video/screencast_img.png
+[2025-02-23 12:13:00.574]	    | Already up to date.
+[2025-02-23 12:13:00.577]	    | 	video/script.md
+[2025-02-23 12:13:00.585]	  "tmux-copycat" update success
+[2025-02-23 12:13:00.588]	    | Please move or remove them before you merge.
+[2025-02-23 12:13:00.595]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:13:00.599]	    | Aborting
+[2025-02-23 12:13:00.606]	    | Already up to date.
+[2025-02-23 12:13:00.609]	  "tokyo-night-tmux" update fail
+[2025-02-23 12:13:00.617]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 12:13:00.620]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:13:00.630]	    | From https://github.com/janoamaral/tokyo-night-tmux
+[2025-02-23 12:13:00.641]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:13:00.651]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:13:00.653]	Done.
+
+[2025-02-23 12:13:00.663]	    | 	.editorconfig
+[2025-02-23 12:13:00.674]	    | 	.github/ISSUE_TEMPLATE/bug_report.md
+[2025-02-23 12:13:00.685]	    | 	.github/ISSUE_TEMPLATE/feature_request.md
+[2025-02-23 12:13:00.696]	    | 	.github/ISSUE_TEMPLATE/security_report.md
+[2025-02-23 12:13:00.707]	    | 	.github/pull_request_template.md
+[2025-02-23 12:13:00.719]	    | 	.github/workflows/bats.yml
+[2025-02-23 12:13:00.730]	    | 	.github/workflows/pre-commit.yml
+[2025-02-23 12:13:00.741]	    | 	.github/workflows/report.yml
+[2025-02-23 12:13:00.751]	    | 	.gitignore
+[2025-02-23 12:13:00.760]	    | 	.pre-commit-config.yaml
+[2025-02-23 12:13:00.770]	    | 	CODE_OF_CONDUCT.md
+[2025-02-23 12:13:00.779]	    | 	CONTRIBUTING.md
+[2025-02-23 12:13:00.789]	    | 	LICENSE.md
+[2025-02-23 12:13:00.798]	    | 	README.md
+[2025-02-23 12:13:00.808]	    | 	SECURITY.md
+[2025-02-23 12:13:00.817]	    | 	lib/coreutils-compat.sh
+[2025-02-23 12:13:00.827]	    | 	lib/netspeed.sh
+[2025-02-23 12:13:00.837]	    | 	snaps/hostname.png
+[2025-02-23 12:13:00.847]	    | 	snaps/l01.png
+[2025-02-23 12:13:00.857]	    | 	snaps/logico.png
+[2025-02-23 12:13:00.868]	    | 	snaps/n01.png
+[2025-02-23 12:13:00.878]	    | 	snaps/n02.png
+[2025-02-23 12:13:00.887]	    | 	snaps/netspeed.png
+[2025-02-23 12:13:00.896]	    | 	src/battery-widget.sh
+[2025-02-23 12:13:00.906]	    | 	src/cmus-tmux-statusbar.sh
+[2025-02-23 12:13:00.915]	    | 	src/custom-number.sh
+[2025-02-23 12:13:00.924]	    | 	src/datetime-widget.sh
+[2025-02-23 12:13:00.933]	    | 	src/git-status.sh
+[2025-02-23 12:13:00.943]	    | 	src/hostname-widget.sh
+[2025-02-23 12:13:00.953]	    | 	src/music-tmux-statusbar.sh
+[2025-02-23 12:13:00.962]	    | 	src/netspeed.sh
+[2025-02-23 12:13:00.972]	    | 	src/path-widget.sh
+[2025-02-23 12:13:00.982]	    | 	src/themes.sh
+[2025-02-23 12:13:00.991]	    | 	src/wb-git-status.sh
+[2025-02-23 12:13:01.000]	    | 	test/netspeed.bats
+[2025-02-23 12:13:01.009]	    | 	tokyo-night.tmux
+[2025-02-23 12:13:01.019]	    | Please move or remove them before you merge.
+[2025-02-23 12:13:01.028]	    | Aborting
+[2025-02-23 12:13:01.038]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 12:13:01.065]	Removing "tmux-copycat"
+[2025-02-23 12:13:01.074]	  "tmux-copycat" clean success
+[2025-02-23 12:13:01.083]	Removing "tmux-cpu"
+[2025-02-23 12:13:01.093]	  "tmux-cpu" clean success
+[2025-02-23 12:13:01.102]	Removing "tmux-resurrect"
+[2025-02-23 12:13:01.112]	  "tmux-resurrect" clean success
+[2025-02-23 12:13:01.121]	Removing "tokyo-night-tmux"
+[2025-02-23 12:13:01.131]	  "tokyo-night-tmux" clean success
+[2025-02-23 12:13:01.141]	Done.
+
+[2025-02-23 12:17:00.153]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 12:17:00.164]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 12:17:00.196]	Installing "tmux-copycat"
+[2025-02-23 12:17:00.208]	Installing "tmux-resurrect"
+[2025-02-23 12:17:00.219]	Installing "tmux-cpu"
+[2025-02-23 12:17:00.231]	Installing "tokyo-night-tmux"
+[2025-02-23 12:17:00.611]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 12:17:00.622]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 12:17:00.654]	Already installed "tmux-copycat"
+[2025-02-23 12:17:00.665]	Already installed "tmux-cpu"
+[2025-02-23 12:17:00.675]	Already installed "tmux-resurrect"
+[2025-02-23 12:17:00.686]	Already installed "tokyo-night-tmux"
+[2025-02-23 12:17:00.698]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 12:17:00.719]	Updating all plugins!
+[2025-02-23 12:17:00.730]	
+[2025-02-23 12:17:00.952]	  "tmux-cpu" download success
+[2025-02-23 12:17:01.104]	  "tmux-copycat" download success
+[2025-02-23 12:17:01.202]	  "tmux-cpu" update fail
+[2025-02-23 12:17:01.212]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:17:01.222]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:17:01.233]	    | 	.editorconfig
+[2025-02-23 12:17:01.244]	    | 	.github/workflows/check.yml
+[2025-02-23 12:17:01.255]	    | 	.mailmap
+[2025-02-23 12:17:01.267]	    | 	LICENSE
+[2025-02-23 12:17:01.278]	    | 	README.md
+[2025-02-23 12:17:01.290]	    | 	cpu.tmux
+[2025-02-23 12:17:01.301]	    | 	screenshots/high_bg.png
+[2025-02-23 12:17:01.313]	    | 	screenshots/high_fg.png
+[2025-02-23 12:17:01.324]	    | 	screenshots/high_icon.png
+[2025-02-23 12:17:01.335]	    | 	screenshots/low_bg.png
+[2025-02-23 12:17:01.346]	    | 	screenshots/low_fg.png
+[2025-02-23 12:17:01.356]	    | 	screenshots/low_icon.png
+[2025-02-23 12:17:01.367]	    | 	screenshots/medium_bg.png
+[2025-02-23 12:17:01.378]	    | 	screenshots/medium_fg.png
+[2025-02-23 12:17:01.390]	    | 	screenshots/medium_icon.png
+[2025-02-23 12:17:01.402]	    | 	scripts/cpu_bg_color.sh
+[2025-02-23 12:17:01.414]	    | 	scripts/cpu_fg_color.sh
+[2025-02-23 12:17:01.426]	    | 	scripts/cpu_icon.sh
+[2025-02-23 12:17:01.430]	  "tokyo-night-tmux" download success
+[2025-02-23 12:17:01.437]	    | 	scripts/cpu_percentage.sh
+[2025-02-23 12:17:01.448]	    | 	scripts/cpu_temp.sh
+[2025-02-23 12:17:01.459]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-23 12:17:01.470]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-23 12:17:01.481]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-23 12:17:01.492]	    | 	scripts/gpu_bg_color.sh
+[2025-02-23 12:17:01.503]	    | 	scripts/gpu_fg_color.sh
+[2025-02-23 12:17:01.514]	    | 	scripts/gpu_icon.sh
+[2025-02-23 12:17:01.525]	    | 	scripts/gpu_percentage.sh
+[2025-02-23 12:17:01.536]	    | 	scripts/gpu_temp.sh
+[2025-02-23 12:17:01.548]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-23 12:17:01.560]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-23 12:17:01.571]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-23 12:17:01.583]	    | 	scripts/gram_bg_color.sh
+[2025-02-23 12:17:01.594]	    | 	scripts/gram_fg_color.sh
+[2025-02-23 12:17:01.606]	    | 	scripts/gram_icon.sh
+[2025-02-23 12:17:01.617]	    | 	scripts/gram_percentage.sh
+[2025-02-23 12:17:01.628]	    | 	scripts/helpers.sh
+[2025-02-23 12:17:01.640]	    | 	scripts/ram_bg_color.sh
+[2025-02-23 12:17:01.651]	    | 	scripts/ram_fg_color.sh
+[2025-02-23 12:17:01.662]	    | 	scripts/ram_icon.sh
+[2025-02-23 12:17:01.674]	    | 	scripts/ram_percentage.sh
+[2025-02-23 12:17:01.685]	    | Please move or remove them before you merge.
+[2025-02-23 12:17:01.696]	    | Aborting
+[2025-02-23 12:17:01.707]	  "tmux-copycat" update fail
+[2025-02-23 12:17:01.718]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:17:01.728]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:17:01.738]	    | 	.gitattributes
+[2025-02-23 12:17:01.748]	    | 	.gitignore
+[2025-02-23 12:17:01.758]	    | 	.travis.yml
+[2025-02-23 12:17:01.769]	    | 	CHANGELOG.md
+[2025-02-23 12:17:01.780]	    | 	LICENSE.md
+[2025-02-23 12:17:01.791]	    | 	README.md
+[2025-02-23 12:17:01.803]	    | 	Vagrantfile
+[2025-02-23 12:17:01.815]	    | 	copycat.tmux
+[2025-02-23 12:17:01.826]	    | 	docs/customizations.md
+[2025-02-23 12:17:01.837]	    | 	docs/defining_new_stored_searches.md
+[2025-02-23 12:17:01.847]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-23 12:17:01.857]	    | 	docs/limitations.md
+[2025-02-23 12:17:01.868]	    | 	run-tests
+[2025-02-23 12:17:01.878]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 12:17:01.888]	  "tmux-resurrect" download success
+[2025-02-23 12:17:01.889]	    | 	scripts/copycat_generate_results.sh
+[2025-02-23 12:17:01.900]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 12:17:01.900]	    | 	scripts/copycat_git_special.sh
+[2025-02-23 12:17:01.912]	    | 	scripts/copycat_jump.sh
+[2025-02-23 12:17:01.924]	Updating all plugins!
+[2025-02-23 12:17:01.924]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-23 12:17:01.936]	
+[2025-02-23 12:17:01.936]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-23 12:17:01.948]	    | 	scripts/copycat_mode_start.sh
+[2025-02-23 12:17:01.961]	    | 	scripts/copycat_search.sh
+[2025-02-23 12:17:01.974]	    | 	scripts/helpers.sh
+[2025-02-23 12:17:01.984]	    | 	scripts/stored_search_helpers.sh
+[2025-02-23 12:17:01.995]	    | 	scripts/variables.sh
+[2025-02-23 12:17:02.005]	    | 	test/README.md
+[2025-02-23 12:17:02.015]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-23 12:17:02.026]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-23 12:17:02.036]	    | 	test/helpers/expect_helpers.exp
+[2025-02-23 12:17:02.047]	    | 	test/helpers/run_tmux.exp
+[2025-02-23 12:17:02.058]	    | 	test/helpers/setup.exp
+[2025-02-23 12:17:02.069]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-23 12:17:02.080]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-23 12:17:02.091]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-23 12:17:02.102]	    | 	test/helpers/test.exp
+[2025-02-23 12:17:02.112]	    | 	test/run-tests-within-vm
+[2025-02-23 12:17:02.123]	    | 	test/test_digit_search.exp
+[2025-02-23 12:17:02.133]	    | 	test/test_file_search.exp
+[2025-02-23 12:17:02.144]	    | 	test/test_free_search.exp
+[2025-02-23 12:17:02.154]	    | 	test/test_git_hash_search.exp
+[2025-02-23 12:17:02.165]	    | 	test/test_git_status_search.exp
+[2025-02-23 12:17:02.176]	    | 	test/test_url_search.exp
+[2025-02-23 12:17:02.186]	    | 	test/test_user_defined_search.exp
+[2025-02-23 12:17:02.196]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-23 12:17:02.207]	    | 	video/README.md
+[2025-02-23 12:17:02.218]	    | 	video/screencast_img.png
+[2025-02-23 12:17:02.229]	    | 	video/script.md
+[2025-02-23 12:17:02.240]	    | Please move or remove them before you merge.
+[2025-02-23 12:17:02.252]	    | Aborting
+[2025-02-23 12:17:02.263]	  "tmux-resurrect" update fail
+[2025-02-23 12:17:02.274]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:17:02.284]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:17:02.295]	    | 	.gitattributes
+[2025-02-23 12:17:02.306]	    | 	.gitignore
+[2025-02-23 12:17:02.318]	    | 	.gitmodules
+[2025-02-23 12:17:02.328]	    | 	.travis.yml
+[2025-02-23 12:17:02.337]	    | 	CHANGELOG.md
+[2025-02-23 12:17:02.348]	    | 	CONTRIBUTING.md
+[2025-02-23 12:17:02.357]	    | 	LICENSE.md
+[2025-02-23 12:17:02.367]	    | 	README.md
+[2025-02-23 12:17:02.376]	    | 	docs/custom_key_bindings.md
+[2025-02-23 12:17:02.386]	    | 	docs/hooks.md
+[2025-02-23 12:17:02.398]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-23 12:17:02.410]	    | 	docs/restoring_bash_history.md
+[2025-02-23 12:17:02.410]	  "tmux-copycat" update success
+[2025-02-23 12:17:02.421]	    | 	docs/restoring_pane_contents.md
+[2025-02-23 12:17:02.421]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:17:02.431]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-23 12:17:02.431]	    | Already up to date.
+[2025-02-23 12:17:02.442]	    | 	docs/restoring_programs.md
+[2025-02-23 12:17:02.442]	  "tmux-cpu" update success
+[2025-02-23 12:17:02.455]	  "tmux-resurrect" update success
+[2025-02-23 12:17:02.455]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-23 12:17:02.467]	    | 	docs/save_dir.md
+[2025-02-23 12:17:02.468]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:17:02.480]	    | Already up to date.
+[2025-02-23 12:17:02.480]	    | 	resurrect.tmux
+[2025-02-23 12:17:02.492]	    | 	run_tests
+[2025-02-23 12:17:02.492]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:17:02.503]	    | 	save_command_strategies/gdb.sh
+[2025-02-23 12:17:02.503]	    | Already up to date.
+[2025-02-23 12:17:02.514]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-23 12:17:02.514]	  "tokyo-night-tmux" update success
+[2025-02-23 12:17:02.524]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:17:02.524]	    | 	save_command_strategies/pgrep.sh
+[2025-02-23 12:17:02.535]	    | Already up to date.
+[2025-02-23 12:17:02.535]	    | 	save_command_strategies/ps.sh
+[2025-02-23 12:17:02.546]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 12:17:02.546]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 12:17:02.557]	    | 	scripts/helpers.sh
+[2025-02-23 12:17:02.568]	    | 	scripts/process_restore_helpers.sh
+[2025-02-23 12:17:02.579]	    | 	scripts/restore.exp
+[2025-02-23 12:17:02.582]	Done.
+
+[2025-02-23 12:17:02.590]	    | 	scripts/restore.sh
+[2025-02-23 12:17:02.600]	    | 	scripts/save.sh
+[2025-02-23 12:17:02.610]	    | 	scripts/spinner_helpers.sh
+[2025-02-23 12:17:02.620]	    | 	scripts/tmux_spinner.sh
+[2025-02-23 12:17:02.631]	    | 	scripts/variables.sh
+[2025-02-23 12:17:02.641]	    | 	strategies/irb_default_strategy.sh
+[2025-02-23 12:17:02.651]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-23 12:17:02.662]	    | 	strategies/nvim_session.sh
+[2025-02-23 12:17:02.673]	    | 	strategies/vim_session.sh
+[2025-02-23 12:17:02.684]	    | 	tests/fixtures/restore_file.txt
+[2025-02-23 12:17:02.698]	    | 	tests/fixtures/save_file.txt
+[2025-02-23 12:17:02.715]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-23 12:17:02.730]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-23 12:17:02.747]	    | 	tests/helpers/helpers.sh
+[2025-02-23 12:17:02.769]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-23 12:17:02.783]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-23 12:17:02.796]	    | 	tests/run_tests_in_isolation
+[2025-02-23 12:17:02.808]	    | 	tests/test_resurrect_restore.sh
+[2025-02-23 12:17:02.819]	    | 	tests/test_resurrect_save.sh
+[2025-02-23 12:17:02.830]	    | 	video/issue_vid.png
+[2025-02-23 12:17:02.840]	    | 	video/screencast_img.png
+[2025-02-23 12:17:02.850]	    | 	video/script.md
+[2025-02-23 12:17:02.859]	    | Please move or remove them before you merge.
+[2025-02-23 12:17:02.868]	    | Aborting
+[2025-02-23 12:17:02.877]	  "tokyo-night-tmux" update fail
+[2025-02-23 12:17:02.887]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:17:02.896]	    | From https://github.com/janoamaral/tokyo-night-tmux
+[2025-02-23 12:17:02.906]	    |  * [new branch]      master     -> origin/master
+[2025-02-23 12:17:02.915]	    |  * [new tag]         v1.6.1     -> v1.6.1
+[2025-02-23 12:17:02.925]	    |  * [new tag]         v1.5       -> v1.5
+[2025-02-23 12:17:02.935]	    |  * [new tag]         v1.5.3     -> v1.5.3
+[2025-02-23 12:17:02.945]	    |  * [new tag]         v1.5.5     -> v1.5.5
+[2025-02-23 12:17:02.956]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:17:02.966]	    | 	.editorconfig
+[2025-02-23 12:17:02.977]	    | 	.github/ISSUE_TEMPLATE/bug_report.md
+[2025-02-23 12:17:02.986]	    | 	.github/ISSUE_TEMPLATE/feature_request.md
+[2025-02-23 12:17:02.996]	    | 	.github/ISSUE_TEMPLATE/security_report.md
+[2025-02-23 12:17:03.005]	    | 	.github/pull_request_template.md
+[2025-02-23 12:17:03.014]	    | 	.github/workflows/bats.yml
+[2025-02-23 12:17:03.024]	    | 	.github/workflows/pre-commit.yml
+[2025-02-23 12:17:03.033]	    | 	.github/workflows/report.yml
+[2025-02-23 12:17:03.043]	    | 	.gitignore
+[2025-02-23 12:17:03.054]	    | 	.pre-commit-config.yaml
+[2025-02-23 12:17:03.065]	    | 	CODE_OF_CONDUCT.md
+[2025-02-23 12:17:03.076]	    | 	CONTRIBUTING.md
+[2025-02-23 12:17:03.087]	    | 	LICENSE.md
+[2025-02-23 12:17:03.096]	    | 	README.md
+[2025-02-23 12:17:03.106]	    | 	SECURITY.md
+[2025-02-23 12:17:03.116]	    | 	lib/coreutils-compat.sh
+[2025-02-23 12:17:03.127]	    | 	lib/netspeed.sh
+[2025-02-23 12:17:03.137]	    | 	snaps/hostname.png
+[2025-02-23 12:17:03.146]	    | 	snaps/l01.png
+[2025-02-23 12:17:03.155]	    | 	snaps/logico.png
+[2025-02-23 12:17:03.164]	    | 	snaps/n01.png
+[2025-02-23 12:17:03.175]	    | 	snaps/n02.png
+[2025-02-23 12:17:03.185]	    | 	snaps/netspeed.png
+[2025-02-23 12:17:03.194]	    | 	src/battery-widget.sh
+[2025-02-23 12:17:03.204]	    | 	src/cmus-tmux-statusbar.sh
+[2025-02-23 12:17:03.213]	    | 	src/custom-number.sh
+[2025-02-23 12:17:03.224]	    | 	src/datetime-widget.sh
+[2025-02-23 12:17:03.233]	    | 	src/git-status.sh
+[2025-02-23 12:17:03.243]	    | 	src/hostname-widget.sh
+[2025-02-23 12:17:03.253]	    | 	src/music-tmux-statusbar.sh
+[2025-02-23 12:17:03.264]	    | 	src/netspeed.sh
+[2025-02-23 12:17:03.273]	    | 	src/path-widget.sh
+[2025-02-23 12:17:03.283]	    | 	src/themes.sh
+[2025-02-23 12:17:03.293]	    | 	src/wb-git-status.sh
+[2025-02-23 12:17:03.303]	    | 	test/netspeed.bats
+[2025-02-23 12:17:03.314]	    | 	tokyo-night.tmux
+[2025-02-23 12:17:03.325]	    | Please move or remove them before you merge.
+[2025-02-23 12:17:03.336]	    | Aborting
+[2025-02-23 12:17:03.347]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 12:17:03.375]	Removing "tmux-copycat"
+[2025-02-23 12:17:03.385]	  "tmux-copycat" clean success
+[2025-02-23 12:17:03.396]	Removing "tmux-cpu"
+[2025-02-23 12:17:03.407]	  "tmux-cpu" clean success
+[2025-02-23 12:17:03.417]	Removing "tmux-resurrect"
+[2025-02-23 12:17:03.427]	  "tmux-resurrect" clean success
+[2025-02-23 12:17:03.436]	Removing "tokyo-night-tmux"
+[2025-02-23 12:17:03.446]	  "tokyo-night-tmux" clean success
+[2025-02-23 12:17:03.456]	Done.
+
+[2025-02-23 12:20:08.867]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 12:20:08.877]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 12:20:08.909]	Installing "tmux-copycat"
+[2025-02-23 12:20:08.918]	Installing "tmux-cpu"
+[2025-02-23 12:20:08.928]	Installing "tmux-resurrect"
+[2025-02-23 12:20:08.938]	Installing "tokyo-night-tmux"
+[2025-02-23 12:20:09.197]	List of discovered tpm plugins: tmux-plugins/tmux-copycat tmux-plugins/tmux-cpu tmux-plugins/tmux-resurrect janoamaral/tokyo-night-tmux
+[2025-02-23 12:20:09.209]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/install_plugins
+[2025-02-23 12:20:09.240]	Already installed "tmux-copycat"
+[2025-02-23 12:20:09.249]	Already installed "tmux-cpu"
+[2025-02-23 12:20:09.259]	Already installed "tmux-resurrect"
+[2025-02-23 12:20:09.268]	Already installed "tokyo-night-tmux"
+[2025-02-23 12:20:09.279]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 12:20:09.299]	Updating all plugins!
+[2025-02-23 12:20:09.309]	
+[2025-02-23 12:20:09.686]	  "tmux-cpu" download success
+[2025-02-23 12:20:09.786]	  "tmux-cpu" update fail
+[2025-02-23 12:20:09.791]	  "tmux-copycat" download success
+[2025-02-23 12:20:09.798]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:20:09.810]	    | From https://github.com/tmux-plugins/tmux-cpu
+[2025-02-23 12:20:09.822]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:20:09.833]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:20:09.842]	    | 	.editorconfig
+[2025-02-23 12:20:09.851]	    | 	.github/workflows/check.yml
+[2025-02-23 12:20:09.860]	    | 	.mailmap
+[2025-02-23 12:20:09.872]	    | 	LICENSE
+[2025-02-23 12:20:09.882]	    | 	README.md
+[2025-02-23 12:20:09.892]	    | 	cpu.tmux
+[2025-02-23 12:20:09.901]	    | 	screenshots/high_bg.png
+[2025-02-23 12:20:09.911]	    | 	screenshots/high_fg.png
+[2025-02-23 12:20:09.920]	    | 	screenshots/high_icon.png
+[2025-02-23 12:20:09.930]	    | 	screenshots/low_bg.png
+[2025-02-23 12:20:09.939]	    | 	screenshots/low_fg.png
+[2025-02-23 12:20:09.948]	    | 	screenshots/low_icon.png
+[2025-02-23 12:20:09.957]	    | 	screenshots/medium_bg.png
+[2025-02-23 12:20:09.967]	    | 	screenshots/medium_fg.png
+[2025-02-23 12:20:09.976]	    | 	screenshots/medium_icon.png
+[2025-02-23 12:20:09.986]	    | 	scripts/cpu_bg_color.sh
+[2025-02-23 12:20:09.995]	    | 	scripts/cpu_fg_color.sh
+[2025-02-23 12:20:10.005]	    | 	scripts/cpu_icon.sh
+[2025-02-23 12:20:10.015]	    | 	scripts/cpu_percentage.sh
+[2025-02-23 12:20:10.025]	    | 	scripts/cpu_temp.sh
+[2025-02-23 12:20:10.034]	    | 	scripts/cpu_temp_bg_color.sh
+[2025-02-23 12:20:10.044]	    | 	scripts/cpu_temp_fg_color.sh
+[2025-02-23 12:20:10.050]	  "tokyo-night-tmux" download success
+[2025-02-23 12:20:10.055]	    | 	scripts/cpu_temp_icon.sh
+[2025-02-23 12:20:10.066]	    | 	scripts/gpu_bg_color.sh
+[2025-02-23 12:20:10.077]	    | 	scripts/gpu_fg_color.sh
+[2025-02-23 12:20:10.087]	    | 	scripts/gpu_icon.sh
+[2025-02-23 12:20:10.096]	    | 	scripts/gpu_percentage.sh
+[2025-02-23 12:20:10.106]	    | 	scripts/gpu_temp.sh
+[2025-02-23 12:20:10.116]	    | 	scripts/gpu_temp_bg_color.sh
+[2025-02-23 12:20:10.127]	    | 	scripts/gpu_temp_fg_color.sh
+[2025-02-23 12:20:10.139]	    | 	scripts/gpu_temp_icon.sh
+[2025-02-23 12:20:10.148]	    | 	scripts/gram_bg_color.sh
+[2025-02-23 12:20:10.158]	    | 	scripts/gram_fg_color.sh
+[2025-02-23 12:20:10.168]	    | 	scripts/gram_icon.sh
+[2025-02-23 12:20:10.178]	    | 	scripts/gram_percentage.sh
+[2025-02-23 12:20:10.188]	    | 	scripts/helpers.sh
+[2025-02-23 12:20:10.198]	    | 	scripts/ram_bg_color.sh
+[2025-02-23 12:20:10.208]	    | 	scripts/ram_fg_color.sh
+[2025-02-23 12:20:10.220]	    | 	scripts/ram_icon.sh
+[2025-02-23 12:20:10.231]	    | 	scripts/ram_percentage.sh
+[2025-02-23 12:20:10.242]	    | Please move or remove them before you merge.
+[2025-02-23 12:20:10.253]	    | Aborting
+[2025-02-23 12:20:10.264]	  "tmux-copycat" update fail
+[2025-02-23 12:20:10.275]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:20:10.285]	    | From https://github.com/tmux-plugins/tmux-copycat
+[2025-02-23 12:20:10.295]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:20:10.310]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:20:10.324]	    | 	.gitattributes
+[2025-02-23 12:20:10.338]	    | 	.gitignore
+[2025-02-23 12:20:10.354]	    | 	.travis.yml
+[2025-02-23 12:20:10.370]	    | 	CHANGELOG.md
+[2025-02-23 12:20:10.384]	    | 	LICENSE.md
+[2025-02-23 12:20:10.396]	    | 	README.md
+[2025-02-23 12:20:10.407]	    | 	Vagrantfile
+[2025-02-23 12:20:10.416]	    | 	copycat.tmux
+[2025-02-23 12:20:10.425]	    | 	docs/customizations.md
+[2025-02-23 12:20:10.434]	    | 	docs/defining_new_stored_searches.md
+[2025-02-23 12:20:10.444]	    | 	docs/installation_for_tmux_2.3.md
+[2025-02-23 12:20:10.452]	    | 	docs/limitations.md
+[2025-02-23 12:20:10.462]	    | 	run-tests
+[2025-02-23 12:20:10.472]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 12:20:10.482]	    | 	scripts/copycat_generate_results.sh
+[2025-02-23 12:20:10.492]	    | 	scripts/copycat_git_special.sh
+[2025-02-23 12:20:10.502]	    | 	scripts/copycat_jump.sh
+[2025-02-23 12:20:10.514]	    | 	scripts/copycat_mode_bindings.sh
+[2025-02-23 12:20:10.525]	    | 	scripts/copycat_mode_quit.sh
+[2025-02-23 12:20:10.536]	    | 	scripts/copycat_mode_start.sh
+[2025-02-23 12:20:10.547]	    | 	scripts/copycat_search.sh
+[2025-02-23 12:20:10.559]	    | 	scripts/helpers.sh
+[2025-02-23 12:20:10.569]	    | 	scripts/stored_search_helpers.sh
+[2025-02-23 12:20:10.580]	    | 	scripts/variables.sh
+[2025-02-23 12:20:10.589]	    | 	test/README.md
+[2025-02-23 12:20:10.598]	    | 	test/helpers/expect_copycat_assertions.exp
+[2025-02-23 12:20:10.607]	    | 	test/helpers/expect_copycat_helpers.exp
+[2025-02-23 12:20:10.616]	    | 	test/helpers/expect_helpers.exp
+[2025-02-23 12:20:10.626]	    | 	test/helpers/run_tmux.exp
+[2025-02-23 12:20:10.636]	    | 	test/helpers/setup.exp
+[2025-02-23 12:20:10.646]	    | 	test/helpers/setup_tmux_conf.sh
+[2025-02-23 12:20:10.656]	    | 	test/helpers/setup_tmux_conf_with_custom_searches.sh
+[2025-02-23 12:20:10.666]	    | 	test/helpers/setup_with_custom_searches.exp
+[2025-02-23 12:20:10.675]	    | 	test/helpers/test.exp
+[2025-02-23 12:20:10.685]	    | 	test/run-tests-within-vm
+[2025-02-23 12:20:10.695]	    | 	test/test_digit_search.exp
+[2025-02-23 12:20:10.704]	    | 	test/test_file_search.exp
+[2025-02-23 12:20:10.715]	    | 	test/test_free_search.exp
+[2025-02-23 12:20:10.725]	    | 	test/test_git_hash_search.exp
+[2025-02-23 12:20:10.735]	    | 	test/test_git_status_search.exp
+[2025-02-23 12:20:10.744]	    | 	test/test_url_search.exp
+[2025-02-23 12:20:10.754]	    | 	test/test_user_defined_search.exp
+[2025-02-23 12:20:10.763]	    | 	vagrant_ubuntu_provisioning_two_five.sh
+[2025-02-23 12:20:10.774]	    | 	video/README.md
+[2025-02-23 12:20:10.783]	    | 	video/screencast_img.png
+[2025-02-23 12:20:10.793]	    | 	video/script.md
+[2025-02-23 12:20:10.802]	    | Please move or remove them before you merge.
+[2025-02-23 12:20:10.811]	    | Aborting
+[2025-02-23 12:20:10.819]	  "tmux-resurrect" download success
+[2025-02-23 12:20:10.821]	  "tmux-resurrect" update fail
+[2025-02-23 12:20:10.832]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/update_plugins all
+[2025-02-23 12:20:10.834]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:20:10.847]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-23 12:20:10.857]	Updating all plugins!
+[2025-02-23 12:20:10.860]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:20:10.869]	
+[2025-02-23 12:20:10.871]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:20:10.883]	    | 	.gitattributes
+[2025-02-23 12:20:10.894]	    | 	.gitignore
+[2025-02-23 12:20:10.905]	    | 	.gitmodules
+[2025-02-23 12:20:10.917]	    | 	.travis.yml
+[2025-02-23 12:20:10.927]	    | 	CHANGELOG.md
+[2025-02-23 12:20:10.938]	    | 	CONTRIBUTING.md
+[2025-02-23 12:20:10.948]	    | 	LICENSE.md
+[2025-02-23 12:20:10.958]	    | 	README.md
+[2025-02-23 12:20:10.967]	    | 	docs/custom_key_bindings.md
+[2025-02-23 12:20:10.977]	    | 	docs/hooks.md
+[2025-02-23 12:20:10.986]	    | 	docs/migrating_from_tmuxinator.md
+[2025-02-23 12:20:10.996]	    | 	docs/restoring_bash_history.md
+[2025-02-23 12:20:11.006]	    | 	docs/restoring_pane_contents.md
+[2025-02-23 12:20:11.016]	    | 	docs/restoring_previously_saved_environment.md
+[2025-02-23 12:20:11.027]	    | 	docs/restoring_programs.md
+[2025-02-23 12:20:11.038]	    | 	docs/restoring_vim_and_neovim_sessions.md
+[2025-02-23 12:20:11.048]	    | 	docs/save_dir.md
+[2025-02-23 12:20:11.059]	    | 	resurrect.tmux
+[2025-02-23 12:20:11.069]	    | 	run_tests
+[2025-02-23 12:20:11.080]	    | 	save_command_strategies/gdb.sh
+[2025-02-23 12:20:11.089]	    | 	save_command_strategies/linux_procfs.sh
+[2025-02-23 12:20:11.098]	    | 	save_command_strategies/pgrep.sh
+[2025-02-23 12:20:11.107]	    | 	save_command_strategies/ps.sh
+[2025-02-23 12:20:11.117]	    | 	scripts/check_tmux_version.sh
+[2025-02-23 12:20:11.127]	    | 	scripts/helpers.sh
+[2025-02-23 12:20:11.136]	    | 	scripts/process_restore_helpers.sh
+[2025-02-23 12:20:11.146]	    | 	scripts/restore.exp
+[2025-02-23 12:20:11.155]	    | 	scripts/restore.sh
+[2025-02-23 12:20:11.165]	    | 	scripts/save.sh
+[2025-02-23 12:20:11.174]	    | 	scripts/spinner_helpers.sh
+[2025-02-23 12:20:11.185]	    | 	scripts/tmux_spinner.sh
+[2025-02-23 12:20:11.196]	    | 	scripts/variables.sh
+[2025-02-23 12:20:11.207]	    | 	strategies/irb_default_strategy.sh
+[2025-02-23 12:20:11.218]	    | 	strategies/mosh-client_default_strategy.sh
+[2025-02-23 12:20:11.228]	    | 	strategies/nvim_session.sh
+[2025-02-23 12:20:11.238]	    | 	strategies/vim_session.sh
+[2025-02-23 12:20:11.249]	    | 	tests/fixtures/restore_file.txt
+[2025-02-23 12:20:11.258]	    | 	tests/fixtures/save_file.txt
+[2025-02-23 12:20:11.268]	    | 	tests/helpers/create_and_save_tmux_test_environment.exp
+[2025-02-23 12:20:11.277]	    | 	tests/helpers/expect_helpers.exp
+[2025-02-23 12:20:11.286]	    | 	tests/helpers/helpers.sh
+[2025-02-23 12:20:11.295]	    | 	tests/helpers/restore_and_save_tmux_test_environment.exp
+[2025-02-23 12:20:11.304]	    | 	tests/helpers/resurrect_helpers.sh
+[2025-02-23 12:20:11.313]	    | 	tests/run_tests_in_isolation
+[2025-02-23 12:20:11.324]	    | 	tests/test_resurrect_restore.sh
+[2025-02-23 12:20:11.335]	    | 	tests/test_resurrect_save.sh
+[2025-02-23 12:20:11.347]	    | 	video/issue_vid.png
+[2025-02-23 12:20:11.359]	    | 	video/screencast_img.png
+[2025-02-23 12:20:11.363]	  "tmux-copycat" update success
+[2025-02-23 12:20:11.371]	    | 	video/script.md
+[2025-02-23 12:20:11.375]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:20:11.382]	    | Please move or remove them before you merge.
+[2025-02-23 12:20:11.385]	    | Already up to date.
+[2025-02-23 12:20:11.392]	    | Aborting
+[2025-02-23 12:20:11.395]	  "tokyo-night-tmux" update success
+[2025-02-23 12:20:11.401]	  "tokyo-night-tmux" update fail
+[2025-02-23 12:20:11.404]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:20:11.410]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:20:11.414]	    | From https://github.com/janoamaral/tokyo-night-tmux
+[2025-02-23 12:20:11.420]	    | From https://github.com/janoamaral/tokyo-night-tmux
+[2025-02-23 12:20:11.424]	    |  * [new tag]         v1.5       -> v1.5
+[2025-02-23 12:20:11.429]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-02-23 12:20:11.433]	    |  * [new tag]         v1.5.3     -> v1.5.3
+[2025-02-23 12:20:11.438]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-02-23 12:20:11.442]	    |  * [new tag]         v1.5.5     -> v1.5.5
+[2025-02-23 12:20:11.448]	    | 	.editorconfig
+[2025-02-23 12:20:11.451]	    | Already up to date.
+[2025-02-23 12:20:11.457]	    | 	.github/ISSUE_TEMPLATE/bug_report.md
+[2025-02-23 12:20:11.461]	  "tmux-cpu" update success
+[2025-02-23 12:20:11.466]	    | 	.github/ISSUE_TEMPLATE/feature_request.md
+[2025-02-23 12:20:11.470]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:20:11.476]	    | 	.github/ISSUE_TEMPLATE/security_report.md
+[2025-02-23 12:20:11.479]	    | Already up to date.
+[2025-02-23 12:20:11.485]	    | 	.github/pull_request_template.md
+[2025-02-23 12:20:11.495]	    | 	.github/workflows/bats.yml
+[2025-02-23 12:20:11.504]	    | 	.github/workflows/pre-commit.yml
+[2025-02-23 12:20:11.514]	    | 	.github/workflows/report.yml
+[2025-02-23 12:20:11.523]	    | 	.gitignore
+[2025-02-23 12:20:11.533]	    | 	.pre-commit-config.yaml
+[2025-02-23 12:20:11.542]	    | 	CODE_OF_CONDUCT.md
+[2025-02-23 12:20:11.552]	    | 	CONTRIBUTING.md
+[2025-02-23 12:20:11.562]	    | 	LICENSE.md
+[2025-02-23 12:20:11.571]	    | 	README.md
+[2025-02-23 12:20:11.580]	    | 	SECURITY.md
+[2025-02-23 12:20:11.590]	    | 	lib/coreutils-compat.sh
+[2025-02-23 12:20:11.599]	    | 	lib/netspeed.sh
+[2025-02-23 12:20:11.608]	    | 	snaps/hostname.png
+[2025-02-23 12:20:11.617]	    | 	snaps/l01.png
+[2025-02-23 12:20:11.626]	    | 	snaps/logico.png
+[2025-02-23 12:20:11.639]	    | 	snaps/n01.png
+[2025-02-23 12:20:11.656]	    | 	snaps/n02.png
+[2025-02-23 12:20:11.669]	    | 	snaps/netspeed.png
+[2025-02-23 12:20:11.683]	    | 	src/battery-widget.sh
+[2025-02-23 12:20:11.700]	    | 	src/cmus-tmux-statusbar.sh
+[2025-02-23 12:20:11.716]	    | 	src/custom-number.sh
+[2025-02-23 12:20:11.730]	    | 	src/datetime-widget.sh
+[2025-02-23 12:20:11.742]	    | 	src/git-status.sh
+[2025-02-23 12:20:11.752]	    | 	src/hostname-widget.sh
+[2025-02-23 12:20:11.762]	    | 	src/music-tmux-statusbar.sh
+[2025-02-23 12:20:11.772]	    | 	src/netspeed.sh
+[2025-02-23 12:20:11.782]	    | 	src/path-widget.sh
+[2025-02-23 12:20:11.794]	    | 	src/themes.sh
+[2025-02-23 12:20:11.804]	    | 	src/wb-git-status.sh
+[2025-02-23 12:20:11.815]	    | 	test/netspeed.bats
+[2025-02-23 12:20:11.825]	    | 	tokyo-night.tmux
+[2025-02-23 12:20:11.835]	    | Please move or remove them before you merge.
+[2025-02-23 12:20:11.846]	    | Aborting
+[2025-02-23 12:20:11.857]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 12:20:11.890]	Done.
+
+[2025-02-23 12:20:12.084]	  "tmux-resurrect" update success
+[2025-02-23 12:20:12.095]	    | git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+[2025-02-23 12:20:12.106]	    | From https://github.com/tmux-plugins/tmux-resurrect
+[2025-02-23 12:20:12.117]	    |  * [new tag]         v0.0.1     -> v0.0.1
+[2025-02-23 12:20:12.128]	    |  * [new tag]         v0.0.2     -> v0.0.2
+[2025-02-23 12:20:12.138]	    |  * [new tag]         v0.0.3     -> v0.0.3
+[2025-02-23 12:20:12.148]	    |  * [new tag]         v0.0.4     -> v0.0.4
+[2025-02-23 12:20:12.158]	    |  * [new tag]         v0.0.5     -> v0.0.5
+[2025-02-23 12:20:12.168]	    |  * [new tag]         v0.1.0     -> v0.1.0
+[2025-02-23 12:20:12.179]	    |  * [new tag]         v0.2.0     -> v0.2.0
+[2025-02-23 12:20:12.189]	    |  * [new tag]         v0.3.0     -> v0.3.0
+[2025-02-23 12:20:12.199]	    |  * [new tag]         v0.4.0     -> v0.4.0
+[2025-02-23 12:20:12.209]	    |  * [new tag]         v1.0.0     -> v1.0.0
+[2025-02-23 12:20:12.219]	    |  * [new tag]         v1.2.0     -> v1.2.0
+[2025-02-23 12:20:12.230]	    |  * [new tag]         v1.2.1     -> v1.2.1
+[2025-02-23 12:20:12.242]	    |  * [new tag]         v1.3.0     -> v1.3.0
+[2025-02-23 12:20:12.253]	    |  * [new tag]         v1.4.0     -> v1.4.0
+[2025-02-23 12:20:12.264]	    |  * [new tag]         v1.5.0     -> v1.5.0
+[2025-02-23 12:20:12.275]	    |  * [new tag]         v2.0.0     -> v2.0.0
+[2025-02-23 12:20:12.295]	    |  * [new tag]         v2.1.0     -> v2.1.0
+[2025-02-23 12:20:12.307]	    |  * [new tag]         v2.2.0     -> v2.2.0
+[2025-02-23 12:20:12.318]	    |  * [new tag]         v2.4.0     -> v2.4.0
+[2025-02-23 12:20:12.329]	    |  * [new tag]         v3.0.0     -> v3.0.0
+[2025-02-23 12:20:12.341]	    |  * [new tag]         v4.0.0     -> v4.0.0
+[2025-02-23 12:20:12.353]	    | Already up to date.
+[2025-02-23 12:20:12.365]	Invoking /home/chicha09/.tmux/plugins/tpm/bin/clean_plugins all
+[2025-02-23 12:20:12.398]	Removing "tmux-copycat"
+[2025-02-23 12:20:12.410]	  "tmux-copycat" clean success
+[2025-02-23 12:20:12.422]	Removing "tmux-cpu"
+[2025-02-23 12:20:12.433]	  "tmux-cpu" clean success
+[2025-02-23 12:20:12.445]	Removing "tmux-resurrect"
+[2025-02-23 12:20:12.456]	  "tmux-resurrect" clean success
+[2025-02-23 12:20:12.468]	Removing "tokyo-night-tmux"
+[2025-02-23 12:20:12.479]	  "tokyo-night-tmux" clean success
+[2025-02-23 12:20:12.490]	Done.
+

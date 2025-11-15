@@ -1,0 +1,5 @@
+[aw-qt]
+autostart_modules = ["aw-server", "aw-awatcher"]
+
+[aw-qt-testing]
+autostart_modules = ["aw-server", "aw-awatcher"]
