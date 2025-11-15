@@ -54,7 +54,7 @@ export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
 
 # ElasticBeanstalk
-export PATH="/home/chicha09/.ebcli-virtual-env/executables:$PATH"
+export PATH="$HOME/.ebcli-virtual-env/executables:$PATH"
 
 # Bat Theme
 export BAT_THEME="tokyonight_moon"
@@ -73,7 +73,7 @@ export BAT_THEME="tokyonight_moon"
 if [[ "$AGENT_MODE" == "true" ]]; then
   export PATH="$HOME/.local/share/mise/shims:$PATH"
 else
-  eval "$(/home/chicha09/.local/bin/mise activate bash)"
+  eval "$($HOME/.local/bin/mise activate bash)"
 fi
 
 # Zoxide (Smart cd)

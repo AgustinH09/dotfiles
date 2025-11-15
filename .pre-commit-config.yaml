@@ -1,0 +1,174 @@
+repos:
+  # Gitleaks - Secret scanning
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+        name: Detect secrets with Gitleaks
+        entry: gitleaks detect --source . --no-git --verbose --redact
+        language: system
+        pass_filenames: false
+        exclude: '^(\.pre-commit-config\.yaml|\.gitleaks\.toml|\.github/workflows/security-scan\.yml|scripts/security-check\.sh|SECURITY.*\.md)$'
+
+  # TruffleHog - Additional secret scanning
+  - repo: https://github.com/trufflesecurity/trufflehog
+    rev: v3.63.7
+    hooks:
+      - id: trufflehog
+        name: Scan for secrets with TruffleHog
+        entry: trufflehog filesystem --directory .
+        language: system
+        pass_filenames: false
+        exclude: '^(\.pre-commit-config\.yaml|\.gitleaks\.toml|\.github/workflows/security-scan\.yml|scripts/security-check\.sh|SECURITY.*\.md)$'
+
+  # Standard pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: detect-private-key
+        name: Detect private keys
+        exclude: '\.age$'
+
+      - id: check-added-large-files
+        name: Check for large files
+        args: ['--maxkb=1000']
+        exclude: '\.age$'
+
+      - id: check-yaml
+        name: Validate YAML files
+        exclude: '\.age$'
+
+      - id: check-toml
+        name: Validate TOML files
+
+      - id: check-json
+        name: Validate JSON files
+        exclude: '\.age$'
+
+      - id: check-merge-conflict
+        name: Check for merge conflicts
+
+      - id: check-case-conflict
+        name: Check for case conflicts
+
+      - id: check-symlinks
+        name: Check for broken symlinks
+
+      - id: end-of-file-fixer
+        name: Fix end of files
+        exclude: '\.age$'
+
+      - id: trailing-whitespace
+        name: Trim trailing whitespace
+        exclude: '\.age$|\.md$'
+
+      - id: mixed-line-ending
+        name: Check line endings
+        exclude: '\.age$'
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.9.0.6
+    hooks:
+      - id: shellcheck
+        name: Shellcheck
+        args: ['--severity=warning']
+        exclude: '\.age$'
+
+  - repo: local
+    hooks:
+      - id: check-unencrypted-sensitive-files
+        name: Check for unencrypted sensitive files
+        entry: bash
+        language: system
+        pass_filenames: false
+        args:
+          - -c
+          - |
+            FOUND=$(find . -type f \( -name "*.pem" -o -name "*.key" -o -name "*secret*" -o -name "*password*" \) \
+              ! -name "*.age" \
+              ! -path "*/.git/*" \
+              ! -path "*/node_modules/*" \
+              ! -path "*/.pre-commit-config.yaml" \
+              ! -path "*/.gitleaks.toml" \
+              ! -path "*/scripts/security-check.sh" \
+              ! -path "*/.github/workflows/*" \
+              ! -path "*/SECURITY*.md")
+            if [ -n "$FOUND" ]; then
+              echo "Unencrypted sensitive files found:"
+              echo "$FOUND"
+              exit 1
+            fi
+            exit 0
+
+      - id: check-hardcoded-paths
+        name: Warn about hardcoded paths
+        entry: bash
+        language: system
+        pass_filenames: false
+        verbose: true
+        args:
+          - -c
+          - |
+            if grep -r "/home/chicha09" \
+              --exclude-dir=".git" \
+              --exclude-dir="node_modules" \
+              --exclude-dir=".github" \
+              --exclude="*.age" \
+              --exclude="*.md" \
+              --exclude=".pre-commit-config.yaml" \
+              --exclude="security-check.sh" \
+              --exclude="security_check.sh" \
+              --exclude="symlink_*" \
+              . 2>/dev/null; then
+              echo "Warning: Hardcoded paths found (non-blocking)"
+            fi
+            exit 0
+
+      - id: verify-age-encryption
+        name: Verify Age encryption setup
+        entry: bash
+        language: system
+        pass_filenames: false
+        args:
+          - -c
+          - |
+            if [ -f "chezmoi.toml" ] && grep -q "encryption" chezmoi.toml; then
+              exit 0
+            else
+              echo "Error: Age encryption not configured in chezmoi.toml"
+              exit 1
+            fi
+
+      - id: check-gitignore-coverage
+        name: Verify .gitignore coverage
+        entry: bash
+        language: system
+        pass_filenames: false
+        verbose: true
+        args:
+          - -c
+          - |
+            for pattern in "key.txt" "*.key" "*.pem" "*token*"; do
+              if ! grep -q "$pattern" .gitignore 2>/dev/null; then
+                echo "Warning: $pattern not in .gitignore"
+              fi
+            done
+            exit 0
+
+# Global settings
+default_install_hook_types: [pre-commit, pre-push]
+default_stages: [pre-commit]
+
+# Exclude patterns
+exclude: |
+  (?x)^(
+    .*\.age$|
+    \.git/.*|
+    node_modules/.*|
+    \.tmux/plugins/.*|
+    \.venv/.*|
+    __pycache__/.*
+  )$
+
+fail_fast: false
+minimum_pre_commit_version: '3.0.0'

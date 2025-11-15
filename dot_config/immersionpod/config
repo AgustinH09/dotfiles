@@ -1,6 +1,6 @@
 langs=japanese,jpn,jp,ja,english,eng,en,rus,ukr,fre,spa,ger,por,ita,ara,dut
 prefer_internal_subs=yes
-video_dir=/home/chicha09/Videos/japanese/impd
+video_dir=$HOME/Videos/japanese/impd
 bitrate=32k
 recent_threshold=10
 padding=0.2

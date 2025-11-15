@@ -1,0 +1,322 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master]
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+  issues: write
+
+jobs:
+  secret-scanning:
+    name: Secret Detection
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: TruffleHog Secret Scanning
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+          extra_args: --only-verified --fail
+
+      - name: Gitleaks Secret Scanning
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+
+      - name: Upload Gitleaks SARIF report
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif
+          category: gitleaks
+
+  path-validation:
+    name: Validate Paths
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for hardcoded paths
+        run: |
+          echo "🔍 Scanning for hardcoded absolute paths..."
+
+          PATTERNS=(
+            "/home/chicha09"
+            "/home/[a-z]+"
+          )
+
+          FOUND_ISSUES=0
+
+          for pattern in "${PATTERNS[@]}"; do
+            echo "Checking pattern: $pattern"
+
+            if grep -r -n -E "$pattern" \
+              --exclude-dir=".git" \
+              --exclude-dir="node_modules" \
+              --exclude-dir=".tmux" \
+              --exclude="*.age" \
+              --exclude="*.md" \
+              --exclude="security-scan.yml" \
+              . 2>/dev/null; then
+
+              echo "❌ Found hardcoded paths matching: $pattern"
+              FOUND_ISSUES=1
+            fi
+          done
+
+          if [ $FOUND_ISSUES -eq 1 ]; then
+            echo ""
+            echo "⚠️  WARNING: Hardcoded absolute paths found!"
+            echo "Consider using environment variables like \$HOME instead."
+            echo "This is not a security issue but affects portability."
+            exit 0
+          else
+            echo "✅ No hardcoded absolute paths found!"
+          fi
+
+  encryption-verification:
+    name: Verify Encryption
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify sensitive files are encrypted
+        run: |
+          echo "🔐 Verifying sensitive files are encrypted..."
+
+          SENSITIVE_PATTERNS=(
+            "*.pem"
+            "*.key"
+            "*token*"
+            "*secret*"
+            "*password*"
+            "*.gpg"
+            "*credentials*"
+            "*auth*"
+          )
+
+          FOUND_UNENCRYPTED=0
+
+          for pattern in "${SENSITIVE_PATTERNS[@]}"; do
+            while IFS= read -r file; do
+              if [[ ! "$file" =~ \.age$ ]] && \
+                 [[ ! "$file" =~ ^\.git/ ]] && \
+                 [[ ! "$file" =~ node_modules/ ]] && \
+                 [[ ! "$file" =~ \.github/workflows/ ]] && \
+                 [[ ! "$file" =~ \.md$ ]]; then
+
+                echo "❌ Unencrypted sensitive file found: $file"
+                FOUND_UNENCRYPTED=1
+              fi
+            done < <(find . -type f -iname "$pattern" 2>/dev/null || true)
+          done
+
+          echo ""
+          echo "🔍 Checking for exposed API keys in code..."
+
+          if grep -r -n -E '(API_KEY|SECRET|TOKEN|PASSWORD)\s*=\s*["\047][a-zA-Z0-9_-]{20,}["\047]' \
+            --exclude-dir=".git" \
+            --exclude-dir="node_modules" \
+            --exclude="*.age" \
+            --exclude="*.md" \
+            --exclude="security-scan.yml" \
+            . 2>/dev/null; then
+
+            echo "❌ Potential API keys found in code!"
+            FOUND_UNENCRYPTED=1
+          fi
+
+          if [ $FOUND_UNENCRYPTED -eq 1 ]; then
+            echo ""
+            echo "🚨 SECURITY ISSUE: Unencrypted sensitive files detected!"
+            echo "Please encrypt these files using Age before committing."
+            exit 1
+          else
+            echo "✅ All sensitive files appear to be properly encrypted!"
+          fi
+
+  file-permissions:
+    name: Check File Permissions
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for overly permissive files
+        run: |
+          echo "🔒 Checking file permissions..."
+
+          EXECUTABLE_FILES=$(git ls-files --stage | grep '^100755' | awk '{print $4}')
+
+          if [ -n "$EXECUTABLE_FILES" ]; then
+            echo "📋 Executable files found:"
+            echo "$EXECUTABLE_FILES"
+            echo ""
+            echo "ℹ️  Verify these files should be executable."
+          else
+            echo "✅ No unexpected executable permissions found."
+          fi
+
+  dependency-scanning:
+    name: Dependency Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          severity: 'CRITICAL,HIGH'
+          exit-code: '0'
+
+      - name: Upload Trivy SARIF report
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: trivy-results.sarif
+          category: trivy
+
+  chezmoi-validation:
+    name: Validate Chezmoi Configuration
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Chezmoi
+        run: |
+          sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin"
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Validate Chezmoi files
+        run: |
+          echo "🔍 Validating Chezmoi configuration..."
+
+          if [ -f "chezmoi.toml" ]; then
+            echo "✅ chezmoi.toml found"
+
+            if grep -q "encryption" chezmoi.toml; then
+              echo "✅ Encryption is configured"
+            else
+              echo "⚠️  Warning: No encryption configuration found"
+            fi
+          else
+            echo "❌ chezmoi.toml not found!"
+            exit 1
+          fi
+
+          if [ -f ".chezmoiignore" ]; then
+            echo "✅ .chezmoiignore found"
+
+            if grep -q "key.txt" .chezmoiignore; then
+              echo "✅ Private key is properly ignored"
+            else
+              echo "⚠️  Warning: Private key may not be ignored"
+            fi
+          fi
+
+          echo ""
+          echo "✅ Chezmoi configuration validation complete!"
+
+  git-history-scan:
+    name: Git History Deep Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan git history for secrets
+        run: |
+          echo "🕵️  Scanning entire git history for accidentally committed secrets..."
+
+          PATTERNS=(
+            "BEGIN.*PRIVATE KEY"
+            "aws_access_key_id"
+            "aws_secret_access_key"
+            "AKIA[0-9A-Z]{16}"
+            "ghp_[0-9a-zA-Z]{36}"
+            "github_pat_[0-9a-zA-Z_]{82}"
+          )
+
+          FOUND_IN_HISTORY=0
+
+          for pattern in "${PATTERNS[@]}"; do
+            echo "Checking for: $pattern"
+
+            if git log --all --full-history -p -S "$pattern" --source -- \
+              | grep -v "\.age" \
+              | grep -E "$pattern" 2>/dev/null; then
+
+              echo "❌ Found potential secret in git history: $pattern"
+              FOUND_IN_HISTORY=1
+            fi
+          done
+
+          if [ $FOUND_IN_HISTORY -eq 1 ]; then
+            echo ""
+            echo "🚨 WARNING: Potential secrets found in git history!"
+            echo "Consider using git-filter-repo or BFG Repo-Cleaner to remove them."
+            echo "See: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository"
+            exit 0
+          else
+            echo "✅ No secrets found in git history!"
+          fi
+
+  summary:
+    name: Security Scan Summary
+    runs-on: ubuntu-latest
+    needs:
+      [
+        secret-scanning,
+        path-validation,
+        encryption-verification,
+        file-permissions,
+        chezmoi-validation,
+      ]
+    if: always()
+
+    steps:
+      - name: Generate Summary
+        run: |
+          echo "# 🔐 Security Scan Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Secret Scanning | ${{ needs.secret-scanning.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Path Validation | ${{ needs.path-validation.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Encryption Verification | ${{ needs.encryption-verification.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| File Permissions | ${{ needs.file-permissions.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Chezmoi Validation | ${{ needs.chezmoi-validation.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Scan completed at:** $(date -u)" >> $GITHUB_STEP_SUMMARY
