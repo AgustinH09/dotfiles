@@ -138,26 +138,38 @@ print_section "5. Validating Chezmoi Configuration"
 
 if [ -f "chezmoi.toml" ]; then
     print_result "pass" "chezmoi.toml exists"
-
     if grep -q "encryption" chezmoi.toml; then
         print_result "pass" "Encryption is configured"
     else
         print_result "warn" "No encryption configuration found in chezmoi.toml"
     fi
+elif [ -f ".chezmoi.toml.tmpl" ]; then
+    print_result "pass" ".chezmoi.toml.tmpl exists"
+    if grep -q "encryption" .chezmoi.toml.tmpl; then
+        print_result "pass" "Encryption is configured (template)"
+    else
+        print_result "warn" "No encryption configuration found in .chezmoi.toml.tmpl"
+    fi
 else
-    print_result "fail" "chezmoi.toml not found"
+    print_result "fail" "chezmoi configuration file not found (chezmoi.toml or .chezmoi.toml.tmpl)"
 fi
 
 if [ -f ".chezmoiignore" ]; then
     print_result "pass" ".chezmoiignore exists"
-
     if grep -q "key.txt" .chezmoiignore; then
         print_result "pass" "Private key is properly ignored"
     else
         print_result "warn" "Private key may not be ignored in .chezmoiignore"
     fi
+elif [ -f ".chezmoiignore.tmpl" ]; then
+    print_result "pass" ".chezmoiignore.tmpl exists"
+    if grep -q "key.txt" .chezmoiignore.tmpl; then
+        print_result "pass" "Private key is properly ignored (template)"
+    else
+        print_result "warn" "Private key may not be ignored in .chezmoiignore.tmpl"
+    fi
 else
-    print_result "warn" ".chezmoiignore not found"
+    print_result "warn" "chezmoi ignore file not found (.chezmoiignore or .chezmoiignore.tmpl)"
 fi
 
 print_section "6. Checking Git Status"

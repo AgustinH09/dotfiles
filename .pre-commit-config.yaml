@@ -134,8 +134,10 @@ repos:
           - |
             if [ -f "chezmoi.toml" ] && grep -q "encryption" chezmoi.toml; then
               exit 0
+            elif [ -f ".chezmoi.toml.tmpl" ] && grep -q "encryption" .chezmoi.toml.tmpl; then
+              exit 0
             else
-              echo "Error: Age encryption not configured in chezmoi.toml"
+              echo "Error: Age encryption not configured in chezmoi.toml or .chezmoi.toml.tmpl"
               exit 1
             fi
 
