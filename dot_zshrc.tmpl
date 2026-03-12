@@ -53,6 +53,7 @@ else
   export VISUAL='nvim'
 fi
 
+{{ if eq .chezmoi.os "linux" }}
 # Hyprland
 export XDG_SESSION_DESKTOP=hyprland
 export XDG_CURRENT_DESKTOP=hyprland
@@ -64,6 +65,7 @@ export XMODIFIERS="@im=fcitx"
 export QT_IM_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
+{{ end }}
 
 # Bob - Neovim
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
@@ -76,7 +78,11 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # Android SDK
+{{ if eq .chezmoi.os "darwin" }}
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+{{ else }}
 export ANDROID_HOME="$HOME/Android/Sdk"
+{{ end }}
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
 
 # ElasticBeanstalk
@@ -155,10 +161,22 @@ fi
 unset __conda_setup
 
 # Brew
+{{ if eq .chezmoi.os "darwin" }}
+if [ -x "/opt/homebrew/bin/brew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x "/usr/local/bin/brew" ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+{{ else }}
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+{{ end }}
 
 # Syntax Highlighting
+{{ if eq .chezmoi.os "darwin" }}
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+{{ else }}
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+{{ end }}
 
 # Tmux
 if [ -n "$TMUX" ]; then

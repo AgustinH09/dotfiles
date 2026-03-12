@@ -1,4 +1,4 @@
 return {
-  'kkharji/sqlite.lua',
-  event="VeryLazy",
+  "kkharji/sqlite.lua",
+  event = "VeryLazy",
 }

@@ -9,9 +9,6 @@ local function M(mode, lhs, rhs, opts)
   map(mode, lhs, rhs, opts)
 end
 
--- pull in modules once
-local mini_move = require "mini.move"
-
 ----- BASIC NAVIGATION & EDITING -----
 M("n", ";", ":", { desc = "Enter command mode" })
 M("n", "<C-d>", "<C-d>zz", { desc = "Scroll down & center" })
@@ -50,33 +47,33 @@ del("n", "<leader>fm")
 ----- BUFFER MANAGEMENT -----
 M("n", "<leader>x", "<cmd>bd<cr>", { desc = "Close buffer" })
 M("n", "<leader>X", "<cmd>bd!<cr>", { desc = "Force close buffer" })
--- M("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
--- M("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
+M("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
+M("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
 
 ----- MINIMOVE -----
 M("n", "<M-h>", function()
-  mini_move.move_line "left"
+  require("mini.move").move_line "left"
 end, { desc = "Move line left" })
 M("v", "<M-h>", function()
-  mini_move.move_selection "left"
+  require("mini.move").move_selection "left"
 end, { desc = "Move selection left" })
 M("n", "<M-l>", function()
-  mini_move.move_line "right"
+  require("mini.move").move_line "right"
 end, { desc = "Move line right" })
 M("v", "<M-l>", function()
-  mini_move.move_selection "right"
+  require("mini.move").move_selection "right"
 end, { desc = "Move selection right" })
 M("n", "<M-k>", function()
-  mini_move.move_line "up"
+  require("mini.move").move_line "up"
 end, { desc = "Move line up" })
 M("v", "<M-k>", function()
-  mini_move.move_selection "up"
+  require("mini.move").move_selection "up"
 end, { desc = "Move selection up" })
 M("n", "<M-j>", function()
-  mini_move.move_line "down"
+  require("mini.move").move_line "down"
 end, { desc = "Move line down" })
 M("v", "<M-j>", function()
-  mini_move.move_selection "down"
+  require("mini.move").move_selection "down"
 end, { desc = "Move selection down" })
 
 ----- TERMINALS -----
@@ -85,6 +82,16 @@ M("n", "<leader>tv", "<cmd>vsplit | terminal<CR>", { desc = "Vertical Terminal" 
 
 ----- UNDOTREE -----
 M("n", "<leader>u", "<cmd>UndotreeToggle<CR>", { desc = "Toggle UndoTree" })
+
+----- WINDOW MANAGEMENT -----
+M("n", "<leader>wv", "<cmd>vsplit<cr>", { desc = "Vertical split" })
+M("n", "<leader>ws", "<cmd>split<cr>", { desc = "Horizontal split" })
+M("n", "<leader>wc", "<C-w>c", { desc = "Close window" })
+M("n", "<leader>wo", "<C-w>o", { desc = "Close other windows" })
+M("n", "<leader>w=", "<C-w>=", { desc = "Equalize window sizes" })
+M("n", "<leader>w|", "<C-w>|", { desc = "Maximize width" })
+M("n", "<leader>w_", "<C-w>_", { desc = "Maximize height" })
+M("n", "<leader>wr", "<C-w>r", { desc = "Rotate windows" })
 
 ----- LSP (Language Server Protocol) -----
 local lsp_grp = vim.api.nvim_create_augroup("UserLspKeymaps", { clear = true })
@@ -314,7 +321,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "go",
   callback = function()
-    M("n", "<leader>gd", "<cmd>GoDoc<CR>", { desc = "GoDoc in Telescope" })
+    M("n", "<leader>goh", "<cmd>GoDoc<CR>", { desc = "GoDoc in Telescope" })
     M("n", "<leader>goA", "<cmd>GoAlternate<CR>", { desc = "Go alternate file (test <-> impl)" })
   end,
 })

@@ -27,6 +27,7 @@ fi
 # GPG
 export GPG_TTY=$(tty)
 
+{{ if eq .chezmoi.os "linux" }}
 # Hyprland Session Variables
 export XDG_SESSION_DESKTOP=hyprland
 export XDG_CURRENT_DESKTOP=hyprland
@@ -38,6 +39,7 @@ export XMODIFIERS="@im=fcitx"
 export QT_IM_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
+{{ end }}
 
 # Bob - Neovim
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
@@ -50,7 +52,11 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 
 # Android SDK
+{{ if eq .chezmoi.os "darwin" }}
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+{{ else }}
 export ANDROID_HOME="$HOME/Android/Sdk"
+{{ end }}
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
 
 # ElasticBeanstalk

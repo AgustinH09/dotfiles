@@ -1,0 +1,35 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "debugging": {
+      "description": "Specialist for nvim-dap debugging setup and DAP configuration",
+      "mode": "subagent",
+      "prompt": "{file:./AGENT_DEBUGGING.md}"
+    },
+    "implementation": {
+      "description": "Plugin integration specialist for adding/configuring plugins",
+      "mode": "subagent",
+      "prompt": "{file:./AGENT_IMPLEMENTATION.md}"
+    },
+    "keybinding": {
+      "description": "Keymapping specialist with comprehensive keymap documentation",
+      "mode": "subagent",
+      "prompt": "{file:./AGENT_KEYBINDING.md}"
+    },
+    "language": {
+      "description": "Language support specialist for LSP/formatter/linter setup",
+      "mode": "subagent",
+      "prompt": "{file:./AGENT_LANGUAGE.md}"
+    },
+    "maintenance": {
+      "description": "Update and stability specialist for config maintenance",
+      "mode": "subagent",
+      "prompt": "{file:./AGENT_MAINTENANCE.md}"
+    },
+    "performance": {
+      "description": "Optimization specialist for performance tuning",
+      "mode": "subagent",
+      "prompt": "{file:./AGENT_PERFORMANCE.md}"
+    }
+  }
+}
