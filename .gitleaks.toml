@@ -176,6 +176,7 @@ tags = ["password", "medium"]
 [rules.allowlist]
 paths = [
   '''dot_zshrc$''',
+  '''dot_zshrc\.tmpl$''',
   '''dot_bashrc$''',
   '''dot_bash_profile$''',
   '''dot_config/hypr/scripts/executable_sddm_wallpaper\.sh$''',
