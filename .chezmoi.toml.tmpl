@@ -7,7 +7,7 @@ encryption = "age"
     autoPush = false
 [merge]
     command = "nvim"
-    args = ["-d", "{{ .Destination }}", "{{ .Base }}", "{{ .Source }}"]
+    args = ["-d", {{ "\"{{ .Destination }}\"" }}, {{ "\"{{ .Base }}\"" }}, {{ "\"{{ .Source }}\"" }}]
 [diff]
     command = "nvim"
     args = ["-d"]
