@@ -1,8 +1,12 @@
 local lint = require "lint"
 
+local shellcheck_available = vim.fn.executable "shellcheck" == 1
+
 lint.linters_by_ft = {
   lua = { "luacheck" },
   ruby = { "rubocop" },
+  eruby = {}, -- ERB templates - explicitly empty to prevent htmlhint false positives
+  ["eruby.html"] = {}, -- Compound filetype for ERB - also needs explicit empty config
   typescript = { "eslint_d" },
   javascript = { "eslint_d" },
   javascriptreact = { "eslint_d" },
@@ -18,14 +22,20 @@ lint.linters_by_ft = {
   markdown = { "markdownlint-cli2" },
   terraform = { "tflint", "tfsec" },
   hcl = { "tflint", "tfsec" },
-  sh = { "shellcheck" },
-  bash = { "shellcheck" },
-  zsh = { "shellcheck" },
+  sh = shellcheck_available and { "shellcheck" } or {},
+  bash = shellcheck_available and { "shellcheck" } or {},
 }
 
 local luacheck_args = lint.linters.luacheck.args or {}
 vim.list_extend(luacheck_args, { "--globals", "vim" })
 lint.linters.luacheck.args = luacheck_args
+
+-- Configure htmlhint to skip ERB templates (avoid false positives on ERB syntax)
+lint.linters.htmlhint.condition = function(ctx)
+  local filename = ctx.filename or ""
+  -- Skip ERB files (.erb, .html.erb, .turbo_stream.erb, etc.)
+  return not filename:match "%.erb$"
+end
 
 -- Configure eslint_d to respect project configs
 lint.linters.eslint_d = {
@@ -42,7 +52,6 @@ lint.linters.eslint_d = {
   stream = "stdout",
   ignore_exitcode = true,
   parser = function(output, bufnr)
-    -- Parse eslint JSON output
     local ok, decoded = pcall(vim.json.decode, output)
     if not ok or not decoded[1] then
       return {}
@@ -69,7 +78,6 @@ lint.linters.eslint_d = {
   end,
 }
 
--- Custom Go linter for nilaway
 lint.linters.nilaway = {
   sourceName = "nilaway",
   command = "nilaway",
@@ -92,7 +100,6 @@ local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave", "TextChanged" }, {
   group = lint_augroup,
   callback = function()
-    -- Debounce linting
     vim.defer_fn(function()
       lint.try_lint()
     end, 100)

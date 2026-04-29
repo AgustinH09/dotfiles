@@ -15,12 +15,13 @@ require("mason-lspconfig").setup {
     "eslint",
     "gopls",
     "ruby_lsp",
-    "rust_analyzer",
+    -- "rust_analyzer", -- Handled by rustaceanvim plugin
     "pyright",
     "hyprls",
-    -- "marksman", – Disabled to avoid conflicts with marksman
+    -- "marksman",
     "markdown_oxide",
     "harper_ls",
+    "angularls",
   },
   automatic_installation = {
     exclude = ignore_install,
