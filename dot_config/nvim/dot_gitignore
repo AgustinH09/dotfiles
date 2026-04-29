@@ -2,6 +2,10 @@
 # These files contain personal AI assistant configurations and should not be committed
 opencode.json
 .opencode/
+*opencode*.md
 AGENTS.md
 AGENT_*.md
 GEMINI.md
+
+# Log files
+*.log
