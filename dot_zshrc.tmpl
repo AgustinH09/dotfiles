@@ -63,7 +63,7 @@ fi
 
 export PATH
 
-# Brew (must be early so Homebrew-installed tools are in PATH for later safe_evals)
+# Brew
 {{ if eq .chezmoi.os "darwin" }}
 if [ -x "/opt/homebrew/bin/brew" ]; then
   safe_eval /opt/homebrew/bin/brew shellenv
