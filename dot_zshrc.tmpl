@@ -1,50 +1,126 @@
-# Vscode and Cursor Agent mode: https://forum.cursor.com/t/cursor-agent-mode-when-running-terminal-commands-often-hangs-up-the-terminal-requiring-a-click-to-pop-it-out-in-order-to-continue-commands/59969/16
-if [[ -n "$npm_config_yes" ]] || [[ -n "$CI" ]] || [[ "$-" != *i* ]] || [[ "$TERM_PROGRAM" == "vscode" ]]; then
+#!/bin/zsh
+
+# Agent Mode Detection
+if [[ -n "$npm_config_yes" ]] || [[ -n "$CI" ]] || [[ "$-" != *i* ]] || \
+   [[ "$TERM_PROGRAM" == "vscode" ]] || [[ -n "$OPENCODE" ]]; then
   export AGENT_MODE=true
 else
   export AGENT_MODE=false
 fi
 
-# Direnv (produces output, so must be before prompt setup))
-eval "$(direnv hook zsh)"
+# --- Helper Functions ---
+# Safe source - only source if file exists
+safe_source() {
+  [[ -f "$1" ]] && source "$1" || return 0
+}
 
+# Safe eval - only eval if command exists
+safe_eval() {
+  local cmd=$1
+  shift
+  if command -v "$cmd" &> /dev/null; then
+    eval "$($cmd "$@")"
+    return $?
+  fi
+  return 1
+}
+
+# Export only if directory exists
+export_if_exists() {
+  local var_name=$1
+  local var_value=$2
+
+  if [[ -d "$var_value" ]]; then
+    export "$var_name=$var_value"
+    return 0
+  fi
+  return 1
+}
+
+# --- Path Configuration ---
+typeset -U path
+
+path=(
+  $HOME/.opencode/bin
+  $HOME/.local/share/bob/nvim-bin
+  $HOME/.ebcli-virtual-env/executables
+  $HOME/.local/bin
+  $HOME/bin
+  $HOME/.bun/bin
+  /usr/local/go/bin
+  $HOME/go/bin
+  /usr/local/bin
+  $path
+)
+
+if [[ -d "$HOME/Android/Sdk" ]]; then
+  path+=(
+    "$HOME/Android/Sdk/tools"
+    "$HOME/Android/Sdk/tools/bin"
+    "$HOME/Android/Sdk/platform-tools"
+  )
+fi
+
+export PATH
+
+# --- Oh-My-Zsh Config ---
+export ZSH="$HOME/.oh-my-zsh"
+
+HISTSIZE=50000
+SAVEHIST=50000
+HIST_STAMPS="dd/mm/yyyy - %H:%M:%S"
+
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
+setopt append_history inc_append_history share_history
+setopt dot_glob
+setopt extended_glob
+
+# --- Completion Config ---
+if [[ "$AGENT_MODE" != "true" ]]; then
+  ZSTYLE_COMPLETION_CACHE_PATH="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/compcache"
+  mkdir -p "$ZSTYLE_COMPLETION_CACHE_PATH"
+
+  zstyle ':completion:*' use-cache on
+  zstyle ':completion:*' cache-path "$ZSTYLE_COMPLETION_CACHE_PATH"
+  zstyle ':completion:*' menu select
+  zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+fi
+
+# Direnv
+safe_eval direnv hook zsh
+
+# --- Theme & Plugins ---
 if [[ "$AGENT_MODE" == "true" ]]; then
   ZSH_THEME=""
+  plugins=(bundler git rails sudo)
 else
-  # Pokemon Colorscripts
   pokemon-colorscripts -r
 
   if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux new-session -A -s main
   fi
 
-  # Powerlevel10k
   ZSH_THEME="powerlevel10k/powerlevel10k"
-  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-  fi
+  safe_source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 
-  #Plugins
-  zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
-  # zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
-  zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
-  zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+  zstyle ':omz:plugins:alias-finder' autoload yes
+  zstyle ':omz:plugins:alias-finder' exact yes
+  zstyle ':omz:plugins:alias-finder' cheaper yes
 
-  # Plugins (out: dirhistory)
-  plugins=(alias-finder aws bgnotify  bundler colorize gem git golang mise npm rails rake-fast ruby sudo terraform tmux zsh-vi-mode zsh-autosuggestions)
+  plugins=(alias-finder aws bgnotify bundler colorize gem git golang mise npm rails rake-fast ruby sudo terraform tmux zsh-vi-mode zsh-autosuggestions)
 fi
-
-
-# .zshrc
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export ZSH="$HOME/.oh-my-zsh"
-HIST_STAMPS="dd/mm/yyyy - %H:%M:%S"
 
 source $ZSH/oh-my-zsh.sh
 
-# ----User configuration----
+# --- User Config ---
 export MANPATH="/usr/bin/man:$MANPATH"
 export LANG=en_US.UTF-8
+
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
   export VISUAL='vim'
@@ -52,6 +128,11 @@ else
   export EDITOR='nvim'
   export VISUAL='nvim'
 fi
+
+# --- Environment Variables ---
+
+# Bitwarden
+export SSH_AUTH_SOCK="/home/$USER/.bitwarden-ssh-agent.sock"
 
 {{ if eq .chezmoi.os "linux" }}
 # Hyprland
@@ -67,66 +148,50 @@ export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
 {{ end }}
 
-# Bob - Neovim
-export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
-
 # Docker Host
 export DOCKER_HOST="unix:///var/run/docker.sock"
 
 # Golang
-export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export_if_exists GOPATH "$HOME/go"
 
 # Android SDK
 {{ if eq .chezmoi.os "darwin" }}
-export ANDROID_HOME="$HOME/Library/Android/sdk"
+export_if_exists ANDROID_HOME "$HOME/Library/Android/sdk"
 {{ else }}
-export ANDROID_HOME="$HOME/Android/Sdk"
+export_if_exists ANDROID_HOME "$HOME/Android/Sdk"
 {{ end }}
-export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
-
-# ElasticBeanstalk
-export PATH="$HOME/.ebcli-virtual-env/executables:$PATH"
 
 # Bat
 export BAT_THEME="tokyonight_moon"
-
-# OpenCode
-export PATH=$HOME/.opencode/bin:$PATH
 
 # GPG Key
 export GPG_TTY=$(tty)
 
 # API Keys
-if [ -f ~/.api_keys ]; then
-    source ~/.api_keys
-fi
+safe_source ~/.api_keys
 
-# ----Additional Tools----
+# --- Tools ---
 
 # Mise
-eval "$(~/.local/bin/mise activate zsh)"
+safe_eval ~/.local/bin/mise activate zsh
 
 # Zoxide
-eval "$(zoxide init zsh)"
+safe_eval zoxide init zsh
 
 # Terraform
 complete -C /usr/bin/terraform terraform
 
 # TheFuck
-eval $(thefuck --alias fk)
+safe_eval thefuck --alias fk
 
 # fzf
-source <(fzf --zsh)
-# Use bat and eza to preview files and directories
+safe_source <(fzf --zsh)
+
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview' --tmux"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200' --tmux"
 
-# Advanced customization of fzf options via _fzf_comprun function
-# - The first argument to the function is the name of the command.
-# - You should make sure to pass the rest of the arguments to fzf.
 _fzf_comprun() {
   local command=$1
   shift
@@ -134,18 +199,17 @@ _fzf_comprun() {
   case "$command" in
     cd)           fzf --preview  'eza --tree --color=always {} | head -200' "$@" ;;
     export|unset) fzf --preview "eval 'echo ${}'"       "$@" ;;
-    ssh)           fzf --preview 'dig {}'                 "$@" ;;
-    *)             fzf --preview "$show_file_or_dir_preview" "$@" ;;
+    ssh)          fzf --preview 'dig {}'                 "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
 
 # Atuin
-. "$HOME/.atuin/bin/env"
-
-eval "$(atuin init zsh)"
+safe_source "$HOME/.atuin/bin/env"
+safe_eval atuin init zsh
 
 # fzf-git.sh
-source $HOME/.oh-my-zsh/tools/fzf-git.sh
+safe_source $HOME/.oh-my-zsh/tools/fzf-git.sh
 
 # Conda
 __conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -163,29 +227,27 @@ unset __conda_setup
 # Brew
 {{ if eq .chezmoi.os "darwin" }}
 if [ -x "/opt/homebrew/bin/brew" ]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  safe_eval /opt/homebrew/bin/brew shellenv
 elif [ -x "/usr/local/bin/brew" ]; then
-  eval "$(/usr/local/bin/brew shellenv)"
+  safe_eval /usr/local/bin/brew shellenv
 fi
 {{ else }}
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+safe_eval /home/linuxbrew/.linuxbrew/bin/brew shellenv
 {{ end }}
 
 # Syntax Highlighting
 {{ if eq .chezmoi.os "darwin" }}
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+safe_source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 {{ else }}
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+safe_source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 {{ end }}
 
-# Tmux
+# --- Tmux ---
 if [ -n "$TMUX" ]; then
-  # Tmux git autofetch
   tmux-git-autofetch() {($HOME/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
   add-zsh-hook chpwd tmux-git-autofetch
 
   case "$TERM" in
-    # Terminal escape sequences
     linux|xterm*|rxvt*)
       export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}: ${PWD##*/}\007"'
       ;;
@@ -197,7 +259,7 @@ if [ -n "$TMUX" ]; then
   esac
 fi
 
-# Yazi: Cwd
+# --- Yazi ---
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -206,37 +268,56 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Fabric
+# --- Fabric ---
 fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit && compinit
 
+# --- Optional Tools ---
 # Undistract-me
 #export LONG_RUNNING_COMMAND_TIMEOUT=20
 #export UDM_PLAY_SOUND=1
 #source /etc/profile.d/undistract-me.sh
 
-# grit doc: https://docs.grit.io/
-. "$HOME/.grit/bin/env"
-# add rvm to path for scripting. make sure this is the last path variable change.
-. "$HOME/.cargo/env"
+# grit
+safe_source "$HOME/.grit/bin/env"
 
+# Cargo
+safe_source "$HOME/.cargo/env"
+
+# --- Agent Mode Overrides ---
 if [[ "$AGENT_MODE" == "true" ]]; then
   PROMPT='%n@%m:%~%# '
   RPROMPT=''
+
   unsetopt CORRECT
   unsetopt CORRECT_ALL
   setopt NO_BEEP
   setopt NO_HIST_BEEP
   setopt NO_LIST_BEEP
+  setopt NO_FLOW_CONTROL
+  setopt HASH_CMDS
+  setopt HASH_DIRS
+  setopt SHORT_LOOPS
 
-  # Agent-friendly aliases
-  # alias rm='rm -f'
-  # alias cp='cp -f'
-  # alias mv='mv -f'
+  unsetopt SHARE_HISTORY
+  unsetopt INC_APPEND_HISTORY
+  unsetopt AUTO_LIST
+
+  export PAGER=cat
+
   alias npm='npm --no-fund --no-audit'
   alias yarn='yarn --non-interactive'
   alias pip='pip --quiet'
   alias git='git -c advice.detachedHead=false'
+
+  if command -v direnv &> /dev/null; then
+    eval "$(direnv export zsh)"
+  fi
 else
-  [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+  safe_source ~/.p10k.zsh
+fi
+
+# --- Profiling ---
+if [[ "$PROFILE_STARTUP" == "true" ]]; then
+  print_startup_profile
 fi
