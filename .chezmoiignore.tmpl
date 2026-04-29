@@ -29,3 +29,11 @@ security-check.sh
 .xprofile
 .mplayer/
 {{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+.config/yabai/
+.config/skhd/
+.config/borders/
+.config/sketchybar/
+.config/karabiner/
+{{ end }}

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# ──────────────────────────────────────────────────────────────────────────────
+# JankyBorders config — rainbow gradient on focused window
+# Mimics Hyprland RainbowBorders.sh
+# ──────────────────────────────────────────────────────────────────────────────
+
+options=(
+    style=round
+    width=5.0
+    hidpi=on
+    active_color="gradient(top_left=0xffff6b6b,top_right=0xfffeca57,bottom_right=0xff48dbfb,bottom_left=0xffff9ff3)"
+    inactive_color=0x00000000
+    blacklist="Raycast,Bitwarden"
+)
+
+borders "${options[@]}"
+
+# Start the rainbow animation loop in the background
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -x "$SCRIPT_DIR/RainbowBorders.sh" ]; then
+    "$SCRIPT_DIR/RainbowBorders.sh" &
+fi
