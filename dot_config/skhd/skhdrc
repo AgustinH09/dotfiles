@@ -1,0 +1,238 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# skhd config — Hyprland keybinds on macOS via yabai
+#
+# Modifier mapping (SUPER → alt because cmd conflicts with macOS system keys):
+#   Hyprland SUPER          → alt
+#   Hyprland SUPER+SHIFT    → shift + alt
+#   Hyprland SUPER+CTRL     → ctrl + alt
+#   Hyprland SUPER+ALT      → cmd + alt
+#   Hyprland CTRL+ALT       → cmd + ctrl
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  LAUNCH APPS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+alt - return : open -na kitty
+alt - d      : open -a "Raycast"
+alt - b      : open -a "Safari"
+alt - t      : kitty --title yazi -e yazi
+
+# Close window (Hyprland: SUPER+Q killactive)
+# On macOS closing a window doesn't quit the app (unlike Linux).
+# This closes the window, then quits the app if it has no remaining windows.
+alt - q : app=$(yabai -m query --windows --window | jq -r '.app'); \
+    yabai -m window --close; \
+    sleep 0.1; \
+    remaining=$(yabai -m query --windows | jq -r "[.[] | select(.app==\"$app\" and .\"is-hidden\"==false)] | length"); \
+    [ "$remaining" -eq 0 ] && osascript -e "tell application \"$app\" to quit" 2>/dev/null; \
+    yabai -m window --focus recent 2>/dev/null || yabai -m window --focus first 2>/dev/null
+
+# Force kill (Hyprland: SUPER+SHIFT+Q KillActiveProcess.sh)
+shift + alt - q : pid=$(yabai -m query --windows --window | jq '.pid') && kill -9 "$pid"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  FOCUS — alt + {h,j,k,l} / alt + {arrows}
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+alt - left  : yabai -m window --focus west
+alt - down  : yabai -m window --focus south
+alt - up    : yabai -m window --focus north
+alt - right : yabai -m window --focus east
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  WARP WINDOWS — ctrl + alt + {h,j,k,l} / {arrows}
+#  Hyprland movewindow = restructure BSP tree (yabai --warp)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - l : yabai -m window --warp east
+
+ctrl + alt - left  : yabai -m window --warp west
+ctrl + alt - down  : yabai -m window --warp south
+ctrl + alt - up    : yabai -m window --warp north
+ctrl + alt - right : yabai -m window --warp east
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  SWAP WINDOWS — cmd + alt + {h,j,k,l} / {arrows}
+#  Hyprland swapwindow = exchange positions (yabai --swap)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cmd + alt - h : yabai -m window --swap west
+cmd + alt - j : yabai -m window --swap south
+cmd + alt - k : yabai -m window --swap north
+cmd + alt - l : yabai -m window --swap east
+
+cmd + alt - left  : yabai -m window --swap west
+cmd + alt - down  : yabai -m window --swap south
+cmd + alt - up    : yabai -m window --swap north
+cmd + alt - right : yabai -m window --swap east
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  RESIZE WINDOWS — shift + alt + {h,j,k,l} / {arrows}
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+shift + alt - h : yabai -m window --resize left:-50:0   2>/dev/null || yabai -m window --resize right:-50:0
+shift + alt - l : yabai -m window --resize right:50:0   2>/dev/null || yabai -m window --resize left:50:0
+shift + alt - k : yabai -m window --resize top:0:-50    2>/dev/null || yabai -m window --resize bottom:0:-50
+shift + alt - j : yabai -m window --resize bottom:0:50  2>/dev/null || yabai -m window --resize top:0:50
+
+shift + alt - left  : yabai -m window --resize left:-50:0   2>/dev/null || yabai -m window --resize right:-50:0
+shift + alt - right : yabai -m window --resize right:50:0   2>/dev/null || yabai -m window --resize left:50:0
+shift + alt - up    : yabai -m window --resize top:0:-50    2>/dev/null || yabai -m window --resize bottom:0:-50
+shift + alt - down  : yabai -m window --resize bottom:0:50  2>/dev/null || yabai -m window --resize top:0:50
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  LAYOUT TOGGLES
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Toggle float (Hyprland: SUPER+SPACE togglefloating)
+alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# Fullscreen (Hyprland: SUPER+SHIFT+F)
+shift + alt - f : yabai -m window --toggle zoom-fullscreen
+
+# Fake fullscreen (Hyprland: SUPER+CTRL+F)
+ctrl + alt - f : yabai -m window --toggle zoom-parent
+
+# Balance tree (Hyprland: SUPER+M splitratio)
+alt - m : yabai -m space --balance
+
+# Toggle split direction (Hyprland: SUPER+SHIFT+I togglesplit)
+shift + alt - i : yabai -m window --toggle split
+
+# Toggle layout bsp/stack (Hyprland: SUPER+ALT+L ChangeLayout)
+cmd + alt - l : current=$(yabai -m query --spaces --space | jq -r '.type') && \
+    [ "$current" = "bsp" ] && yabai -m space --layout stack || yabai -m space --layout bsp
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  FOCUS SPACE — alt + {1-0}
+#  With back_and_forth: pressing the same space again returns to previous
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+alt - 1 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 1 ]  && yabai -m space --focus recent || yabai -m space --focus 1
+alt - 2 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 2 ]  && yabai -m space --focus recent || yabai -m space --focus 2
+alt - 3 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 3 ]  && yabai -m space --focus recent || yabai -m space --focus 3
+alt - 4 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 4 ]  && yabai -m space --focus recent || yabai -m space --focus 4
+alt - 5 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 5 ]  && yabai -m space --focus recent || yabai -m space --focus 5
+alt - 6 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 6 ]  && yabai -m space --focus recent || yabai -m space --focus 6
+alt - 7 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 7 ]  && yabai -m space --focus recent || yabai -m space --focus 7
+alt - 8 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 8 ]  && yabai -m space --focus recent || yabai -m space --focus 8
+alt - 9 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 9 ]  && yabai -m space --focus recent || yabai -m space --focus 9
+alt - 0 : [ "$(yabai -m query --spaces --space | jq '.index')" -eq 10 ] && yabai -m space --focus recent || yabai -m space --focus 10
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  MOVE WINDOW TO SPACE + FOLLOW — shift + alt + {1-0}
+#  Uses --focus flag for atomic move+focus (no race condition)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+shift + alt - 1 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 1;  yabai -m space --focus 1;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 2 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 2;  yabai -m space --focus 2;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 3 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 3;  yabai -m space --focus 3;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 4 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 4;  yabai -m space --focus 4;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 5 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 5;  yabai -m space --focus 5;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 6 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 6;  yabai -m space --focus 6;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 7 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 7;  yabai -m space --focus 7;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 8 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 8;  yabai -m space --focus 8;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 9 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 9;  yabai -m space --focus 9;  yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 0 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space 10; yabai -m space --focus 10; yabai -m window --focus "$id" 2>/dev/null
+
+# Move to adjacent space + follow (Hyprland: SUPER+SHIFT+[/])
+shift + alt - 0x21 : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space prev; yabai -m space --focus prev; yabai -m window --focus "$id" 2>/dev/null
+shift + alt - 0x1E : id=$(yabai -m query --windows --window | jq '.id'); yabai -m window --space next; yabai -m space --focus next; yabai -m window --focus "$id" 2>/dev/null
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  MOVE WINDOW TO SPACE SILENTLY — ctrl + alt + {1-0}
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ctrl + alt - 1 : yabai -m window --space 1
+ctrl + alt - 2 : yabai -m window --space 2
+ctrl + alt - 3 : yabai -m window --space 3
+ctrl + alt - 4 : yabai -m window --space 4
+ctrl + alt - 5 : yabai -m window --space 5
+ctrl + alt - 6 : yabai -m window --space 6
+ctrl + alt - 7 : yabai -m window --space 7
+ctrl + alt - 8 : yabai -m window --space 8
+ctrl + alt - 9 : yabai -m window --space 9
+ctrl + alt - 0 : yabai -m window --space 10
+
+ctrl + alt - 0x21 : yabai -m window --space prev
+ctrl + alt - 0x1E : yabai -m window --space next
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  CYCLE SPACES
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+alt - tab         : yabai -m space --focus next 2>/dev/null || yabai -m space --focus first
+shift + alt - tab : yabai -m space --focus prev 2>/dev/null || yabai -m space --focus last
+
+alt - 0x2F : yabai -m space --focus next 2>/dev/null || yabai -m space --focus first
+alt - 0x2B : yabai -m space --focus prev 2>/dev/null || yabai -m space --focus last
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  SCRATCHPAD (Hyprland special workspace)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Minimize window (Hyprland: SUPER+SHIFT+U movetoworkspace special)
+shift + alt - u : yabai -m window --minimize
+
+# Restore last minimized (Hyprland: SUPER+U togglespecialworkspace)
+alt - u : win=$(yabai -m query --windows | jq -r '[.[] | select(."is-minimized" == true and ."is-hidden" == false)] | last | .id // empty') && \
+    [ -n "$win" ] && yabai -m window "$win" --deminimize --focus || true
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  WINDOW CYCLING
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+alt - n : yabai -m window --focus next 2>/dev/null || yabai -m window --focus first
+alt - p : yabai -m window --focus prev 2>/dev/null || yabai -m window --focus last
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  DROPDOWN TERMINAL — shift + alt + return
+#  Pulls the dropdown kitty from space 11 to the current space (show),
+#  or sends it back to space 11 (hide). Spawns kitty on first use.
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+shift + alt - return : id=$(yabai -m query --windows | jq -r '[.[] | select(.app=="kitty" and .title=="dropdown")] | first | .id // empty'); \
+    if [ -z "$id" ]; then \
+        kitty --title dropdown -o remember_window_size=no -o initial_window_width=1200 -o initial_window_height=700 &  \
+    else \
+        current=$(yabai -m query --spaces --space | jq '.index'); \
+        win_space=$(yabai -m query --windows --window "$id" | jq '.space'); \
+        if [ "$win_space" -eq "$current" ]; then \
+            yabai -m window "$id" --space 11; \
+        else \
+            yabai -m window "$id" --space "$current"; \
+            yabai -m window --focus "$id"; \
+        fi; \
+    fi
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  SCREENSHOTS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+shift + alt - s : screencapture -i -c
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  UTILITIES
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Clipboard manager — set this hotkey INSIDE Raycast instead:
+#   Raycast > Settings > Extensions > Clipboard History > Hotkey: cmd+alt+v
+# Raycast handles toggle/escape natively; skhd deep-links don't toggle.
+
+# Lock screen
+cmd + ctrl - l : pmset displaysleepnow
+
+# Toggle Dock visibility (like Hyprland CTRL+ALT+B toggle waybar)
+alt - g : osascript -e 'tell application "System Events" to set autohide of dock preferences to not (autohide of dock preferences)'
+
+# Restart yabai + skhd
+ctrl + alt - r : yabai --restart-service && skhd --restart-service

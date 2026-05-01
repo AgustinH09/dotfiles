@@ -1,0 +1,26 @@
+# nvim agent docs
+.config/nvim/AGENTS.md
+.config/nvim/AGENT_DEBUGGING.md
+.config/nvim/AGENT_IMPLEMENTATION.md
+.config/nvim/AGENT_KEYBINDING.md
+.config/nvim/AGENT_LANGUAGE.md
+.config/nvim/AGENT_MAINTENANCE.md
+.config/nvim/AGENT_PERFORMANCE.md
+.config/nvim/GEMINI.md
+
+# nvim plugin specs
+.config/nvim/lua/plugins/avante.lua
+.config/nvim/lua/plugins/gp.lua
+.config/nvim/lua/plugins/mcphub.lua
+
+# nvim opencode JSON
+.config/nvim/opencode.json
+
+# mozc IME databases
+.config/mozc/cform.db
+.config/mozc/.history.db
+.config/mozc/.session.ipc
+.config/mozc/segment.db
+
+# fabric pattern
+.config/fabric/patterns/explain_code/user.md

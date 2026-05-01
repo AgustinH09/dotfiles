@@ -63,6 +63,17 @@ fi
 
 export PATH
 
+# Brew
+{{ if eq .chezmoi.os "darwin" }}
+if [ -x "/opt/homebrew/bin/brew" ]; then
+  safe_eval /opt/homebrew/bin/brew shellenv
+elif [ -x "/usr/local/bin/brew" ]; then
+  safe_eval /usr/local/bin/brew shellenv
+fi
+{{ else }}
+safe_eval /home/linuxbrew/.linuxbrew/bin/brew shellenv
+{{ end }}
+
 # --- Oh-My-Zsh Config ---
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -129,10 +140,25 @@ else
   export VISUAL='nvim'
 fi
 
+# --- Aliases ---
+alias n='nvim'
+alias v='nvim'
+alias lg='lazygit'
+alias ld='lazydocker'
+alias cat='bat'
+alias ls='eza --icons=always'
+alias ll='eza -lh --icons=always'
+alias la='eza -lah --icons=always'
+alias tree='eza --tree --icons=always'
+
 # --- Environment Variables ---
 
-# Bitwarden
+# Bitwarden SSH Agent
+{{ if eq .chezmoi.os "darwin" -}}
+export SSH_AUTH_SOCK=~/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+{{ else -}}
 export SSH_AUTH_SOCK="/home/$USER/.bitwarden-ssh-agent.sock"
+{{ end -}}
 
 {{ if eq .chezmoi.os "linux" }}
 # Hyprland
@@ -176,7 +202,7 @@ safe_source ~/.api_keys
 safe_eval ~/.local/bin/mise activate zsh
 
 # Zoxide
-safe_eval zoxide init zsh
+safe_eval zoxide init zsh --cmd cd
 
 # Terraform
 complete -C /usr/bin/terraform terraform
@@ -223,17 +249,6 @@ else
     fi
 fi
 unset __conda_setup
-
-# Brew
-{{ if eq .chezmoi.os "darwin" }}
-if [ -x "/opt/homebrew/bin/brew" ]; then
-  safe_eval /opt/homebrew/bin/brew shellenv
-elif [ -x "/usr/local/bin/brew" ]; then
-  safe_eval /usr/local/bin/brew shellenv
-fi
-{{ else }}
-safe_eval /home/linuxbrew/.linuxbrew/bin/brew shellenv
-{{ end }}
 
 # Syntax Highlighting
 {{ if eq .chezmoi.os "darwin" }}
