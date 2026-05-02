@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SketchyBar — Workspace indicator only (kanji carousel)
+# ──────────────────────────────────────────────────────────────────────────────
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+FONT="Hack Nerd Font"
+
+# Catppuccin Mocha
+TRANSPARENT=0x00000000
+ISLAND_BG=0xdd1e1e2e
+SURFACE0=0xa0313244
+TEXT=0xffcdd6f4
+OVERLAY=0xff585b70
+RED=0xfff38ba8
+
+# ─── Bar ─────────────────────────────────────────────────────────────────────
+sketchybar --bar \
+    position=top \
+    height=26 \
+    color=$TRANSPARENT \
+    border_width=0 \
+    shadow=off \
+    blur_radius=0 \
+    margin=0 \
+    y_offset=0 \
+    corner_radius=0 \
+    padding_left=0 \
+    padding_right=0 \
+    notch_width=200 \
+    sticky=on \
+    font_smoothing=on
+
+# ─── Defaults ────────────────────────────────────────────────────────────────
+sketchybar --default \
+    icon.font="$FONT:Bold:14.0" \
+    icon.color=$TEXT \
+    icon.padding_left=4 \
+    icon.padding_right=4 \
+    label.drawing=off \
+    background.drawing=off
+
+# ─── Workspaces (center, kanji carousel) ─────────────────────────────────────
+SPACE_ICONS=("一" "二" "三" "四" "五" "六" "七" "八" "九" "十")
+
+for i in "${!SPACE_ICONS[@]}"; do
+    sid=$((i + 1))
+    sketchybar --add space space.$sid center \
+        --set space.$sid \
+            space=$sid \
+            icon="${SPACE_ICONS[$i]}" \
+            icon.font="$FONT:Bold:13.0" \
+            icon.color=$OVERLAY \
+            icon.highlight_color=$TEXT \
+            icon.padding_left=10 \
+            icon.padding_right=10 \
+            background.drawing=on \
+            background.corner_radius=4 \
+            background.height=20 \
+            background.color=$TRANSPARENT \
+            script="$PLUGIN_DIR/space.sh" \
+            click_script="yabai -m space --focus $sid"
+done
+
+for sid in $(seq 1 10); do
+    sketchybar --subscribe space.$sid space_change
+done
+
+sketchybar --add bracket island '/space\..*/' \
+    --set island \
+        background.color=$ISLAND_BG \
+        background.corner_radius=8 \
+        background.height=22 \
+        background.drawing=on \
+        background.blur_radius=30
+
+# ─── Done ────────────────────────────────────────────────────────────────────
+sketchybar --update

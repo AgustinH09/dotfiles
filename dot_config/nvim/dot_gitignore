@@ -1,7 +1,20 @@
-# AI/OpenCode Configuration Files (local only)
-# These files contain personal AI assistant configurations and should not be committed
+# AI assistant configs
 opencode.json
 .opencode/
+*opencode*.md
 AGENTS.md
 AGENT_*.md
 GEMINI.md
+
+# Logs
+*.log
+
+# Pilot BeepBoop profile
+sounds/pilot/**
+
+# Local Python tooling
+scripts/.venv/
+scripts/extract_pilot_words.py
+
+# Personal docs
+docs/superpowers/
