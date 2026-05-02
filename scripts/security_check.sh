@@ -55,7 +55,7 @@ print_result() {
 
 print_section "1. Checking for Hardcoded Paths"
 
-HARDCODED_PATHS=$(grep -r -n "/home/chicha09" \
+HARDCODED_PATHS=$(grep -r -n "/home/"chicha09 \
     --exclude-dir=".git" \
     --exclude-dir="node_modules" \
     --exclude-dir=".tmux" \

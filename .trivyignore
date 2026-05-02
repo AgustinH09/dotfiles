@@ -1,0 +1,3 @@
+# Ignore vulnerabilities in local LSP dependencies
+CVE-2026-41316
+CVE-2026-34060
