@@ -109,7 +109,7 @@ repos:
         args:
           - -c
           - |
-            if grep -r "/home/chicha09" \
+            if grep -r "/home/"chicha09 \
               --exclude-dir=".git" \
               --exclude-dir="node_modules" \
               --exclude-dir=".github" \

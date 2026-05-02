@@ -1,0 +1,108 @@
+#!/usr/bin/env sh
+
+# ──────────────────────────────────────────────────────────────────────────────
+# yabai config — Hyprland-like tiling on macOS
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ─── Scripting addition ──────────────────────────────────────────────────────
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# ─── Debug (disable once stable) ─────────────────────────────────────────────
+yabai -m config debug_output on
+
+# ─── Layout ───────────────────────────────────────────────────────────────────
+yabai -m config layout                      bsp
+yabai -m config window_placement            second_child
+yabai -m config split_ratio                 0.50
+yabai -m config auto_balance                off
+
+# ─── Gaps & padding (Hyprland: gaps_in=6, gaps_out=8) ────────────────────────
+yabai -m config top_padding                 8
+yabai -m config bottom_padding              8
+yabai -m config left_padding                8
+yabai -m config right_padding               8
+yabai -m config window_gap                  6
+
+# ─── Mouse (Hyprland: SUPER+LMB=move, SUPER+RMB=resize) ─────────────────────
+yabai -m config mouse_modifier              alt
+yabai -m config mouse_action1               move
+yabai -m config mouse_action2               resize
+yabai -m config mouse_drop_action           swap
+yabai -m config focus_follows_mouse         off
+yabai -m config mouse_follows_focus         off
+
+# ─── Window appearance ───────────────────────────────────────────────────────
+yabai -m config window_shadow               float
+yabai -m config window_opacity              off
+yabai -m config active_window_opacity       1.0
+yabai -m config normal_window_opacity       0.90
+yabai -m config window_animation_duration   0.0
+yabai -m config insert_feedback_color       0xff7aa2f7
+
+# ─── SketchyBar integration (26px compact bar) ──────────────────────────────
+yabai -m config external_bar                all:26:0
+
+# ─── Ensure 10 spaces exist (Hyprland has workspaces 1-10 by default) ────────
+JQ=$(command -v jq || echo /usr/bin/jq)
+
+setup_spaces() {
+    desired=11
+    current=$(yabai -m query --spaces | $JQ 'length')
+    while [ "$current" -lt "$desired" ]; do
+        yabai -m space --create
+        current=$((current + 1))
+    done
+
+    for i in $(seq 1 10); do
+        yabai -m space "$i" --label "ws${i}" 2>/dev/null
+    done
+    yabai -m space 11 --label "dropdown" 2>/dev/null
+}
+setup_spaces
+
+# ─── Window rules — float apps that should not tile ──────────────────────────
+yabai -m rule --add app="^System Settings$"     manage=off
+yabai -m rule --add app="^System Preferences$"  manage=off
+yabai -m rule --add app="^System Information$"  manage=off
+yabai -m rule --add app="^Calculator$"          manage=off
+yabai -m rule --add app="^Karabiner"            manage=off
+yabai -m rule --add app="^QuickTime Player$"    manage=off
+yabai -m rule --add app="^Archive Utility$"     manage=off
+yabai -m rule --add app="^Activity Monitor$"    manage=off
+yabai -m rule --add app="^App Store$"           manage=off
+yabai -m rule --add app="^Digital Color Meter$" manage=off
+yabai -m rule --add app="^Installer$"           manage=off
+yabai -m rule --add app="^Stickies$"            manage=off
+yabai -m rule --add app="^Preview$"             manage=off
+yabai -m rule --add app="^Raycast$"             manage=off
+yabai -m rule --add app="^Disk Utility$"        manage=off
+yabai -m rule --add app="^Font Book$"           manage=off
+yabai -m rule --add app="^Keychain Access$"     manage=off
+yabai -m rule --add app="^AnyConnect$"          manage=off
+yabai -m rule --add app="^Bitwarden$"           manage=off
+yabai -m rule --add app="^Finder$" title="^(Copy|Connect|Move|Info|Pref)" manage=off
+
+# Dropdown terminal — always float (Hyprland: kitty-dropdown rules)
+yabai -m rule --add app="^kitty$" title="^dropdown$" manage=off
+
+# ─── Signals ─────────────────────────────────────────────────────────────────
+# Auto-focus the most recent window when one is closed (like Hyprland)
+yabai -m signal --add event=window_destroyed active=yes \
+    action="yabai -m window --focus recent 2>/dev/null || yabai -m window --focus first 2>/dev/null || true"
+yabai -m signal --add event=application_terminated active=yes \
+    action="yabai -m window --focus recent 2>/dev/null || yabai -m window --focus first 2>/dev/null || true"
+
+# ─── Borders (focused window highlight — like Hyprland RainbowBorders) ───────
+# JankyBorders is started from its own config at ~/.config/borders/bordersrc
+# but we also trigger it here to ensure it reloads when yabai restarts
+borders active_color="gradient(top_left=0xffff6b6b,top_right=0xfffeca57,bottom_right=0xff48dbfb,bottom_left=0xffff9ff3)" \
+        inactive_color=0x00000000 width=5.0 style=round hidpi=on &
+
+# Start rainbow animation loop
+RAINBOW_SCRIPT="$HOME/.config/borders/RainbowBorders.sh"
+if [ -x "$RAINBOW_SCRIPT" ]; then
+    "$RAINBOW_SCRIPT" &
+fi
+
+echo "yabai configuration loaded."

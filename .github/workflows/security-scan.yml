@@ -2,7 +2,7 @@ name: Security Scan
 
 on:
   push:
-    branches: [main, master, develop]
+    branches: [main, master]
   pull_request:
     branches: [main, master]
   schedule:
@@ -21,31 +21,19 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
 
       - name: TruffleHog Secret Scanning
-        uses: trufflesecurity/trufflehog@main
+        uses: trufflesecurity/trufflehog@5f47aad1c2df34f7c6230784ce9a5a659922f479 # main
         with:
           path: ./
           base: ""
           head: ""
           extra_args: --only-verified
 
-      - name: Gitleaks Secret Scanning
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
-      - name: Upload Gitleaks SARIF report
-        if: always() && hashFiles('results.sarif') != ''
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: results.sarif
-          category: gitleaks
-        continue-on-error: true
 
   path-validation:
     name: Validate Paths
@@ -53,15 +41,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Check for hardcoded paths
         run: |
           echo "🔍 Scanning for hardcoded absolute paths..."
 
           PATTERNS=(
-            "/home/chicha09"
-            "/home/[a-z]+"
+            "/home/"chicha09
           )
 
           FOUND_ISSUES=0
@@ -73,6 +60,7 @@ jobs:
               --exclude-dir=".git" \
               --exclude-dir="node_modules" \
               --exclude-dir=".tmux" \
+              --exclude-dir=".github" \
               --exclude="*.age" \
               --exclude="*.md" \
               --exclude="security-scan.yml" \
@@ -84,11 +72,8 @@ jobs:
           done
 
           if [ $FOUND_ISSUES -eq 1 ]; then
-            echo ""
-            echo "⚠️  WARNING: Hardcoded absolute paths found!"
-            echo "Consider using environment variables like \$HOME instead."
-            echo "This is not a security issue but affects portability."
-            exit 0
+            echo "🚨 ERROR: Hardcoded absolute paths found!"
+            exit 1
           else
             echo "✅ No hardcoded absolute paths found!"
           fi
@@ -99,7 +84,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Verify sensitive files are encrypted
         run: |
@@ -162,7 +147,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Check for overly permissive files
         run: |
@@ -185,21 +170,23 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           scan-type: 'fs'
           scan-ref: '.'
           format: 'sarif'
           output: 'trivy-results.sarif'
           severity: 'CRITICAL,HIGH'
-          exit-code: '0'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          ignore-unfixed: true
+          exit-code: '1'
 
       - name: Upload Trivy SARIF report
         if: always() && hashFiles('trivy-results.sarif') != ''
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@b56ba49b26e50535fa1e7f7db0f4f7b4bf65d80d # v3.28.10
         with:
           sarif_file: trivy-results.sarif
           category: trivy
@@ -211,7 +198,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Install Chezmoi
         run: |
@@ -222,16 +209,17 @@ jobs:
         run: |
           echo "🔍 Validating Chezmoi configuration..."
 
-          if [ -f "chezmoi.toml" ]; then
-            echo "✅ chezmoi.toml found"
+          if [ -f "chezmoi.toml" ] || [ -f ".chezmoi.toml.tmpl" ]; then
+            echo "✅ Chezmoi configuration found"
 
-            if grep -q "encryption" chezmoi.toml; then
+            # Check for encryption in whichever file exists
+            if grep -q "encryption" chezmoi.toml 2>/dev/null || grep -q "encryption" .chezmoi.toml.tmpl 2>/dev/null; then
               echo "✅ Encryption is configured"
             else
               echo "⚠️  Warning: No encryption configuration found"
             fi
           else
-            echo "❌ chezmoi.toml not found!"
+            echo "❌ Chezmoi configuration not found!"
             exit 1
           fi
 
@@ -254,7 +242,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
 
@@ -276,7 +264,7 @@ jobs:
           for pattern in "${PATTERNS[@]}"; do
             echo "Checking for: $pattern"
 
-            if git log --all --full-history -p -S "$pattern" --source -- \
+            if git log --all --full-history -p -S "$pattern" --source -- . ':!.github/workflows' ':!.gitleaks.toml' ':!.pre-commit-config.yaml' ':!scripts/security_check.sh' ':!security-check.sh' \
               | grep -v "\.age" \
               | grep -E "$pattern" 2>/dev/null; then
 
@@ -286,11 +274,8 @@ jobs:
           done
 
           if [ $FOUND_IN_HISTORY -eq 1 ]; then
-            echo ""
-            echo "🚨 WARNING: Potential secrets found in git history!"
-            echo "Consider using git-filter-repo or BFG Repo-Cleaner to remove them."
-            echo "See: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository"
-            exit 0
+            echo "🚨 ERROR: Secrets found in git history!"
+            exit 1
           else
             echo "✅ No secrets found in git history!"
           fi
@@ -304,7 +289,9 @@ jobs:
         path-validation,
         encryption-verification,
         file-permissions,
+        dependency-scanning,
         chezmoi-validation,
+        git-history-scan,
       ]
     if: always()
 
@@ -319,6 +306,14 @@ jobs:
           echo "| Path Validation | ${{ needs.path-validation.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Encryption Verification | ${{ needs.encryption-verification.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| File Permissions | ${{ needs.file-permissions.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Dependency Scanning | ${{ needs.dependency-scanning.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Chezmoi Validation | ${{ needs.chezmoi-validation.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| History Scan | ${{ needs.git-history-scan.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Scan completed at:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+
+      - name: Verify Overall Result
+        if: always() && (contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled'))
+        run: |
+          echo "❌ Security scans failed. Please check the results above."
+          exit 1

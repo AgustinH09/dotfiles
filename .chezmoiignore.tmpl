@@ -1,6 +1,12 @@
 key.txt.age
 .config/nvim/.git
 
+LICENSE
+README.md
+scripts
+scripts/**
+security-check.sh
+
 {{ if eq .chezmoi.os "darwin" }}
 .config/hypr/
 .config/Kvantum/
@@ -22,4 +28,12 @@ key.txt.age
 .config/wallust/
 .xprofile
 .mplayer/
+{{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+.config/yabai/
+.config/skhd/
+.config/borders/
+.config/sketchybar/
+.config/karabiner/
 {{ end }}
