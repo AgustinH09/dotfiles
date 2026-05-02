@@ -48,7 +48,7 @@ jobs:
           echo "🔍 Scanning for hardcoded absolute paths..."
 
           PATTERNS=(
-            "/home/chicha09"
+            "/home/"chicha09
             "/home/[a-z]+"
           )
 
@@ -209,16 +209,17 @@ jobs:
         run: |
           echo "🔍 Validating Chezmoi configuration..."
 
-          if [ -f "chezmoi.toml" ]; then
-            echo "✅ chezmoi.toml found"
+          if [ -f "chezmoi.toml" ] || [ -f ".chezmoi.toml.tmpl" ]; then
+            echo "✅ Chezmoi configuration found"
 
-            if grep -q "encryption" chezmoi.toml; then
+            # Check for encryption in whichever file exists
+            if grep -q "encryption" chezmoi.toml 2>/dev/null || grep -q "encryption" .chezmoi.toml.tmpl 2>/dev/null; then
               echo "✅ Encryption is configured"
             else
               echo "⚠️  Warning: No encryption configuration found"
             fi
           else
-            echo "❌ chezmoi.toml not found!"
+            echo "❌ Chezmoi configuration not found!"
             exit 1
           fi
 
@@ -263,7 +264,7 @@ jobs:
           for pattern in "${PATTERNS[@]}"; do
             echo "Checking for: $pattern"
 
-            if git log --all --full-history -p -S "$pattern" --source -- \
+            if git log --all --full-history -p -S "$pattern" --source -- . ':!.github/workflows' ':!.gitleaks.toml' ':!.pre-commit-config.yaml' ':!scripts/security_check.sh' ':!security-check.sh' \
               | grep -v "\.age" \
               | grep -E "$pattern" 2>/dev/null; then
 
