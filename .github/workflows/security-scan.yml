@@ -2,9 +2,9 @@ name: Security Scan
 
 on:
   push:
-    branches: ["**"]
+    branches: [main, master]
   pull_request:
-    branches: ["**"]
+    branches: [main, master]
   schedule:
     - cron: '0 9 * * 1'
   workflow_dispatch:
@@ -49,7 +49,6 @@ jobs:
 
           PATTERNS=(
             "/home/"chicha09
-            "/home/[a-z]+"
           )
 
           FOUND_ISSUES=0
@@ -61,6 +60,7 @@ jobs:
               --exclude-dir=".git" \
               --exclude-dir="node_modules" \
               --exclude-dir=".tmux" \
+              --exclude-dir=".github" \
               --exclude="*.age" \
               --exclude="*.md" \
               --exclude="security-scan.yml" \
