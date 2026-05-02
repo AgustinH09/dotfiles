@@ -35,15 +35,15 @@ shift + alt - q : pid=$(yabai -m query --windows --window | jq '.pid') && kill -
 #  FOCUS — alt + {h,j,k,l} / alt + {arrows}
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+alt - h : yabai -m window --focus west  2>/dev/null || yabai -m display --focus west  2>/dev/null
+alt - j : yabai -m window --focus south 2>/dev/null || yabai -m display --focus south 2>/dev/null
+alt - k : yabai -m window --focus north 2>/dev/null || yabai -m display --focus north 2>/dev/null
+alt - l : yabai -m window --focus east  2>/dev/null || yabai -m display --focus east  2>/dev/null
 
-alt - left  : yabai -m window --focus west
-alt - down  : yabai -m window --focus south
-alt - up    : yabai -m window --focus north
-alt - right : yabai -m window --focus east
+alt - left  : yabai -m window --focus west  2>/dev/null || yabai -m display --focus west  2>/dev/null
+alt - down  : yabai -m window --focus south 2>/dev/null || yabai -m display --focus south 2>/dev/null
+alt - up    : yabai -m window --focus north 2>/dev/null || yabai -m display --focus north 2>/dev/null
+alt - right : yabai -m window --focus east  2>/dev/null || yabai -m display --focus east  2>/dev/null
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #  WARP WINDOWS — ctrl + alt + {h,j,k,l} / {arrows}
@@ -175,6 +175,26 @@ shift + alt - tab : yabai -m space --focus prev 2>/dev/null || yabai -m space --
 
 alt - 0x2F : yabai -m space --focus next 2>/dev/null || yabai -m space --focus first
 alt - 0x2B : yabai -m space --focus prev 2>/dev/null || yabai -m space --focus last
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  DISPLAY / MONITOR (Hyprland: focusmonitor, movewindow mon:)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Focus display — alt + {o, y} (Hyprland: SUPER+comma/period focusmonitor)
+alt - o : yabai -m display --focus next 2>/dev/null || yabai -m display --focus first
+alt - y : yabai -m display --focus prev 2>/dev/null || yabai -m display --focus last
+
+# Move window to display + follow — shift + alt + {o, y}
+shift + alt - o : id=$(yabai -m query --windows --window | jq '.id'); \
+    yabai -m window --display next 2>/dev/null || yabai -m window --display first; \
+    yabai -m window --focus "$id" 2>/dev/null
+shift + alt - y : id=$(yabai -m query --windows --window | jq '.id'); \
+    yabai -m window --display prev 2>/dev/null || yabai -m window --display first; \
+    yabai -m window --focus "$id" 2>/dev/null
+
+# Move space to display — cmd + alt + {o, y}
+cmd + alt - o : yabai -m space --display next 2>/dev/null || yabai -m space --display first
+cmd + alt - y : yabai -m space --display prev 2>/dev/null || yabai -m space --display last
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #  SCRATCHPAD (Hyprland special workspace)
