@@ -199,7 +199,11 @@ safe_source ~/.api_keys
 # --- Tools ---
 
 # Mise
+{{ if eq .chezmoi.os "darwin" -}}
+safe_eval mise activate zsh
+{{ else -}}
 safe_eval ~/.local/bin/mise activate zsh
+{{ end -}}
 
 # Zoxide
 safe_eval zoxide init zsh --cmd cd
