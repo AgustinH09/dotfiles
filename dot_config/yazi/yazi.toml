@@ -1,0 +1,158 @@
+# Yazi Configuration - Optimized for nvim/tmux workflow
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+[mgr]
+# Layout ratio: parent:current:preview (matching nvim splits)
+ratio = [1, 3, 4]
+
+# Sorting
+sort_by = "natural"
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+sort_translit = false
+
+# Show hidden files (like .config, .gitignore)
+show_hidden = false
+show_symlink = true
+
+# Center cursor (similar to nvim scrolloff)
+scrolloff = 5
+
+# Line mode: show size by default
+linemode = "size"
+
+# : }}}
+
+# : Preview {{{
+[preview]
+# Tab size for code preview
+tab_size = 2
+
+# Max dimensions for preview
+max_width = 1000
+max_height = 1000
+
+# Cache directory
+cache_dir = ""
+
+# Image settings
+image_delay = 30
+image_filter = "triangle"
+image_quality = 75
+
+# Ueberzug-specific settings (if using image preview)
+ueberzug_scale = 1
+ueberzug_offset = [0, 0, 0, 0]
+
+# : }}}
+
+# : Opener {{{
+[opener]
+# Edit text files with nvim
+edit = [
+	{ run = 'nvim "$@"', block = true, desc = "Edit in nvim", for = "unix" },
+]
+
+# Open in default application
+open = [
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open", for = "linux" },
+]
+
+# Reveal in file manager (fallback)
+reveal = [
+	{ run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "linux" },
+]
+
+# Extract archives
+extract = [
+	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
+]
+
+# Play media files
+play = [
+	{ run = 'mpv "$@"', orphan = true, desc = "Play", for = "unix" },
+]
+
+# : }}}
+
+# : Open {{{
+[open]
+# Rules for opening files based on patterns
+rules = [
+	# Text/Code files → nvim
+	{ mime = "text/*", use = "edit" },
+	{ mime = "application/json", use = "edit" },
+	{ mime = "application/x-yaml", use = "edit" },
+	{ mime = "application/toml", use = "edit" },
+
+	# Markdown files
+	{ mime = "text/markdown", use = "edit" },
+
+	# Archives → extract
+	{ mime = "application/zip", use = ["extract", "open"] },
+	{ mime = "application/x-tar", use = ["extract", "open"] },
+	{ mime = "application/x-bzip*", use = ["extract", "open"] },
+	{ mime = "application/x-7z-compressed", use = ["extract", "open"] },
+	{ mime = "application/x-rar", use = ["extract", "open"] },
+	{ mime = "application/x-xz", use = ["extract", "open"] },
+
+	# Media files → play
+	{ mime = "video/*", use = ["play", "open", "reveal"] },
+	{ mime = "audio/*", use = ["play", "reveal"] },
+
+	# Images → open
+	{ mime = "image/*", use = ["open", "reveal"] },
+
+	# PDFs and documents
+	{ mime = "application/pdf", use = ["open", "reveal"] },
+
+	# Fallback
+	{ mime = "*", use = ["open", "reveal"] },
+]
+
+# : }}}
+
+# : Tasks {{{
+[tasks]
+# Micro-optimizations for task manager
+micro_workers = 10
+macro_workers = 25
+bizarre_retry = 5
+image_alloc = 536870912  # 512MB
+image_bound = [0, 0]
+suppress_preload = false
+
+# : }}}
+
+# : Plugin {{{
+[plugin]
+# Note: Don't override preloaders/previewers - use prepend/append instead!
+# The defaults already include the folder preloader for directory sizes.
+# If you need custom preloaders, use:
+# prepend_preloaders = [...]
+# append_preloaders = [...]
+
+# : }}}
+
+# : Input {{{
+[input]
+# Cursor position in the input
+cursor_blink = false
+
+# : }}}
+
+# : Select {{{
+[select]
+# Open in a specific position
+open_title = "Yazi: {cwd}"
+open_origin = "top-center"
+open_offset = [0, 0, 50, 20]
+
+# : }}}
+
+# : Log {{{
+[log]
+enabled = false
+# : }}}
