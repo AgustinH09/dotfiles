@@ -33,7 +33,7 @@ jobs:
 
       - name: Upload Gitleaks SARIF report
         if: always()
-        uses: github/codeql-action/upload-sarif@b56ba49b26e50535fa1e7f7db0f4f7b4bf65d80d # v3.28.10
+        uses: github/codeql-action/upload-sarif@e46ed2cbd01164d986452f91f178727624ae40d7 # v4.35.3
         with:
           sarif_file: results.sarif
           category: gitleaks
