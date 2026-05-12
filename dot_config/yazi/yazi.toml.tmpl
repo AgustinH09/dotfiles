@@ -1,7 +1,7 @@
 # Yazi Configuration - Optimized for nvim/tmux workflow
 # vim:fileencoding=utf-8:foldmethod=marker
 
-# : Manager {{{
+# : Manager
 [mgr]
 # Layout ratio: parent:current:preview (matching nvim splits)
 ratio = [1, 3, 4]
@@ -23,9 +23,9 @@ scrolloff = 5
 # Line mode: show size by default
 linemode = "size"
 
-# : }}}
+# :
 
-# : Preview {{{
+# : Preview
 [preview]
 # Tab size for code preview
 tab_size = 2
@@ -46,9 +46,9 @@ image_quality = 75
 ueberzug_scale = 1
 ueberzug_offset = [0, 0, 0, 0]
 
-# : }}}
+# :
 
-# : Opener {{{
+# : Opener
 [opener]
 # Edit text files with nvim
 edit = [
@@ -57,12 +57,20 @@ edit = [
 
 # Open in default application
 open = [
+{{- if eq .chezmoi.os "darwin" }}
+	{ run = 'open "$@"', orphan = true, desc = "Open", for = "macos" },
+{{- else }}
 	{ run = 'xdg-open "$@"', orphan = true, desc = "Open", for = "linux" },
+{{- end }}
 ]
 
 # Reveal in file manager (fallback)
 reveal = [
+{{- if eq .chezmoi.os "darwin" }}
+	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
+{{- else }}
 	{ run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "linux" },
+{{- end }}
 ]
 
 # Extract archives
@@ -75,9 +83,9 @@ play = [
 	{ run = 'mpv "$@"', orphan = true, desc = "Play", for = "unix" },
 ]
 
-# : }}}
+# :
 
-# : Open {{{
+# : Open
 [open]
 # Rules for opening files based on patterns
 rules = [
@@ -112,9 +120,9 @@ rules = [
 	{ mime = "*", use = ["open", "reveal"] },
 ]
 
-# : }}}
+# :
 
-# : Tasks {{{
+# : Tasks
 [tasks]
 # Micro-optimizations for task manager
 micro_workers = 10
@@ -124,9 +132,9 @@ image_alloc = 536870912  # 512MB
 image_bound = [0, 0]
 suppress_preload = false
 
-# : }}}
+# :
 
-# : Plugin {{{
+# : Plugin
 [plugin]
 # Note: Don't override preloaders/previewers - use prepend/append instead!
 # The defaults already include the folder preloader for directory sizes.
@@ -134,25 +142,25 @@ suppress_preload = false
 # prepend_preloaders = [...]
 # append_preloaders = [...]
 
-# : }}}
+# :
 
-# : Input {{{
+# : Input
 [input]
 # Cursor position in the input
 cursor_blink = false
 
-# : }}}
+# :
 
-# : Select {{{
+# : Select
 [select]
 # Open in a specific position
 open_title = "Yazi: {cwd}"
 open_origin = "top-center"
 open_offset = [0, 0, 50, 20]
 
-# : }}}
+# :
 
-# : Log {{{
+# : Log
 [log]
 enabled = false
-# : }}}
+# :
