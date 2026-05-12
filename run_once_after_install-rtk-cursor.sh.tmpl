@@ -1,0 +1,55 @@
+#!/bin/sh
+
+set -eu
+
+export RTK_TELEMETRY_DISABLED=1
+export PATH="$HOME/.local/bin:$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+
+mkdir -p "$HOME/.cursor"
+
+if ! command -v rtk >/dev/null 2>&1; then
+  if command -v brew >/dev/null 2>&1; then
+    brew install rtk
+  else
+    tmp="$(mktemp)"
+    trap 'rm -f "$tmp"' EXIT
+    curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/install.sh -o "$tmp"
+    sh "$tmp"
+  fi
+fi
+
+if ! command -v rtk >/dev/null 2>&1; then
+  echo "rtk not found on PATH after install" >&2
+  exit 1
+fi
+
+if ! command -v ruby >/dev/null 2>&1; then
+  echo "ruby is required to merge ~/.cursor/hooks.json safely" >&2
+  exit 1
+fi
+
+ruby <<'RUBY'
+require 'json'
+
+path = File.expand_path('~/.cursor/hooks.json')
+data = if File.exist?(path) && !File.empty?(path)
+  JSON.parse(File.read(path))
+else
+  {}
+end
+
+data['version'] ||= 1
+data['hooks'] ||= {}
+data['hooks']['preToolUse'] ||= []
+
+entry = { 'command' => 'rtk hook cursor', 'matcher' => 'Shell' }
+exists = data['hooks']['preToolUse'].any? do |hook|
+  hook['command'] == entry['command'] && hook['matcher'] == entry['matcher']
+end
+
+data['hooks']['preToolUse'] << entry unless exists
+
+tmp_path = "#{path}.tmp"
+File.write(tmp_path, "#{JSON.pretty_generate(data)}\n")
+File.rename(tmp_path, path)
+RUBY

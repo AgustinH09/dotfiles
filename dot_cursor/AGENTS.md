@@ -42,3 +42,20 @@ build/
 ```ts
 const MAX_RETRIES = 3 // maximum number of retries before giving up
 ```
+
+# Token Efficiency
+
+Default concise. Preserve decisions, caveats, verification results, and file references.
+
+## Context
+
+- Prefer targeted context: `rg`, `Glob`, `ReadFile` ranges, and semantic search for broad questions.
+- Avoid broad folder dumps, whole-file reads, and large terminal output unless needed.
+- Use subagents for noisy exploration when isolated context is cheaper than loading everything into the main chat.
+- Use Max Mode, many MCP servers, broad `@folder` context, and parallel agents only when the task needs them.
+
+## Shell
+
+- Prefer quiet, targeted commands.
+- When RTK is available, let it compact noisy command output.
+- For failed commands, inspect saved full output before rerunning expensive commands.
