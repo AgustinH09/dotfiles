@@ -8,7 +8,7 @@ repos:
         entry: gitleaks detect --source . --no-git --verbose --redact
         language: system
         pass_filenames: false
-        exclude: '^(\.pre-commit-config\.yaml|\.gitleaks\.toml|\.github/workflows/security-scan\.yml|scripts/security-check\.sh|SECURITY.*\.md)$'
+        exclude: '^(\.pre-commit-config\.yaml|\.gitleaks\.toml|\.github/workflows/security-scan\.yml|scripts/security[-_]check\.sh|SECURITY.*\.md)$'
 
   # TruffleHog - Additional secret scanning
   - repo: https://github.com/trufflesecurity/trufflehog
@@ -19,7 +19,7 @@ repos:
         entry: trufflehog filesystem --directory . --exclude-paths .trufflehog-exclude.txt
         language: system
         pass_filenames: false
-        exclude: '^(\.pre-commit-config\.yaml|\.gitleaks\.toml|\.github/workflows/security-scan\.yml|scripts/security-check\.sh|SECURITY.*\.md)$'
+        exclude: '^(\.pre-commit-config\.yaml|\.gitleaks\.toml|\.github/workflows/security-scan\.yml|scripts/security[-_]check\.sh|SECURITY.*\.md)$'
 
   # Standard pre-commit hooks
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -91,6 +91,7 @@ repos:
               ! -path "*/.pre-commit-config.yaml" \
               ! -path "*/.gitleaks.toml" \
               ! -path "*/scripts/security-check.sh" \
+              ! -path "*/scripts/security_check.sh" \
               ! -path "*/.github/workflows/*" \
               ! -path "*/SECURITY*.md")
             if [ -n "$FOUND" ]; then

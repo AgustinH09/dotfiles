@@ -41,13 +41,13 @@ print_result() {
 
     if [ "$status" = "pass" ]; then
         echo -e "${GREEN}✅ $message${NC}"
-        ((CHECKS_PASSED++))
+        ((CHECKS_PASSED+=1))
     elif [ "$status" = "warn" ]; then
         echo -e "${YELLOW}⚠️  $message${NC}"
-        ((WARNINGS++))
+        ((WARNINGS+=1))
     elif [ "$status" = "fail" ]; then
         echo -e "${RED}❌ $message${NC}"
-        ((ERRORS++))
+        ((ERRORS+=1))
     else
         echo -e "$message"
     fi
@@ -127,8 +127,13 @@ print_section "4. Checking for Private Keys"
 PRIVATE_KEYS=$(grep -r -n "BEGIN.*PRIVATE KEY" \
     --exclude-dir=".git" \
     --exclude-dir="node_modules" \
+    --exclude-dir=".github" \
     --exclude="*.age" \
     --exclude="*.md" \
+    --exclude=".gitleaks.toml" \
+    --exclude=".pre-commit-config.yaml" \
+    --exclude="security-check.sh" \
+    --exclude="security_check.sh" \
     . 2>/dev/null || true)
 
 if [ -n "$PRIVATE_KEYS" ]; then
