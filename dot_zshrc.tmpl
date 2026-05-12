@@ -2,7 +2,7 @@
 
 # Agent Mode Detection
 if [[ -n "$npm_config_yes" ]] || [[ -n "$CI" ]] || [[ "$-" != *i* ]] || \
-   [[ "$TERM_PROGRAM" == "vscode" ]] || [[ -n "$OPENCODE" ]]; then
+   [[ "$TERM_PROGRAM" == "vscode" ]] || [[ -n "$CURSOR_AGENT" ]] || [[ -n "$OPENCODE" ]]; then
   export AGENT_MODE=true
 else
   export AGENT_MODE=false
@@ -52,6 +52,10 @@ path=(
   /usr/local/bin
   $path
 )
+
+if [[ -d "$HOME/.antigravity/antigravity/bin" ]]; then
+  path=("$HOME/.antigravity/antigravity/bin" $path)
+fi
 
 if [[ -d "$HOME/Android/Sdk" ]]; then
   path+=(
@@ -202,6 +206,9 @@ export GPG_TTY=$(tty)
 
 # API Keys
 safe_source ~/.api_keys
+
+# RTK
+export RTK_TELEMETRY_DISABLED=1
 
 # --- Tools ---
 
