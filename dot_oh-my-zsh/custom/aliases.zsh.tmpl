@@ -1,0 +1,30 @@
+{{ if eq .chezmoi.os "darwin" -}}
+alias c="pbcopy"
+alias v="pbpaste"
+alias p="pbpaste"
+{{ else -}}
+alias c="wl-copy"
+alias v="wl-paste"
+alias p="wl-paste"
+{{ end -}}
+alias n='nvim'
+alias z='cd'
+alias cat="bat"
+alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias fuck="fk"
+alias mux="tmuxinator"
+
+# Kitty kittens
+alias icat="kitten icat"
+alias clipboard="kitten clipboard"
+
+# --- Agent Mode Aliases ---
+if [[ "$AGENT_MODE" == "true" ]]; then
+  alias ll='eza -lh --color=always --git --icons=always'
+  alias la='eza -lAh --color=always --git --icons=always'
+  alias grep='grep --color=auto'
+  alias diff='diff --color=auto'
+  alias curl='curl -s'
+  alias wget='wget -q'
+  alias make='make -s'
+fi

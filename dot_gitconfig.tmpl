@@ -1,0 +1,40 @@
+[user]
+	name = AgustinH09
+	email = agus.hernandez9@gmail.com
+{{- $hasSigningKey := false -}}
+{{- if lookPath "gpg" -}}
+{{- $hasSigningKey = eq (output "sh" "-c" "gpg --list-secret-keys 4B9BBA0747D7BCDF >/dev/null 2>&1 && printf yes || printf no") "yes" -}}
+{{- end }}
+{{- if $hasSigningKey }}
+	signingkey = 4B9BBA0747D7BCDF
+{{- end }}
+{{ if eq .chezmoi.os "darwin" }}
+[credential]
+	helper = osxkeychain
+{{ end }}
+[core]
+	editor = nvim
+{{ if lookPath "delta" }}
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	dark = true
+	side-by-side = true
+	hyperlinks = true
+{{ end }}
+
+[merge]
+	conflictstyle = zdiff3
+
+{{ if $hasSigningKey }}
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+{{ end }}
+[init]
+	defaultBranch = main
