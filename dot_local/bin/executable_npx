@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# --- Zero-Trust Containerized npx ---
+
+if [[ "$AGENT_MODE" == "true" ]]; then
+  exec podman run --rm --userns=keep-id -v "$(pwd):/workspace" -w /workspace -p 3000:3000 -p 5173:5173 -p 8080:8080 docker.io/library/node:lts npx "$@"
+else
+  if [ -t 0 ]; then
+    TTY_ARGS="-it"
+  else
+    TTY_ARGS=""
+  fi
+  exec podman run --rm $TTY_ARGS --userns=keep-id -v "$(pwd):/workspace" -w /workspace -p 3000:3000 -p 5173:5173 -p 8080:8080 docker.io/library/node:lts-alpine npx "$@"
+fi

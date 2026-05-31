@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# --- Zero-Trust Containerized npm ---
+
+# Ensure we're executing node commands via Podman
+if [[ "$AGENT_MODE" == "true" ]]; then
+  # Headless agent configuration: no -it, full Node.js image with build tools
+  exec podman run --rm --userns=keep-id -v "$(pwd):/workspace" -w /workspace -p 3000:3000 -p 5173:5173 -p 8080:8080 docker.io/library/node:lts npm --no-fund --no-audit "$@"
+else
+  # Interactive user configuration: -it enabled, alpine image
+  # Note: checking if standard input is a terminal to avoid -it errors on weird contexts
+  if [ -t 0 ]; then
+    TTY_ARGS="-it"
+  else
+    TTY_ARGS=""
+  fi
+  exec podman run --rm $TTY_ARGS --userns=keep-id -v "$(pwd):/workspace" -w /workspace -p 3000:3000 -p 5173:5173 -p 8080:8080 docker.io/library/node:lts-alpine npm "$@"
+fi
