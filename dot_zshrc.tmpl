@@ -336,6 +336,13 @@ else
   safe_source ~/.p10k.zsh
 fi
 
+# --- Zero-Trust Containerized npm/Node ---
+if [[ "$AGENT_MODE" != "true" ]]; then
+  alias npm="podman run --rm -it --userns=keep-id -v \$(pwd):/workspace -w /workspace -p 3000:3000 -p 5173:5173 -p 8080:8080 docker.io/library/node:lts-alpine npm"
+  alias npx="podman run --rm -it --userns=keep-id -v \$(pwd):/workspace -w /workspace -p 3000:3000 -p 5173:5173 -p 8080:8080 docker.io/library/node:lts-alpine npx"
+  alias safe-node="node --permission --allow-fs-read=\$(pwd) --allow-net"
+fi
+
 # --- Profiling ---
 if [[ "$PROFILE_STARTUP" == "true" ]]; then
   print_startup_profile
