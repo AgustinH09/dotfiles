@@ -336,6 +336,11 @@ else
   safe_source ~/.p10k.zsh
 fi
 
+# --- Automatic Socket Intelligence ---
+if command -v socket &> /dev/null; then
+  alias npm="socket npm"
+  alias npx="socket npx"
+fi
 
 # --- Profiling ---
 if [[ "$PROFILE_STARTUP" == "true" ]]; then

@@ -101,4 +101,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-
+# --- Automatic Socket Intelligence ---
+if command -v socket &> /dev/null; then
+  alias npm="socket npm"
+  alias npx="socket npx"
+fi
