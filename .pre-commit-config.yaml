@@ -12,7 +12,7 @@ repos:
 
   # TruffleHog - Additional secret scanning
   - repo: https://github.com/trufflesecurity/trufflehog
-    rev: v3.95.3
+    rev: v3.95.4
     hooks:
       - id: trufflehog
         name: Scan for secrets with TruffleHog
