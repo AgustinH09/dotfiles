@@ -16,11 +16,5 @@
 # nvim opencode JSON
 .config/nvim/opencode.json
 
-# mozc IME databases
-.config/mozc/cform.db
-.config/mozc/.history.db
-.config/mozc/.session.ipc
-.config/mozc/segment.db
-
 # fabric pattern
 .config/fabric/patterns/explain_code/user.md
