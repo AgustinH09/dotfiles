@@ -1,0 +1,23 @@
+{
+  "general": {
+    "vimMode": true,
+    "preferredEditor": "neovim"
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "context": {
+    "fileName": [
+      "GEMINI.md",
+      "SYSTEM.md"
+    ],
+    "includeDirectories": [
+      "~/.gemini/extensions/ralph"
+    ]
+  },
+  "hooksConfig": {
+    "enabled": true
+  }
+}
