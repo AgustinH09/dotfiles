@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# --- Zero-Trust Safe Node ---
+# Uses the Node.js Permission Model
+
+exec node --permission --allow-fs-read="$(pwd)" --allow-net "$@"
