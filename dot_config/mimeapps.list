@@ -16,6 +16,7 @@ application/x-wayland-gnome-saved-search=thunar.desktop
 x-scheme-handler/obsidian=obsidian.desktop
 application/x-extension-burp=install4j_a2pvxx-BurpSuiteCommunity.desktop
 application/x-ms-dos-executable=com.usebottles.bottles.desktop
+x-scheme-handler/slack=slack.desktop
 
 [Added Associations]
 x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
@@ -39,3 +40,4 @@ application/x-ms-dos-executable=wine-extension-msp.desktop;com.usebottles.bottle
 image/webp=org.gnome.Loupe.desktop;
 application/x-shellscript=nvim.desktop;
 application/xml=org.gnome.TextEditor.desktop;
+application/vnd.rar=xarchiver.desktop;

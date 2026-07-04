@@ -1,0 +1,42 @@
+{
+  "github": {
+    "overrides": [
+      "/home/chicha09/*"
+    ]
+  },
+  "context7": {
+    "overrides": [
+      "/home/chicha09/*"
+    ]
+  },
+  "chrome-devtools-mcp": {
+    "overrides": [
+      "/home/chicha09/*"
+    ]
+  },
+  "redis": {
+    "overrides": [
+      "/home/chicha09/*"
+    ]
+  },
+  "gemini-cli-security": {
+    "overrides": [
+      "/home/chicha09/*"
+    ]
+  },
+  "code-review": {
+    "overrides": [
+      "/home/chicha09/*"
+    ]
+  },
+  "mcp-toolbox-for-databases": {
+    "overrides": [
+      "/home/chicha09/*"
+    ]
+  },
+  "ralph": {
+    "overrides": [
+      "/home/chicha09/*"
+    ]
+  }
+}

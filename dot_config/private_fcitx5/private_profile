@@ -39,5 +39,5 @@ Name=keyboard-latam
 Layout=
 
 [GroupOrder]
-0=Default
-1=Japanese
+0=Japanese
+1=Default

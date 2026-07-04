@@ -1,0 +1,52 @@
+# --GitHub Accounts--
+
+# Chicha09 account
+Host github-chicha9
+	HostName github.com
+        AddressFamily inet
+	User git
+	IdentityFile ~/.ssh/chicha9
+	AddKeysToAgent yes
+	IdentitiesOnly yes
+
+# AgustinH09 account
+Host github-AgustinH09
+	HostName github.com
+        AddressFamily inet
+	User git
+	IdentityFile ~/.ssh/AgustinH09
+	AddKeysToAgent yes
+	IdentitiesOnly yes
+
+# ThinkCERCA Organization
+Host github-ThinkCERCA
+	HostName github.com
+        AddressFamily inet
+	User git
+	IdentityFile ~/.ssh/chicha9
+	AddKeysToAgent yes
+	IdentitiesOnly yes
+
+# ASP Organization
+Host github-ArqSoftPractica
+	HostName github.com
+        AddressFamily inet
+	User git
+	IdentityFile ~/.ssh/AgustinH09
+	AddKeysToAgent yes
+	IdentitiesOnly yes
+
+# Default Account (AgustinH09)
+Host github.com
+	HostName github.com
+        AddressFamily inet
+	IdentityFile ~/.ssh/AgustinH09
+	IdentitiesOnly yes
+
+# --DigitalOcean Droplet--
+Host digitalocean-droplet
+	HostName 161.35.182.246
+	User root
+	ControlMaster auto
+	ControlPath ~/.ssh/sockets/%r@%h-%p
+	ControlPersist 600
