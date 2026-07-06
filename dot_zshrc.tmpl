@@ -57,6 +57,10 @@ if [[ -d "$HOME/.antigravity/antigravity/bin" ]]; then
   path=("$HOME/.antigravity/antigravity/bin" $path)
 fi
 
+if [[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]]; then
+  path=("$HOME/.antigravity-ide/antigravity-ide/bin" $path)
+fi
+
 if [[ -d "$HOME/Android/Sdk" ]]; then
   path+=(
     "$HOME/Android/Sdk/tools"
@@ -117,7 +121,17 @@ else
   pokemon-colorscripts -r
 
   if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux new-session -A -s main
+    if [[ "$TERM_PROGRAM" == "Orca" ]]; then
+      # Orca (agent orchestrator) spawns one shell per agent terminal/pane.
+      # Give each its own tmux session instead of piling into "main", or
+      # every agent would end up sharing the same window.
+      orca_session="orca-${ORCA_TERMINAL_HANDLE:-${ORCA_WORKTREE_ID:-$$}}"
+      orca_session="${orca_session//[^A-Za-z0-9_-]/_}"
+      tmux new-session -A -s "$orca_session"
+      unset orca_session
+    else
+      tmux new-session -A -s main
+    fi
   fi
 
   ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -340,7 +354,7 @@ if [[ "$AGENT_MODE" == "true" ]]; then
 
   export PAGER=cat
 
-
+  alias npm='npm --no-fund --no-audit'
   alias yarn='yarn --non-interactive'
   alias pip='pip --quiet'
   alias git='git -c advice.detachedHead=false'
