@@ -57,6 +57,10 @@ if [[ -d "$HOME/.antigravity/antigravity/bin" ]]; then
   path=("$HOME/.antigravity/antigravity/bin" $path)
 fi
 
+if [[ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]]; then
+  path=("$HOME/.antigravity-ide/antigravity-ide/bin" $path)
+fi
+
 if [[ -d "$HOME/Android/Sdk" ]]; then
   path+=(
     "$HOME/Android/Sdk/tools"
@@ -117,7 +121,14 @@ else
   pokemon-colorscripts -r
 
   if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux new-session -A -s main
+    if [[ "$TERM_PROGRAM" == "Orca" ]]; then
+      orca_session="orca-${ORCA_TERMINAL_HANDLE:-${ORCA_WORKTREE_ID:-$$}}"
+      orca_session="${orca_session//[^A-Za-z0-9_-]/_}"
+      tmux new-session -A -s "$orca_session"
+      unset orca_session
+    else
+      tmux new-session -A -s main
+    fi
   fi
 
   ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -339,7 +350,6 @@ if [[ "$AGENT_MODE" == "true" ]]; then
   unsetopt AUTO_LIST
 
   export PAGER=cat
-
 
   alias yarn='yarn --non-interactive'
   alias pip='pip --quiet'
