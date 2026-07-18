@@ -44,14 +44,12 @@ local options = {
     enable = true,
   },
 
-  -- Rainbow parentheses
   rainbow = {
     enable = true,
     extended_mode = true,
     max_file_lines = nil,
   },
 
-  -- Context-aware commenting
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
@@ -65,5 +63,5 @@ require("nvim-treesitter.configs").setup(options)
 -- Set up treesitter-based folding
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldenable = false -- Don't fold by default
+vim.opt.foldenable = false
 vim.opt.foldlevel = 99

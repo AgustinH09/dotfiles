@@ -1,12 +1,7 @@
-local lspconfig = require "lspconfig"
-
--- which of your lspconfig servers to skip installing
-local ignore_install = {}
-
-local on_attach = require("nvchad.configs.lspconfig").on_attach
-local capabilities = require("nvchad.configs.lspconfig").capabilities
-
 -- Setup mason-lspconfig
+-- v2 breaking change: `automatic_installation` and `setup_handlers` were
+-- removed in favor of `automatic_enable`. Servers are enabled manually in
+-- configs/lspconfig (vim.lsp.config + vim.lsp.enable), so keep that off.
 require("mason-lspconfig").setup {
   ensure_installed = {
     "lua_ls",
@@ -23,28 +18,8 @@ require("mason-lspconfig").setup {
     "harper_ls",
     "angularls",
   },
-  automatic_installation = {
-    exclude = ignore_install,
-  },
+  automatic_enable = false,
 }
-
--- Setup handlers
--- require("mason-lspconfig").setup_handlers {
---   -- Default handler for all servers
---   function(server_name)
---     if not vim.tbl_contains(ignore_install, server_name) then
---       lspconfig[server_name].setup {
---         on_attach = on_attach,
---         capabilities = capabilities,
---       }
---     end
---   end,
---
---   -- Custom handlers for specific servers can be added here
---   -- ["rust_analyzer"] = function()
---   --   -- Custom rust_analyzer setup handled by rustaceanvim
---   -- end,
--- }
 
 -- Diagnostic command for Mason issues
 vim.api.nvim_create_user_command("MasonDiagnostics", function()
