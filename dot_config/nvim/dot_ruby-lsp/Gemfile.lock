@@ -12,7 +12,7 @@ GEM
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    language_server-protocol (3.17.0.6)
+    language_server-protocol (3.17.0.5)
     logger (1.7.0)
     pp (0.6.3)
       prettyprint
@@ -21,7 +21,7 @@ GEM
     psych (5.3.1)
       date
       stringio
-    rbs (4.0.3)
+    rbs (4.0.2)
       logger
       prism (>= 1.6.0)
       tsort
@@ -31,7 +31,7 @@ GEM
       tsort
     reline (0.6.3)
       io-console (~> 0.5)
-    ruby-lsp (0.26.10)
+    ruby-lsp (0.26.9)
       language_server-protocol (~> 3.17.0)
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 5)
@@ -44,7 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   debug
-  ruby-lsp (~> 0.26.10)
+  ruby-lsp (~> 0.26.9)
 
 BUNDLED WITH
    2.6.7

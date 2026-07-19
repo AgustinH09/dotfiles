@@ -50,6 +50,9 @@ M.mason = {
     "stylelint",
     "jsonlint",
     "markdownlint-cli2",
+    "luacheck",
+    "tflint",
+    "tfsec",
 
     -- DAP adapters
     "delve",

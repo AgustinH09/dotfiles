@@ -3,6 +3,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "master",
     event = { "BufReadPost", "BufNewFile", "BufWritePre" },
     build = ":TSUpdate",
     config = function()
@@ -12,6 +13,9 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
+    -- pin to master: the main branch is a rewrite that only works with
+    -- nvim-treesitter's main branch (NvChad v2.5 uses the legacy API)
+    branch = "master",
     event = "VeryLazy",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
@@ -89,7 +93,7 @@ return {
   },
 
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     event = "VeryLazy",
     dependencies = { "nvim-lspconfig" },
     config = function()
