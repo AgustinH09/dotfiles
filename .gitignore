@@ -40,3 +40,7 @@ Thumbs.db
 
 # Documentation
 docs/
+
+# Editor specific / LSP
+**/dot_ruby-lsp/
+**/.ruby-lsp/
