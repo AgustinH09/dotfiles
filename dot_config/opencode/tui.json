@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "tokyonight-storm",
+  "keybinds": {
+    "leader": "ctrl+x",
+    "messages_half_page_up": "ctrl+u",
+    "messages_half_page_down": "ctrl+d",
+    "input_delete_to_line_start": "ctrl+alt+u",
+    "input_delete": "delete,shift+delete",
+    "session_delete": "<leader>d",
+    "stash_delete": "none",
+    "model_provider_list": "<leader>p",
+    "input_line_home": "home,ctrl+alt+a"
+  }
+}
