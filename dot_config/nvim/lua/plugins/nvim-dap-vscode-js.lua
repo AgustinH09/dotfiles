@@ -3,8 +3,11 @@ return {
   dependencies = {
     {
       "microsoft/vscode-js-debug",
-      -- After install, build it and rename the dist directory to out
-      build = "npm install --legacy-peer-deps --no-save && npx gulp vsDebugServerBundle && rm -rf out && mv dist out",
+      -- After install, build it and rename the dist directory to out.
+      -- --ignore-scripts skips the repo's playwright postinstall (test-only,
+      -- ~550MB chromium download) and native devDeps (microtime/node-gyp),
+      -- so the build needs no python/compiler and stays portable.
+      build = "npm install --legacy-peer-deps --no-save --ignore-scripts && npx gulp vsDebugServerBundle && rm -rf out && mv dist out",
       version = "1.*",
     },
   },
