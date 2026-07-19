@@ -1,0 +1,10 @@
+{
+  "backend": {
+    "topic": "{env:NTFY_TOPIC}",
+    "title": {
+      "session.idle": { "value": "{project}: agent idle" },
+      "session.error": { "value": "{project}: agent error" },
+      "permission.asked": { "value": "{project}: permission asked" }
+    }
+  }
+}
