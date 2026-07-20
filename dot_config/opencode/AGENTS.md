@@ -54,7 +54,11 @@ affects all OpenCode sessions on this machine. Load the built-in
   comment); to refresh, run `open-cursor sync-models --variants --compact`
   with `OPENCODE_CONFIG` pointed at a THROWAWAY json file, then hand-merge
   the `models` map — running it against this JSONC directly rewrites it as
-  plain JSON and strips comments.
+  plain JSON and strips comments. Variant selection (fast/thinking/effort)
+  happens in the TUI via `variant_cycle` after picking the family, or the
+  `variant` field in an agent/command definition — there is NO
+  `--model provider/model/variant` CLI syntax (opencode 1.18.3 rejects it
+  with a cryptic "Unexpected server error").
 - **`package.json` + `node_modules` exist only for `@opencode-ai/plugin`
   types** (editor IntelliSense when writing plugins). npm plugins from the
   `plugin` array install to `~/.cache/opencode/node_modules/` instead.
