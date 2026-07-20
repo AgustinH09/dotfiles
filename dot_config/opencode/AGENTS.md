@@ -49,9 +49,12 @@ affects all OpenCode sessions on this machine. Load the built-in
   (`"auto"`, NOT `"cursor-acp/auto"`) or lookup fails with a misleading
   "Model not found … Did you mean" error. Auth comes from `cursor-agent
   login` (first-party token store), no `opencode auth login` needed. The
-  proxy spawns per-process on 127.0.0.1:32124 (no persistent daemon). Do NOT
-  run `open-cursor sync-models` here — it rewrites the config as plain JSON
-  and strips JSONC comments.
+  proxy spawns per-process on 127.0.0.1:32124 (no persistent daemon). The
+  model list is a synced snapshot (19 families, see date in the config
+  comment); to refresh, run `open-cursor sync-models --variants --compact`
+  with `OPENCODE_CONFIG` pointed at a THROWAWAY json file, then hand-merge
+  the `models` map — running it against this JSONC directly rewrites it as
+  plain JSON and strips comments.
 - **`package.json` + `node_modules` exist only for `@opencode-ai/plugin`
   types** (editor IntelliSense when writing plugins). npm plugins from the
   `plugin` array install to `~/.cache/opencode/node_modules/` instead.
