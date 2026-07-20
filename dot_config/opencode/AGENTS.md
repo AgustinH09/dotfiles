@@ -58,7 +58,15 @@ affects all OpenCode sessions on this machine. Load the built-in
   happens in the TUI via `variant_cycle` after picking the family, or the
   `variant` field in an agent/command definition — there is NO
   `--model provider/model/variant` CLI syntax (opencode 1.18.3 rejects it
-  with a cryptic "Unexpected server error").
+  with a cryptic "Unexpected server error"). Bridge env toggles (set in
+  `~/.zshrc`): `CURSOR_ACP_BRIDGE_JSON=off` disables the bridge-json prompt
+  shim (its "SYSTEM: opencode bridge" preamble makes models complain about
+  prompt injection on every message); `CURSOR_ACP_WORKSPACE` pins the
+  workspace path Cursor attributes usage to (`oc-lms` alias pins the
+  principal work repo). Caveat: with the Option C manual provider block ALL
+  bridge traffic goes to whatever opencode process owns :32124 first, so
+  attribution follows the proxy owner's spawn directory unless the env pin
+  is set on that process.
 - **`package.json` + `node_modules` exist only for `@opencode-ai/plugin`
   types** (editor IntelliSense when writing plugins). npm plugins from the
   `plugin` array install to `~/.cache/opencode/node_modules/` instead.
