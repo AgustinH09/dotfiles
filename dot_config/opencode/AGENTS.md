@@ -43,6 +43,15 @@ affects all OpenCode sessions on this machine. Load the built-in
   registry (`rtk rewrite`), never in this file. Requires the `rtk` binary on
   PATH (homebrew). `plugins/notify.js` fires macOS notifications on
   idle/error/permission-ask.
+- **cursor-acp bridge (`@rama_nigg/open-cursor`)**: pinned version +
+  source-audit date are recorded inline in `opencode.jsonc`; never bump
+  without re-auditing the npm tarball. Provider model keys must be bare ids
+  (`"auto"`, NOT `"cursor-acp/auto"`) or lookup fails with a misleading
+  "Model not found … Did you mean" error. Auth comes from `cursor-agent
+  login` (first-party token store), no `opencode auth login` needed. The
+  proxy spawns per-process on 127.0.0.1:32124 (no persistent daemon). Do NOT
+  run `open-cursor sync-models` here — it rewrites the config as plain JSON
+  and strips JSONC comments.
 - **`package.json` + `node_modules` exist only for `@opencode-ai/plugin`
   types** (editor IntelliSense when writing plugins). npm plugins from the
   `plugin` array install to `~/.cache/opencode/node_modules/` instead.

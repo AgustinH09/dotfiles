@@ -19,15 +19,47 @@
   // - dcp:         prunes obsolete tool outputs from context (rtk covers input side)
   // - ntfy.sh:     push notifications to phone (topic in notification-ntfy.json)
   // - snippets:    #hashtag inline text expansion in the prompt editor
-  // - handoff:     focused handoff prompts for continuing work in a new session
+  // - handoff:    focused handoff prompts for continuing work in a new session
+  // - open-cursor: Cursor backend bridge (local proxy 127.0.0.1:32124 around
+  //   the first-party cursor-agent binary). Pinned + source-audited 2026-07-20
+  //   (no postinstall, egress = localhost only). NEVER bump without re-audit.
   "plugin": [
     "opencode-telemetry@0.1.19",
     "@tarquinen/opencode-dcp@3.1.14",
     "opencode-ntfy.sh@1.1.0",
     "opencode-update-notifier@0.3.3",
     "opencode-snippets@3.0.0",
-    "opencode-handoff@0.5.0"
+    "opencode-handoff@0.5.0",
+    "@rama_nigg/open-cursor@2.5.3"
   ],
+
+  // Cursor subscription models via the open-cursor proxy. Default model stays
+  // Go/Zen; opt in per session with /model cursor-acp/auto or
+  // `opencode run --model cursor-acp/auto`. Auth: `cursor-agent login`.
+  "provider": {
+    "cursor-acp": {
+      "name": "Cursor ACP",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:32124/v1"
+      },
+      "models": {
+        // key is the BARE model id (README's "cursor-acp/auto" key breaks
+        // lookup: "not found: cursor-acp/auto, did you mean cursor-acp/auto?")
+        "auto": { "name": "Auto" }
+      }
+    }
+  },
+
+  // Bridge safeguard (council): the cursor-acp tool-call shim is
+  // translation-lossy, and mcptool MCP-bridge calls ride the bash channel —
+  // so nothing mutates or leaves the machine without a prompt. Relax
+  // per-project with an opencode.json of allow-rules if this gets noisy.
+  "permission": {
+    "bash": "ask",
+    "edit": "ask",
+    "websearch": "ask"
+  },
 
   // Ported from ~/.cursor/mcp.json
   "mcp": {
