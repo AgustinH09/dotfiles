@@ -63,7 +63,10 @@ affects all OpenCode sessions on this machine. Load the built-in
   shim (its "SYSTEM: opencode bridge" preamble makes models complain about
   prompt injection on every message); `CURSOR_ACP_WORKSPACE` pins the
   workspace path Cursor attributes usage to (`oc-lms` alias pins the
-  principal work repo). Caveat: with the Option C manual provider block ALL
+  principal work repo); `CURSOR_ACP_SESSION_RESUME=true` resumes the
+  underlying Cursor chat across opencode restarts. Env only reaches the
+  process that OWNS the :32124 proxy — restart stale opencode processes
+  after changing these. Caveat: with the Option C manual provider block ALL
   bridge traffic goes to whatever opencode process owns :32124 first, so
   attribution follows the proxy owner's spawn directory unless the env pin
   is set on that process.
