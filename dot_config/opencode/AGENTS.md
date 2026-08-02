@@ -43,6 +43,33 @@ affects all OpenCode sessions on this machine. Load the built-in
   registry (`rtk rewrite`), never in this file. Requires the `rtk` binary on
   PATH (homebrew). `plugins/notify.js` fires macOS notifications on
   idle/error/permission-ask.
+- **cursor-acp bridge (`@rama_nigg/open-cursor`)**: pinned version +
+  source-audit date are recorded inline in `opencode.jsonc`; never bump
+  without re-auditing the npm tarball. Provider model keys must be bare ids
+  (`"auto"`, NOT `"cursor-acp/auto"`) or lookup fails with a misleading
+  "Model not found … Did you mean" error. Auth comes from `cursor-agent
+  login` (first-party token store), no `opencode auth login` needed. The
+  proxy spawns per-process on 127.0.0.1:32124 (no persistent daemon). The
+  model list is a synced snapshot (19 families, see date in the config
+  comment); to refresh, run `open-cursor sync-models --variants --compact`
+  with `OPENCODE_CONFIG` pointed at a THROWAWAY json file, then hand-merge
+  the `models` map — running it against this JSONC directly rewrites it as
+  plain JSON and strips comments. Variant selection (fast/thinking/effort)
+  happens in the TUI via `variant_cycle` after picking the family, or the
+  `variant` field in an agent/command definition — there is NO
+  `--model provider/model/variant` CLI syntax (opencode 1.18.3 rejects it
+  with a cryptic "Unexpected server error"). Bridge env toggles (set in
+  `~/.zshrc`): `CURSOR_ACP_BRIDGE_JSON=off` disables the bridge-json prompt
+  shim (its "SYSTEM: opencode bridge" preamble makes models complain about
+  prompt injection on every message); `CURSOR_ACP_WORKSPACE` pins the
+  workspace path Cursor attributes usage to (`oc-lms` alias pins the
+  principal work repo); `CURSOR_ACP_SESSION_RESUME=true` resumes the
+  underlying Cursor chat across opencode restarts. Env only reaches the
+  process that OWNS the :32124 proxy — restart stale opencode processes
+  after changing these. Caveat: with the Option C manual provider block ALL
+  bridge traffic goes to whatever opencode process owns :32124 first, so
+  attribution follows the proxy owner's spawn directory unless the env pin
+  is set on that process.
 - **`package.json` + `node_modules` exist only for `@opencode-ai/plugin`
   types** (editor IntelliSense when writing plugins). npm plugins from the
   `plugin` array install to `~/.cache/opencode/node_modules/` instead.

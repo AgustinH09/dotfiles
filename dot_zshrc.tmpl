@@ -8,6 +8,21 @@ else
   export AGENT_MODE=false
 fi
 
+# --- opencode cursor-acp bridge ---
+# The plugin's bridge-json shim prepends "SYSTEM: opencode bridge..." to
+# prompts; models flag it as injected text on every message. Disable it.
+export CURSOR_ACP_BRIDGE_JSON=off
+# Resume the underlying Cursor chat across opencode restarts (pairs with
+# tmux-resurrect-opencode-sessions). Off by default upstream.
+export CURSOR_ACP_SESSION_RESUME=true
+# Attribute bridge usage to the principal work repo (employer reporting).
+# Run `oc-lms` instead of `opencode`. Only defined on machines where the
+# repo checkout exists. Caveat: under the Option C config all bridge
+# traffic uses whichever opencode process owns :32124, so the pin takes
+# effect when this session is the one that spawns the proxy.
+[[ -d "$HOME/github/cirrus/cirrus-lms-api" ]] && \
+  alias oc-lms='CURSOR_ACP_WORKSPACE=$HOME/github/cirrus/cirrus-lms-api opencode'
+
 # --- Helper Functions ---
 # Safe source - only source if file exists
 safe_source() {
