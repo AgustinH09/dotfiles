@@ -56,11 +56,30 @@ repos:
 
       - id: end-of-file-fixer
         name: Fix end of files
-        exclude: '\.age$'
+        # Skip binaries/media and nested git object stores (identify misses some).
+        exclude: |
+          (?x)(
+            \.age$|
+            \.otf$|\.ttf$|\.woff2?$|
+            \.png$|\.jpe?g$|\.gif$|\.webp$|\.ico$|\.svg$|
+            \.wav$|\.mp3$|
+            \.pack$|\.idx$|\.rev$|
+            (^|/)dot_fonts/|
+            (^|/)\.git/
+          )
 
       - id: trailing-whitespace
         name: Trim trailing whitespace
-        exclude: '\.age$|\.md$'
+        exclude: |
+          (?x)(
+            \.age$|\.md$|
+            \.otf$|\.ttf$|\.woff2?$|
+            \.png$|\.jpe?g$|\.gif$|\.webp$|\.ico$|\.svg$|
+            \.wav$|\.mp3$|
+            \.pack$|\.idx$|\.rev$|
+            (^|/)dot_fonts/|
+            (^|/)\.git/
+          )
 
       - id: mixed-line-ending
         name: Check line endings
@@ -72,7 +91,18 @@ repos:
       - id: shellcheck
         name: Shellcheck
         args: ['--severity=warning']
-        exclude: '\.age$|^dot_p10k\.zsh$'
+        # Vendored Hypr/JaKooLit + kitty theme tooling; OMZ fragments lack shebangs.
+        exclude: |
+          (?x)^(
+            .*\.age$|
+            ^dot_p10k\.zsh$|
+            ^dot_config/hypr/(scripts|UserScripts)/.*|
+            ^dot_config/hypr/executable_.*|
+            ^dot_config/kitty/kitty-themes/.*|
+            ^dot_tmux/dot_git/.*|
+            ^dot_oh-my-zsh/custom/.*\.zsh$|
+            .*\.(py|swift)$
+          )$
 
   - repo: local
     hooks:
