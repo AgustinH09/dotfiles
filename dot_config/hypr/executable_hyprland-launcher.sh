@@ -4,7 +4,7 @@ distro_id=$(grep '^ID=' /etc/os-release | cut -d'=' -f2)
 distro_id=${distro_id:-fedora}
 export HYPRLAND_DISTRO_CONFIG="${distro_id}.conf"
 
-if command -v uwsm >/dev/null && uwsm check may-start; then
+if command -v uwsm >/dev/null; then
   exec uwsm start -e -D Hyprland hyprland.desktop
 fi
 

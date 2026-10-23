@@ -51,7 +51,7 @@ local startup_commands = {
   "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP",
   "$HOME/.config/hypr/scripts/Polkit.sh",
   "nm-applet --indicator",
-  "systemctl --user start waybar.service",
+  "$HOME/.config/hypr/scripts/WaybarStartup.sh",
   "wl-paste --type text --watch cliphist store",
   "wl-paste --type image --watch cliphist store",
   "hypridle",
