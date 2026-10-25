@@ -1,32 +1,70 @@
-#!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# For disabling touchpad.
-# Edit the Touchpad_Device on ~/.config/hypr/UserConfigs/Laptops.conf according to your system
-# use hyprctl devices to get your system touchpad device name
+#!/usr/bin/env bash
+# ==================================================
+#  KoolDots (2026)
+#  Project URL: https://github.com/LinuxBeginnings
+#  License: GNU GPLv3
+#  SPDX-License-Identifier: GPL-3.0-or-later
+# ==================================================
+# Toggle the detected or configured touchpad device.
+# Set TOUCHPAD_DEVICE or define Touchpad_Device in UserConfigs/user_laptops.lua to override auto-detection.
 # source https://github.com/hyprwm/Hyprland/discussions/4283?sort=new#discussioncomment-8648109
 
-notif="$HOME/.config/swaync/images/ja.png"
+set -euo pipefail
 
-export STATUS_FILE="$XDG_RUNTIME_DIR/touchpad.status"
+notif="${XDG_CONFIG_HOME:-$HOME/.config}/swaync/images/ja.png"
+user_laptops_lua="${XDG_CONFIG_HOME:-$HOME/.config}/hypr/UserConfigs/user_laptops.lua"
+
+touchpad_device="${TOUCHPAD_DEVICE:-}"
+
+# Check user_laptops.lua for Lua override
+if [[ -z "$touchpad_device" && -f "$user_laptops_lua" ]]; then
+    touchpad_device="$(
+        sed -nE 's/^[[:space:]]*(TOUCHPAD_DEVICE|Touchpad_Device|touchpad_device)[[:space:]]*=[[:space:]]*["'\''"]([^"'\''"]+)["'\''"].*/\2/p' "$user_laptops_lua" | tail -n1
+    )"
+fi
+
+# Auto-detect touchpad from hyprctl devices
+if [[ -z "$touchpad_device" ]]; then
+    touchpad_device="$(
+        hyprctl devices -j 2>/dev/null |
+            jq -r 'first(.mice[]?.name | select(test("touchpad|trackpad|glidepoint"; "i"))) // empty' 2>/dev/null || true
+    )"
+fi
+
+if [[ -z "$touchpad_device" ]]; then
+    notify-send -u low -i "$notif" " Touchpad" " No touchpad was detected" 2>/dev/null || true
+    exit 1
+fi
+
+runtime_dir="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+status_file="$runtime_dir/touchpad.status"
+
+set_touchpad_state() {
+    local state="$1"
+
+    # Hyprland native Lua eval path
+    hyprctl -r eval "hl.device({ name = [[$touchpad_device]], enabled = $state })" >/dev/null 2>&1 || true
+}
 
 enable_touchpad() {
-    printf "true" >"$STATUS_FILE"
-    notify-send -u low -i $notif  " Enabling" " touchpad"
-    hyprctl keyword '$TOUCHPAD_ENABLED' "true" -r
+    set_touchpad_state true
+    printf '%s\n' "true" >"$status_file"
+    notify-send -u low -i "$notif" " Touchpad" " Enabled" 2>/dev/null || true
 }
 
 disable_touchpad() {
-    printf "false" >"$STATUS_FILE"
-    notify-send -u low -i $notif " Disabling" " touchpad"
-    hyprctl keyword '$TOUCHPAD_ENABLED' "false" -r
+    set_touchpad_state false
+    printf '%s\n' "false" >"$status_file"
+    notify-send -u low -i "$notif" " Touchpad" " Disabled" 2>/dev/null || true
 }
 
-if ! [ -f "$STATUS_FILE" ]; then
-  enable_touchpad
-else
-  if [ $(cat "$STATUS_FILE") = "true" ]; then
+current_state="true"
+if [[ -f "$status_file" ]]; then
+    current_state="$(<"$status_file")"
+fi
+
+if [[ "$current_state" == "true" ]]; then
     disable_touchpad
-  elif [ $(cat "$STATUS_FILE") = "false" ]; then
+else
     enable_touchpad
-  fi
 fi

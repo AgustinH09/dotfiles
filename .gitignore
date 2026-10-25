@@ -10,6 +10,8 @@ key.txt.age
 **/*token*
 **/*authtoken*
 !encrypted_*
+!dot_config/swaync/
+!dot_config/swaync/config.json
 private_dot_copilot*
 dot_supermaven/
 

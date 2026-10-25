@@ -12,11 +12,20 @@ key.txt.age
 .config/opencode/bun.lock
 .config/opencode/.gitignore
 
+# fcitx5 rewrites this at runtime (input-method group order drifts per machine)
+.config/fcitx5/profile
+
 LICENSE
 README.md
 scripts
 scripts/**
 security-check.sh
+
+{{ if ne .chezmoi.os "linux" }}
+bin/brave-wayland-launch.sh
+.config/swaync/
+.local/share/applications/brave-browser.desktop
+{{ end }}
 
 {{ if eq .chezmoi.os "darwin" }}
 .config/hypr/
