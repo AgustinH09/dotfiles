@@ -1,0 +1,9 @@
+# Host-specific monitor layout; other machines use automatic detection.
+{{ if eq .chezmoi.hostname "chicha09desu" }}
+monitor=eDP-1,1920x1080@144.03,3537x282,1.0
+monitor=DP-3,1920x1080@60.0,5457x541,1.0
+# The pre-F44 modeline produces a black screen with Aquamarine 0.15 and NVIDIA 615.
+monitor=HDMI-A-1,1600x900@59.98,1937x836,1.0
+{{ else }}
+monitor=,preferred,auto,1
+{{ end }}
