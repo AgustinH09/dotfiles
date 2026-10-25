@@ -1073,3 +1073,20 @@ apply_window_rule({
   },
   opaque = true,
 })
+
+-- Xwayland video bridge opens a black capture window. Park it off workspace 1.
+apply_window_rule({
+  name = "personal-xwaylandvideobridge",
+  match = {
+    class = "^(xwaylandvideobridge)$",
+  },
+  float = true,
+  workspace = "special:xwaylandvideobridge silent",
+  no_initial_focus = true,
+  no_focus = true,
+  no_anim = true,
+  no_blur = true,
+  max_size = "1 1",
+  opacity = "0.0 0.0",
+  opaque = false,
+})
